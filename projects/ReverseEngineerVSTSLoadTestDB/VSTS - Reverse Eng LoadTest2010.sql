@@ -4,11 +4,15 @@ select COUNT(*) from LoadTestRun --37
 select * from LoadTestRun
 --LoadTestRunId, RunId and StartTime
 select COUNT(*) from LoadTestLogData_Run37_Log0 --0
-select COUNT(*) from LoadTestDataCollectorLog --32
+select COUNT(*) from LoadTestDataCollectorLog --32, -> Event Log
 select * from LoadTestDataCollectorLog
 select * from LoadTestBrowsers
 select * from LoadTestCase
 select * from LoadTestDetailMessage where LoadTestRunId = 35
+select * from LoadTestFileAttachment --33
+select * from LoadTestFileAttachmentChunk -- what the hell is this?
+select * from LoadTestLogData_Run10_Log0 --0
+select * from LoadTestLogData_Run37_Log0 --0
 select * from LoadTestNetworks
 select * from LoadTestPageDetail --0
 select * from LoadTestPageSummaryByNetwork --0
@@ -23,3 +27,4 @@ select * from LoadTestPerformanceCounterInstance where LoadTestRunId = 35
 sp_help LoadTestPerformanceCounterInstance
 
 select * from LoadTestMessage where  LoadTestRunId = 35 --to get messages
+
