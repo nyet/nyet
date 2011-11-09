@@ -1,0 +1,73 @@
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
+
+127.0.0.1	2o7.net
+127.0.0.1	flagcounter.com
+127.0.0.1	247realmedia.com
+127.0.0.1	33across.com
+127.0.0.1	5min.com
+127.0.0.1	6pm.com
+127.0.0.1	intentmedia.net
+127.0.0.1	a9.com
+127.0.0.1	360yield.com
+127.0.0.1	adap.tv
+127.0.0.1	adadvisor.net
+127.0.0.1	2mdn.net
+127.0.0.1	adblade.com
+127.0.0.1	adbrite.com
+127.0.0.1	addthis.com
+127.0.0.1	adelixir.com
+127.0.0.1	adfrontiers.com
+127.0.0.1	adfusion.com
+127.0.0.1	adinterax.com
+127.0.0.1	adku.com
+127.0.0.1	adlegend.com
+127.0.0.1	admeld.com
+127.0.0.1	advertising.com
+127.0.0.1	adxpose.com
+127.0.0.1	atdmt.com
+127.0.0.1	btrll.com
+127.0.0.1	casalemedia.com
+127.0.0.1	doubleclick.net
+127.0.0.1	tracking.dsmmadvantage.com
+127.0.0.1	dsmmadvantage.com
+127.0.0.1	fastclick.net
+127.0.0.1	gamevance.com
+127.0.0.1	gourmandia.com
+127.0.0.1	www.gourmandia.com
+127.0.0.1	optmd.com
+127.0.0.1	cdn.optmd.com
+127.0.0.1	pheedo.com
+127.0.0.1	ads.pheedo.com
+127.0.0.1	quantserve.com
+127.0.0.1	rockyou.com
+127.0.0.1	rya.rockyou.com
+127.0.0.1	telemetryverification.net
+127.0.0.1	tremormedia.com
+127.0.0.1	dc.tremormedia.com
+127.0.0.1	tubemogule.com
+127.0.0.1	ad.xtendmedia.com
+127.0.0.1	xtendmedia.com
+127.0.0.1	www.ypmate.com
+127.0.0.1	ypmate.com
+127.0.0.1	zedo.com
+127.0.0.1	c5.zedo.com
