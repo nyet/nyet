@@ -1,0 +1,13 @@
+
+
+
+<pre><code>
+</code></pre>
+
+
+Not good
+<blockquote>
+
+</blockquote>
+
+$product->clone->findnodes('//a')
