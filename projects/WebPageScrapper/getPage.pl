@@ -28,11 +28,19 @@ my $nt = Net::Twitter->new(
     access_token_secret => $conf->{twitter_access_token_secret},
 );
 
+my %months = (
+	Jan=>1, Feb=>2, Mar=>3, Apr=>4,  May=>5,  Jun=>6, 
+	Jul=>7, Aug=>8, Sep=>9, Oct=>10, Nov=>11, Dec=>12,
+	January=>1,  February=>2,  March=>3, 
+	April=>4,    May=>5,       June=>6, 
+	July=>7,     August=>8,    September=>9, 
+	October=>10, November=>11, December=>12,
+);
+
 my $time = time;
 my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime($time);
 $year+=1900;
 $mon++;$mon = "0$mon" if length($mon)==1;
-$mon = "0$mon" if length($mon)==1;
 $mday = "0$mday" if length($mday)==1;
 my $timestamp = "$year-$mon-$mday";
 
@@ -82,12 +90,51 @@ my %grab = (
 			TimeStamp => "$year-$mon-$mday",
 		},
 	},
+	arcamax => {
+		garfield => {
+			Every => 24*3600-600,
+			URL => 'http://www.arcamax.com/thefunnies/garfield',
+			File => 'www.arcamax.com/thefunnies/garfield',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		mutts => {
+			Every => 24*3600-600,
+			URL => 'http://www.arcamax.com/thefunnies/mutts',
+			File => 'www.arcamax.com/thefunnies/mutts',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		ninechickweedlane => {
+			Every => 24*3600-600,
+			URL => 'http://www.arcamax.com/thefunnies/ninechickweedlane',
+			File => 'www.arcamax.com/thefunnies/ninechickweedlane',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		nonsequitur => {
+			Every => 24*3600-600,
+			URL => 'http://www.arcamax.com/thefunnies/nonsequitur',
+			File => 'www.arcamax.com/thefunnies/nonsequitur',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		pearlsbeforeswine => {
+			Every => 24*3600-600,
+			URL => 'http://www.arcamax.com/thefunnies/pearlsbeforeswine',
+			File => 'www.arcamax.com/thefunnies/pearlsbeforeswine',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		thebarn => {
+			Every => 24*3600-600,
+			URL => 'http://www.arcamax.com/thefunnies/thebarn',
+			File => 'www.arcamax.com/thefunnies/thebarn',
+			TimeStamp => "$year-$mon-$mday",
+		},
+	},
 );
 
 #Get Webpage
 my %Pages = ();
 foreach my $website (keys %grab) {
 	foreach my $webpage (keys %{$grab{$website}}) {
+		my $previousUpdate = $conf->{Pages}{$website}{$webpage}{Lastupdate};
 		if ($time-$previousUpdate > $grab{$website}{$webpage}{Every}) {
 			my $webpageURL = $grab{$website}{$webpage}{URL};
 			my $cmd = qq{wget -p -k -H --user-agent="Mozilla/5.0 (Linux; U; Android 0.5; en-us) AppleWebKit/522+ (KHTML, like Gecko) Safari/419.3" $webpageURL};
@@ -103,11 +150,77 @@ foreach my $website (keys %grab) {
 			copy("wget/".$grab{$website}{$webpage}{File}, $bkupFile);
 			tee("backedup to: $bkupFile");
 			$Pages{$website}{$webpage}{File} = $bkupFile;
+			$conf->{Pages}{$website}{$webpage}{Lastupdate} = $time;
+			DumpFile($conffile, $conf);
 			DumpFile($pagesfile, \%Pages);
 		}
 	}
 }
 
+if (exists $Pages{arcamax}) {
+	foreach my $comic (keys %{$Pages{arcamax}}) {
+		my $Page = $Pages{arcamax}{$comic}{File};
+		
+		my $bkupFolder = "C:/private__/comic/$comic";
+		mkpath($bkupFolder) if !-d $bkupFolder;
+		
+		tee("Start parsing arcamax:$comic: $Page");
+		use HTML::Entities;
+		use HTML::TreeBuilder::XPath;
+		my $tree= HTML::TreeBuilder::XPath->new;
+		$tree->parse_file($Page);
+		my @srcs = $tree->findvalues('//img/@src');
+		my @alts = $tree->findvalues('//img/@alt');
+		my $src = '';
+		my $alt = '';
+		GETSRC:foreach my $src1 (@srcs) {
+			$src = $src1;
+			$alt = shift @alts;
+			if ($src =~ /newspics/) {
+				say "	found:$src:$alt";
+				last GETSRC;
+			}
+		}
+		
+		#my $src = $tree->findvalue('(//img)[2]/@src');
+		tee("	img src: $src");
+		#my $alt = $tree->findvalue('(//img)[2]/@alt');
+		tee("	img alt: $alt");
+
+		if ($alt =~ /(.+?) Cartoon for (\w{3})\/(\d{1,2})\/(\d{4})/) {
+			my $cartoon = decode_entities($1);
+			my $mon = $months{$2}; $mon = "0$mon" if length($mon)==1;
+			my $mday = $3;$mday = "0$mday" if length($mday)==1;
+			my $year = $4;
+
+			if ($src =~ /(newspics.+)\.(.+)$/) {
+				my $source = "wget/www.arcamax.com/$1.$2";
+				my $target = "$bkupFolder/$cartoon-$year-$mon-$mday.$2";
+				tee("	source: $source");
+				tee("	target: $target");
+				use File::Copy;
+				my $result = copy($source, $target);
+				tee("	copy result: $result");
+				if ($result == 1) {
+					tee("	All is good");
+				}
+				else {
+					tee("ERROR:result is not 1:copy($source, $target)");
+					my $result = $nt->update("\@nyet arcamax:$comic file copy is bad");
+				}
+			}
+			else {
+				tee("ERROR:Can not parse src: $src");
+				my $result = $nt->update("\@nyet arcamax:$comic parser is broken");
+			}
+		}
+		else {
+			tee("ERROR:Can not parse alt: $alt");
+			my $result = $nt->update("\@nyet arcamax:$comic parser is broken");
+		}
+		tee("End parsing arcamax:$comic");
+	}
+}
 
 
 if (exists $Pages{BorrowLenses}) {
