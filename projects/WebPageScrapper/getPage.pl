@@ -6,6 +6,10 @@ use File::Copy;
 use File::Path;
 use Net::Twitter;
 use YAML::Syck;
+# TODO
+# 1. test for link that gives 404
+# 2. parse the content of sysinternals
+# 3. parse the content of dilbert
 
 my $logfile = "$0.log";
 my $conffile = "$0.conf";
@@ -125,6 +129,94 @@ my %grab = (
 			Every => 24*3600-600,
 			URL => 'http://www.arcamax.com/thefunnies/thebarn',
 			File => 'www.arcamax.com/thefunnies/thebarn',
+			TimeStamp => "$year-$mon-$mday",
+		},
+	},
+	sysinternals => {
+		Autologon => {
+			Every => 7*24*3600-600,
+			URL => 'http://technet.microsoft.com/en-us/sysinternals/bb963905',
+			File => 'technet.microsoft.com/en-us/sysinternals/bb963905',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		Autoruns => {
+			Every => 7*24*3600-600,
+			URL => 'http://technet.microsoft.com/en-us/sysinternals/bb963902',
+			File => 'technet.microsoft.com/en-us/sysinternals/bb963902',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		Disk2vhd => {
+			Every => 7*24*3600-600,
+			URL => 'http://technet.microsoft.com/en-us/sysinternals/ee656415',
+			File => 'technet.microsoft.com/en-us/sysinternals/ee656415',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		DiskUsage => {
+			Every => 7*24*3600-600,
+			URL => 'http://technet.microsoft.com/en-us/sysinternals/bb896651',
+			File => 'technet.microsoft.com/en-us/sysinternals/bb896651',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		FindLinks => {
+			Every => 7*24*3600-600,
+			URL => 'http://technet.microsoft.com/en-us/sysinternals/hh290814',
+			File => 'technet.microsoft.com/en-us/sysinternals/hh290814',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		Handle => {
+			Every => 7*24*3600-600,
+			URL => 'http://technet.microsoft.com/en-us/sysinternals/bb896655',
+			File => 'technet.microsoft.com/en-us/sysinternals/bb896655',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		Junction => {
+			Every => 7*24*3600-600,
+			URL => 'http://technet.microsoft.com/en-us/sysinternals/bb896768',
+			File => 'technet.microsoft.com/en-us/sysinternals/bb896768',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		ListDLLs => {
+			Every => 7*24*3600-600,
+			URL => 'http://technet.microsoft.com/en-us/sysinternals/bb896656',
+			File => 'technet.microsoft.com/en-us/sysinternals/bb896656',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		ProcessExplorer => {
+			Every => 7*24*3600-600,
+			URL => 'http://technet.microsoft.com/en-us/sysinternals/bb896653',
+			File => 'technet.microsoft.com/en-us/sysinternals/bb896653',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		ProcessMonitor => {
+			Every => 7*24*3600-600,
+			URL => 'http://technet.microsoft.com/en-us/sysinternals/bb896645',
+			File => 'technet.microsoft.com/en-us/sysinternals/bb896645',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		PsTools => {
+			Every => 7*24*3600-600,
+			URL => 'http://technet.microsoft.com/en-us/sysinternals/bb896649',
+			File => 'technet.microsoft.com/en-us/sysinternals/bb896649',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		VMMap => {
+			Every => 7*24*3600-600,
+			URL => 'http://technet.microsoft.com/en-us/sysinternals/dd535533',
+			File => 'technet.microsoft.com/en-us/sysinternals/dd535533',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		SysinternalsSuite => {
+			Every => 7*24*3600-600,
+			URL => 'http://technet.microsoft.com/en-us/sysinternals/bb842062',
+			File => 'technet.microsoft.com/en-us/sysinternals/bb842062',
+			TimeStamp => "$year-$mon-$mday",
+		},
+	},
+	dilbert => {
+		dilbert => {
+			Every => 24*3600-600,
+			URL => 'http://dilbert.com',
+			File => 'dilbert.com/index.html',
 			TimeStamp => "$year-$mon-$mday",
 		},
 	},
