@@ -1,13 +1,18 @@
+Foswiki
+<verbatim>print "Hello World";
+</verbatim>
 
 
-
-<pre><code>
+MT
+<pre><code>print "Hello World";
 </code></pre>
+
+
+
+
 
 
 Not good
 <blockquote>
 
 </blockquote>
-
-$product->clone->findnodes('//a')
