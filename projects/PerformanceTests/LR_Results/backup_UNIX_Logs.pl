@@ -10,12 +10,6 @@ my $currentDateString = dateFileString();
 #my $hostname = 'ijtcap148.ngs.fnf.com';
 #my $hostname = 'ijtcap149.ngs.fnf.com';
 
-my %option = (
-	debug    => 1,
-	user     => 'lsusanto',
-	password => 'whyme1103',
-);
-
 my %archived;
 {
 	open ARCHIVED, "ARCHIVED.log";
@@ -31,129 +25,108 @@ open my $LOG, ">$log_file";
 close $LOG;
 
 my @appservers = qw(
-	ijtcap148.ngs.fnf.com
-	ijtcap149.ngs.fnf.com
+	lltcap148.fnf.com
+	lltcap149.fnf.com
+	lltcap150.fnf.com
 );
 foreach my $hostname (@appservers) {
-	if (1) { # logs in /usr/WebSphere/AppServer/profiles/AppSrv01/logs/Trax(.*)
-		my @dirs = (
-			'/usr/WebSphere/AppServer/profiles/AppSrv01/logs/Trax', 
-			'/usr/WebSphere/AppServer/profiles/AppSrv01/logs/Trax-1', 
-			'/usr/WebSphere/AppServer/profiles/AppSrv01/logs/Trax-2', 
-			'/usr/WebSphere/AppServer/profiles/AppSrv01/logs/Trax-3'
-		);
-		foreach my $dir (@dirs) {
-			my @this = split /\//, $dir;
-			my $dirName = $this[$#this];
-			
-			my $sshClient = Net::SSH::Perl->new($hostname, %option);
-			$sshClient->login($option{'user'}, $option{'password'});
-			
-			my ($lsout, $lserr, $lsexit) = $sshClient->cmd("ls -At $dir/*.log");
-			open my $LOG, ">>$log_file";
-			print {$LOG} "cmd:cd $dir\nls -al\n";
-			print {$LOG} "exit:$lsexit\n";
-			print {$LOG} "out:$lsout\n";
-			print {$LOG} "err:$lserr\n";
-			close $LOG;
-			
-			my $outputFile = "";
-			$sshClient->register_handler(SSH_SMSG_STDOUT_DATA, sub {
-				my($ssh, $packet) = @_;
-				my $str = $packet->get_str;
-				
-				open  my $OUT, ">>$outputFile";
-				binmode $OUT;
-				print {$OUT} $str;
-				close $OUT;
-			});
-			my $errStr = "";
-			$sshClient->register_handler(SSH_SMSG_STDERR_DATA, sub {
-				my($ssh, $packet) = @_;
-				my $str = $packet->get_str;
-				
-				$errStr .= $str;
-			});
-			
-			
-			my $i=0;
-			foreach my $file (split /\n/, $lsout) {
-				open my $LOG, ">>$log_file";
-				if ($file =~ /\/([^\/\\]+_\d+\.\d+\.\d+_\d+\.\d+\.\d+\.log)/) {
-					my $filename = $1;
-					$filename =~ s/\.log$/.gz/;
-					print {$LOG} "$i:$hostname:$file\n";
-					
-					if (!exists $archived{"$hostname:$file"}) {
-						if (!-d "$hostname/$dirName") {
-							mkpath("$hostname/$dirName");
-							print {$LOG} "mkpath('$hostname/$dirName');\n";
-						}
-						print {$LOG} "archive the file\n";
-						print {$LOG} "filename:$filename\n";
-						
-						my $t0 = [gettimeofday];
-						$outputFile = "$hostname/$dirName/$filename";
-						print {$LOG} "outputFile:$outputFile\n";
-						open TEMP, ">$outputFile";
-						binmode TEMP;
-						close TEMP;
-						$errStr     = "";
-						$sshClient->cmd("gzip -9 -c $file");
-						#gzip -9 -c /usr/WebSphere/AppServer/profiles/AppSrv01/logs/Trax/trace_09.09.12_19.48.41.log
-						if (length $errStr > 0) {
-							print {$LOG} "Failed to run gzip -9 -c $dir/$filename, reason: $errStr\n";
-						}
-						my $elapsed = tv_interval ( $t0, [gettimeofday]);
-						
-						my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,$atime,$mtime,$ctime,$blksize,$blocks) = stat($outputFile);
-						open  PERF, ">>backup.perf.log";
-						print PERF timeStampString()."\t$dir/$filename\t$elapsed\t$size\n";
-						close PERF;
-						print {$LOG} "Downloaded $dir/$filename in $elapsed\n";
-						
-						$archived{"$hostname:$file"} = 1;
-					}
-				}
-				elsif ($file =~ /\/([^\/\\]+\.log)/) {
-					my $filename = $1;
-					$filename =~ s/\.log$/.gz/;
-					print {$LOG} "$i:$hostname:$file\n";
-					
-					if (!exists $archived{"$hostname:$file"}) {
-						if (!-d "$hostname/$dirName") {
-							mkpath("$hostname/$dirName");
-							print {$LOG} "mkpath('$hostname/$dirName');\n";
-						}
-						print {$LOG} "copy the file\n";
-						print {$LOG} "filename:$filename\n";
-						
-						my $t0 = [gettimeofday];
-						$outputFile = "$hostname/$dirName/$filename";
-						print {$LOG} "outputFile:$outputFile\n";
-						open TEMP, ">$outputFile";
-						binmode TEMP;
-						close TEMP;
-						$errStr     = "";
-						$sshClient->cmd("gzip -9 -c $file");
-						#gzip -9 -c /usr/WebSphere/AppServer/profiles/AppSrv01/logs/Trax/trace.log
-						if (length $errStr > 0) {
-							print {$LOG} "Failed to run gzip -9 -c $dir/$filename, reason: $errStr\n";
-						}
-						my $elapsed = tv_interval ( $t0, [gettimeofday]);
-						
-						my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,$atime,$mtime,$ctime,$blksize,$blocks) = stat($outputFile);
-						open  PERF, ">>backup.perf.log";
-						print PERF timeStampString()."\t$dir/$filename\t$elapsed\t$size\n";
-						close PERF;
-						print {$LOG} "Downloaded $dir/$filename in $elapsed\n";
-					}
-				}
-				close $LOG;
-				$i++;
-			}
-			
+	if (1) { # /w70p/App-JTCTRAXLT/logs/trax-b
+		my @files;
+		open my $LOG, ">>$log_file";
+		print {$LOG} "cmd:ls -At /w70p/App-LTCTRAX/logs/trax*/*.log\n";
+		open my $CMD, "C:\\work\\bin\\plink.exe -ssh lsusanto\@$hostname -2 -i C:\\work\\data\\lsusanto.ppk -m C:\\work\\data\\appsrv_log_files_was7_prod.txt |";
+		while (my $file = <$CMD>) {
+			print {$LOG} "cmd:ls -At /w70p/App-LTCTRAX/logs/trax*/*.log\n";
+			chomp $file;
+			push @files, $file;
+			#print "$file\n";
 		}
+		close $CMD;
+		
+		my $i=0;
+		foreach my $file (@files) {
+			my $dirName = "";
+			if ($file =~ /\/(trax.+?)\//) {
+				$dirName = $1;
+			}
+				
+			if ($file =~ /\/([^\/\\]+_\d+\.\d+\.\d+_\d+\.\d+\.\d+\.log)/) {
+				my $filename = $1;
+				$filename =~ s/\.log$/.gz/;
+				print {$LOG} "$i:$hostname:$file\n";
+				if (!exists $archived{"$hostname:$file"}) {
+					if (!-d "$hostname/$dirName") {
+						mkpath("$hostname/$dirName");
+						print {$LOG} "mkpath('$hostname/$dirName');\n";
+					}
+					print {$LOG} "archive the file\n";
+					print {$LOG} "filename:$filename\n";
+					
+					my $t0 = [gettimeofday];
+					my $outputFile = "$hostname/$dirName/$filename";
+					print {$LOG} "outputFile:$outputFile\n";
+					open TEMP, ">$outputFile";
+					binmode TEMP;
+					{
+						local $/ = undef;
+						open my $CMD, "C:\\work\\bin\\plink.exe -ssh lsusanto\@$hostname -2 -i C:\\work\\data\\lsusanto.ppk \"gzip -9 -c $file\" |";
+						binmode $CMD;
+						#gzip -9 -c /usr/WebSphere/AppServer/profiles/AppSrv01/logs/Trax/trace_09.09.12_19.48.41.log
+						while (my $line = <$CMD>) {
+							print TEMP $line;
+						}
+						close $CMD;
+					}
+					close TEMP;
+					my $elapsed = tv_interval ( $t0, [gettimeofday]);
+					my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,$atime,$mtime,$ctime,$blksize,$blocks) = stat($outputFile);
+					open  PERF, ">>backup.perf.log";
+					print PERF timeStampString()."\t$file\t$elapsed\t$size\n";
+					close PERF;
+					print {$LOG} "Downloaded $file in $elapsed\n";
+					
+					$archived{"$hostname:$file"} = 1;
+				}
+			}
+			elsif ($file =~ /\/([^\/\\]+\.log)/) {
+				my $filename = $1;
+				$filename =~ s/\.log$/.gz/;
+				print {$LOG} "$i:$hostname:$file\n";
+				if (!exists $archived{"$hostname:$file"}) {
+					if (!-d "$hostname/$dirName") {
+						mkpath("$hostname/$dirName");
+						print {$LOG} "mkpath('$hostname/$dirName');\n";
+					}
+					print {$LOG} "copy the file\n";
+					print {$LOG} "filename:$filename\n";
+					
+					my $t0 = [gettimeofday];
+					my $outputFile = "$hostname/$dirName/$filename";
+					print {$LOG} "outputFile:$outputFile\n";
+					open TEMP, ">$outputFile";
+					binmode TEMP;
+					{
+						local $/ = undef;
+						open my $CMD, "C:\\work\\bin\\plink.exe -ssh lsusanto\@$hostname -2 -i C:\\work\\data\\lsusanto.ppk \"gzip -9 -c $file\" |";
+						binmode $CMD;
+						#gzip -9 -c /usr/WebSphere/AppServer/profiles/AppSrv01/logs/Trax/trace.log
+						while (my $line = <$CMD>) {
+							print TEMP $line;
+						}
+						close $CMD;
+					}
+					close TEMP;
+					my $elapsed = tv_interval ( $t0, [gettimeofday]);
+					my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,$atime,$mtime,$ctime,$blksize,$blocks) = stat($outputFile);
+					open  PERF, ">>backup.perf.log";
+					print PERF timeStampString()."\t$file\t$elapsed\t$size\n";
+					close PERF;
+					print {$LOG} "Downloaded $file in $elapsed\n";
+				}
+			}
+			$i++;
+		}
+		close $LOG;
 	}
 }
 
