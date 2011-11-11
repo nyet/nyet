@@ -18,6 +18,26 @@ Multiple log in a page:
 	%COMMENT{type="lifelog"}%
 
 
+	<form method="post" 
+		action="http://localhost/foswiki/bin/save/Main/TestMultipleLogs" 
+		enctype="multipart/form-data" 
+		name="lifelog1" 
+		id="lifelog1" 
+		onsubmit="StrikeOne.submit(this)">
+	<input type='hidden' name='validation_key' 
+		value='?c5188cd4417b1f6fb4f9402d8f42057d' />
+
+	Content-Disposition: form-data; name="validation_key" 5490166b24c1c54e8d6044fdc006247d
+	Content-Disposition: form-data; name="comment_action" save
+	Content-Disposition: form-data; name="comment_type" lifelog
+	Content-Disposition: form-data; name="comment_index" 1
+
+	validation_key	98e723fede4f21d6275c6c2a19803600
+	comment	This is work log #13
+	comment_action	save
+	comment_type	lifelog
+	comment_index	0
+	
 Not good
 <blockquote>
 
