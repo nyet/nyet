@@ -1,15 +1,21 @@
-Foswiki
-<verbatim>print "Hello World";
-</verbatim>
+Code:
+	Foswiki
+	<verbatim>print "Hello World";
+	</verbatim>
+
+	MT
+	<pre><code>print "Hello World";
+	</code></pre>
 
 
-MT
-<pre><code>print "Hello World";
-</code></pre>
+Multiple log in a page:
+	<a href="#PrivateLog">Private Log</a>
+	
+	---++ %MAKETEXT{"Log"}%<a name="WorkLog"></a>:
+	%COMMENT{type="lifelog"}%
 
-
-
-
+	---++ %MAKETEXT{"Private Log"}%<a name="PrivateLog"></a>:
+	%COMMENT{type="lifelog"}%
 
 
 Not good
