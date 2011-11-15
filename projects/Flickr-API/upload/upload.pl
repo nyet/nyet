@@ -35,9 +35,9 @@ PICTURES:foreach my $file (bsd_glob('2upload/*')) {
 			'photo' => $file,
 			'auth_token' => $conf->{flickr_auth_token},
 			#'tags' => 'me myself eye',
-			'is_public' => 0,
-			'is_friend' => 1,
-			'is_family' => 1,
+			'is_public' => 1,
+			'is_friend' => 0,
+			'is_family' => 0,
 			'async' => 0,
 		);
 		say "upload result: $result";
