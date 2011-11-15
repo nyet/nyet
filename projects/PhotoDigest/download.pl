@@ -76,15 +76,15 @@ PAGE:while (1) {
 			$height = $note->{attributes}->{url_t};
 		}
 		push @logdata, $url_type, $width, $height, $url, "||".$note->{attributes}->{title}."||";
-		print {$DWLOG} join("\t", @logdata)."\n";
 		
 		if (($url ne "N/A")&&($url =~ /\/([^\/]+)$/)) {
 			my $filename = $1;
 			$filename =~ s/(\?.+)//;
-			if (!-f $filename) {
-				say {$LOG} "	download:$url:$filename";
-				system qq{lwp-download "$url" "$filename"};
+			if (!-f "$thumbnailsFolder/$filename") {
+				say {$LOG} "	download:$url:$thumbnailsFolder/$filename";
+				system qq{lwp-download "$url" "$thumbnailsFolder/$filename"};
 				
+				print {$DWLOG} join("\t", @logdata)."\n";
 			}
 		}
 	}

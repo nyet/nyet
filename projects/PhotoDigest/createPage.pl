@@ -7,7 +7,7 @@ use XML::Simple;
 
 open my $LOG, ">$0.log";
 
-open FILE, "download.pl.download.log";
+open FILE, "nyet/download.log";
 my %photos;
 while (my $line = <FILE>) {
 	if ($line =~ /^\d/) {
