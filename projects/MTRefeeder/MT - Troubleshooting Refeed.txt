@@ -1,0 +1,57 @@
+0,10,20,30,40,50 * * * * cd /home/nyet/public_html/cgi-bin/mt; 
+perl ./tools/run-periodic-tasks -verbose >> ../../mt.log
+
+/home/nyet/public_html/cgi-bin/mt-5.12/plugins/Refeed
+
+/home/nyet/public_html/mt/mt-static/support/
+refeed-history.db
+
+http://delicious.com/v2/rss/leosusanto
+nyet2
+
+
+seen:$VAR1 = {
+          '3http://www.delicious.com/url/599e522d47b06b5dc725a1eddac515c8#leosusanto' => '437',
+          '3http://www.delicious.com/url/ccc0a1e0a0305255625bfd17aeb83df4#leosusanto' => '440',
+          '3http://www.delicious.com/url/c0c4bae320f7259c77a246e9b85f2279#leosusanto' => '442',
+          '3http://www.delicious.com/url/458548f88efb5c11f19f099958d24fee#leosusanto' => '443',
+          '3http://www.delicious.com/url/b3ba687bf76cf3c6de9cb497153fe0ac#leosusanto' => '438',
+          '3http://www.delicious.com/url/cc5c73be42503eb959555d26e4c0e7df#leosusanto' => '439',
+          '3http://www.delicious.com/url/b5cc56205c612e562b762b6df892ca94#leosusanto' => '441',
+          '3http://www.delicious.com/url/c083dc1b1b4a9cdec5f601da55379604#leosusanto' => '444',
+          '3http://www.delicious.com/url/e9ff751083043df93d8319f6068decd4#leosusanto' => '445',
+          '3http://www.delicious.com/url/29ff3fe229650daa389c3f6e494d7402#leosusanto' => '446'
+        };
+
+look like this part doesnt work
+
+
+    require MT::XMLRPCServer;
+
+    no warnings 'redefine';
+    local *MT::XMLRPCServer::_login = sub {
+        return( $author, $perms );
+    };
+    local *MT::XMLRPCServer::Util::mt_new = sub {
+        return MT->instance;
+    };
+    local *SOAP::Data::type = sub {
+        my $class = shift;
+        my( %param ) = @_;
+        return $param{string};
+    };
+
+    my $id = metaWeblog->newPost(
+        $blog->id,
+        '',
+        '',
+        {
+            title               => join(': ', $feed->title, $entry->title),
+            description         => $entry->content->body,
+            dateCreated         => $issued->iso8601 . 'Z',
+            mt_convert_breaks   => 0,
+            mt_keywords         => $entry->link,
+        },
+        1,
+    );
+
