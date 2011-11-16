@@ -67,10 +67,34 @@ my %grab = (
 		},
 	},
 	PortableApps => {
+		Frhed => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/development/frhed_portable',
+			File => 'portableapps.com/apps/development/frhed_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		FileZilla => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/internet/filezilla_portable',
+			File => 'portableapps.com/apps/internet/filezilla_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		NotepadPP => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/development/notepadpp_portable',
+			File => 'portableapps.com/apps/development/notepadpp_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
 		Pidgin => {
 			Every => 7*24*3600-600,
 			URL => 'http://portableapps.com/apps/internet/pidgin_portable',
 			File => 'portableapps.com/apps/internet/pidgin_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		PuTTY => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/internet/putty_portable',
+			File => 'portableapps.com/apps/internet/putty_portable',
 			TimeStamp => "$year-$mon-$mday",
 		},
 		Skype => {
@@ -79,10 +103,16 @@ my %grab = (
 			File => 'portableapps.com/apps/internet/skype_portable',
 			TimeStamp => "$year-$mon-$mday",
 		},
-		NotepadPP => {
+		SqliteDataBaseBrowser => {
 			Every => 7*24*3600-600,
-			URL => 'http://portableapps.com/apps/development/notepadpp_portable',
-			File => 'portableapps.com/apps/development/notepadpp_portable',
+			URL => 'http://portableapps.com/apps/development/sqlite_database_browser_portable',
+			File => 'portableapps.com/apps/development/sqlite_database_browser_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		VLC => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/music_video/vlc_portable',
+			File => 'portableapps.com/apps/music_video/vlc_portable',
 			TimeStamp => "$year-$mon-$mday",
 		},
 	},

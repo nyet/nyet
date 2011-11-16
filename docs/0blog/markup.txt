@@ -3,6 +3,12 @@ Code:
 	<verbatim>print "Hello World";
 	</verbatim>
 
+	%CODE{ lang="sql" }%SELECT * FROM table;%ENDCODE%
+
+	javascript, c, perl, csharp, css
+
+	%CODE{ lang="plain" }
+
 	MT
 	<pre><code>print "Hello World";
 	</code></pre>
