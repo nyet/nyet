@@ -1,6 +1,7 @@
 package PostOffice;
 
 use strict;
+use Data::Dumper;
 
 our $DEBUG = 0;
 
@@ -129,8 +130,11 @@ sub process_message_parts {
     foreach my $part (@parts) {
         my ( $media_type, $charset ) =
           _parse_content_type( $part->header('Content-Type') );
-        if ( $media_type eq 'text/plain' ) {
-            $text = MT::I18N::encode_text( $part->body, $charset );
+        #if ( $media_type eq 'text/plain' ) {
+        #	$text = MT::I18N::encode_text( $part->body, $charset );
+        #}
+		if ( $media_type eq 'text/html' ) {
+			$text = MT::I18N::encode_text( $part->body, $charset );
         }
         else {
             if ( $part->filename ) {
@@ -185,9 +189,9 @@ sub process_message_parts {
     }
 
     # TBD: Allow user to specify the sanitize spec for this
-    require MT::Sanitize;
-    MT::Sanitize->sanitize( $text,
-        "a href,b,i,strong,em,p,br/,ul,li,ol,blockquote,pre" );
+    #require MT::Sanitize;
+    #MT::Sanitize->sanitize( $text,
+    #    "a href,b,i,strong,em,p,br/,ul,li,ol,blockquote,pre" );
     $msg->{text}  = $text;
     $msg->{files} = \@files;
 }
@@ -223,12 +227,14 @@ sub _get_valid_addresses {
 sub process_message {
     my $pkg = shift;
     my ( $blog_id, $cfg, $au, $perm, $msg ) = @_;
-
-    require MT::Blog;
+	
+	require MT::Blog;
     my $blog = MT::Blog->load($blog_id);
 
     $pkg->process_message_parts( $blog, $msg );
 
+	print "process_message:msg:".Dumper($msg)."\n";
+	
     require MT::Entry;
     my $entry = MT::Entry->new();
     $entry->title( $msg->{subject} );
@@ -321,12 +327,12 @@ sub process_messages {
     my $default_author = MT::Author->load($default_author_id)
       if $default_author_id;
 
-    print "blog_id: $blog_id\n";
+    #print "blog_id: $blog_id\n";
     
     my $xp = $pkg->transport($cfg)
       or die "PostOffice: No mail transport configured";
       
-    print "message_iter: ".$xp->message_iter."\n";
+    #print "message_iter: ".$xp->message_iter."\n";
     
     my $iter = $xp->message_iter or return 0;
 
@@ -336,8 +342,9 @@ sub process_messages {
     my $addresses_by_blog = {};
 
     while ( my $msg = $iter->() ) {
-    	  print "inside iterator\n";
-    	  
+    	print "inside iterator\n";
+    	#print "msg($count):".Dumper($msg)."\n";
+		
         # determine blog_id for active message
         my $extension = $msg->{to};
         print "extension: $extension\n";
@@ -348,7 +355,7 @@ sub process_messages {
             $extension = $1;
             print "extension after (+) extraction: $extension\n";
             if ( $extension =~ m!^(?:(.+)\.)?(\d+)$! ) {
-            	 print "how is the local_blog_id? $1,$2\n";
+            	print "how is the local_blog_id? $1,$2\n";
                 $local_blog_id = $2;
                 $api_key = $1 if $1;
             }

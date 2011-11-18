@@ -299,11 +299,17 @@ if (exists $Pages{arcamax}) {
 			$src = $src1;
 			$alt = shift @alts;
 			if ($src =~ /newspics/) {
-				say "	found:$src:$alt";
 				last GETSRC;
 			}
 		}
-		
+		GETSRC:foreach my $src1 (@alts) {
+			$alt = $src1;
+			if ($src1 =~ /(.+?) Cartoon for (\w{3})\/(\d{1,2})\/(\d{4})/) {
+				last GETSRC;
+			}
+		}
+		say "	found:$src:$alt";
+
 		#my $src = $tree->findvalue('(//img)[2]/@src');
 		tee("	img src: $src");
 		#my $alt = $tree->findvalue('(//img)[2]/@alt');
