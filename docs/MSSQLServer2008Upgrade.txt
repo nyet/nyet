@@ -1,0 +1,14 @@
+SQLEXPRESS: 10.2.4000.0
+Developer: 10.51.2500.0
+
+MSSQLServer
+	Select @@version
+	Microsoft SQL Server 2008 R2 (SP1) - 10.50.2500.0 (Intel X86)   Jun 17 2011 00:57:23   Copyright (c) Microsoft Corporation  Developer Edition on Windows NT 6.1 <X86> (Build 7601: Service Pack 1) 
+	SELECT SERVERPROPERTY('productversion'), SERVERPROPERTY ('productlevel'), SERVERPROPERTY ('edition')
+	10.50.2500.0	SP1	Developer Edition
+
+SQLEXpress
+	Select @@version
+	Microsoft SQL Server 2008 (SP3) - 10.0.5500.0 (Intel X86)   Sep 22 2011 00:28:06   Copyright (c) 1988-2008 Microsoft Corporation  Express Edition on Windows NT 6.1 <X86> (Build 7601: Service Pack 1) 
+	SELECT SERVERPROPERTY('productversion'), SERVERPROPERTY ('productlevel'), SERVERPROPERTY ('edition')
+	10.0.5500.0	SP3	Express Edition
