@@ -297,7 +297,6 @@ if (exists $Pages{arcamax}) {
 		my $alt = '';
 		GETSRC:foreach my $src1 (@srcs) {
 			$src = $src1;
-			$alt = shift @alts;
 			if ($src =~ /newspics/) {
 				last GETSRC;
 			}
