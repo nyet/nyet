@@ -44,8 +44,12 @@ my %months = (
 my $time = time;
 my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime($time);
 $year+=1900;
-$mon++;$mon = "0$mon" if length($mon)==1;
+$mon++;
+$mon  = "0$mon"  if length($mon)==1;
 $mday = "0$mday" if length($mday)==1;
+$hour = "0$hour" if length($hour)==1;
+$min  = "0$min"  if length($min)==1;
+$sec  = "0$sec"  if length($sec)==1;
 my $timestamp = "$year-$mon-$mday";
 
 my $previousUpdate = 0;
@@ -250,6 +254,16 @@ my %grab = (
 			TimeStamp => "$year-$mon-$mday",
 		},
 	},
+	cmegroup => {
+		'light-sweet-crude' => {
+			Every => 1800-600,
+			URL => 'http://www.cmegroup.com/trading/energy/crude-oil/light-sweet-crude.html',
+			File => 'www.cmegroup.com/trading/energy/crude-oil/light-sweet-crude.html',
+			TimeStamp => "$year-$mon-$mday-$hour$min",
+		},
+	},
+	#
+	#http://www.cmegroup.com/trading/energy/crude-oil/crude-oil-volatility-index-vix-futures.html
 );
 
 #Get Webpage
