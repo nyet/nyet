@@ -44,8 +44,12 @@ my %months = (
 my $time = time;
 my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime($time);
 $year+=1900;
-$mon++;$mon = "0$mon" if length($mon)==1;
+$mon++;
+$mon  = "0$mon"  if length($mon)==1;
 $mday = "0$mday" if length($mday)==1;
+$hour = "0$hour" if length($hour)==1;
+$min  = "0$min"  if length($min)==1;
+$sec  = "0$sec"  if length($sec)==1;
 my $timestamp = "$year-$mon-$mday";
 
 my $previousUpdate = 0;
