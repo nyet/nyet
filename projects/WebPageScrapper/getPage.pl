@@ -250,6 +250,16 @@ my %grab = (
 			TimeStamp => "$year-$mon-$mday",
 		},
 	},
+	cmegroup => {
+		'light-sweet-crude' => {
+			Every => 1800-600,
+			URL => 'http://www.cmegroup.com/trading/energy/crude-oil/light-sweet-crude.html',
+			File => 'www.cmegroup.com/trading/energy/crude-oil/light-sweet-crude.html',
+			TimeStamp => "$year-$mon-$mday-$hour$min",
+		},
+	},
+	#
+	#http://www.cmegroup.com/trading/energy/crude-oil/crude-oil-volatility-index-vix-futures.html
 );
 
 #Get Webpage
