@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">
+  <sql:query>
+    SELECT * FROM SessionInfo
+    FOR XML AUTO
+  </sql:query>
+</ROOT>
