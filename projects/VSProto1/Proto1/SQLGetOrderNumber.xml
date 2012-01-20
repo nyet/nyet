@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">
+  <sql:query>
+    DECLARE @val1 NCHAR;
+    DECLARE @intErrorCode INT;
+    BEGIN TRAN
+    UPDATE SessionInfo
+    SET value1 = CAST((CAST(value1 as INT) + 1) as NCHAR)
+    WHERE (key1='orderNumber');
+    select value1 FROM SessionInfo WHERE key1='orderNumber';
+
+    SELECT @intErrorCode = @@ERROR
+    IF (@intErrorCode != 0) GOTO PROBLEM
+    COMMIT TRAN
+    PROBLEM:
+    IF (@intErrorCode != 0) BEGIN
+    PRINT 'Unexpected error occurred!'
+    ROLLBACK TRAN
+    END
+  </sql:query>
+</ROOT>

@@ -50,9 +50,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Proto1.RegExTest</StartupObject>
+    <StartupObject>Proto1.LoadTestDataTestDriver</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Enyim.Caching">
+      <HintPath>..\..\..\..\..\PerformanceTest\Impact\Membase.2.14\Enyim.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Membase">
+      <HintPath>..\..\..\..\..\PerformanceTest\Impact\Membase.2.14\Membase.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -62,12 +68,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppFabricExample.cs" />
+    <Compile Include="CurrentDirectory.cs" />
     <Compile Include="FireEventTest.cs" />
+    <Compile Include="LoadTestData.cs" />
+    <Compile Include="LoadTestDataFactory.cs" />
+    <Compile Include="LoadTestDataTestDriver.cs" />
+    <Compile Include="MembaseExample.cs" />
     <Compile Include="RegExTest.cs" />
     <Compile Include="SerTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlXmlCommandExample.cs" />
     <Compile Include="StringOperation.cs" />
+    <Compile Include="SystemFunctions.cs" />
     <Compile Include="TimeStuff.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -93,7 +107,29 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LTDF_Hash_AddElement.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LTDF_Hash_GetElement.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LTDFNotes.sql" />
+    <Content Include="SQLGetOrderNumber.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SQLSelectTest1.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLSelectTest1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
