@@ -1,0 +1,1 @@
+﻿INSERT INTO SessionHashInfo(key1, value1) VALUES (@p0, @p1);

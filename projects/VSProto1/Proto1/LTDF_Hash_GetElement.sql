@@ -1,0 +1,1 @@
+﻿SELECT value1 FROM SessionHashInfo WHERE key1 = @p0
