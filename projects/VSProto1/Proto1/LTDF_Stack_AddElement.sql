@@ -1,0 +1,1 @@
+﻿INSERT INTO SessionStackInfo(key1, value1) VALUES (@p0, @p1);
