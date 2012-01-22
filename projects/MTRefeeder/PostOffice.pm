@@ -233,7 +233,7 @@ sub process_message {
 
     $pkg->process_message_parts( $blog, $msg );
 
-	print "process_message:msg:".Dumper($msg)."\n";
+	#print "process_message:msg:".Dumper($msg)."\n";
 	
     require MT::Entry;
     my $entry = MT::Entry->new();
@@ -335,7 +335,8 @@ sub process_messages {
     #print "message_iter: ".$xp->message_iter."\n";
     
     my $iter = $xp->message_iter or return 0;
-
+	#print "Dumper(iter):".Dumper($iter)."\n";
+	
     require Email::Address;
     my $count = 0;
 
@@ -475,6 +476,8 @@ sub process_messages {
     }
     print "outside iterator\n";
     
+	print "processed message: $count\n";
+	
     $count;
 }
 

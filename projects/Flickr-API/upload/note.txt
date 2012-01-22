@@ -1,0 +1,357 @@
+montage -background #336699 -tile 2x2 -geometry +2+2 src1 trg1
+
+exiftool.exe -q -ImageDescription="" -keywords="" "2upload\
+
+WIYB
+
+exiftool.exe -q -ImageDescription="Burritos" -keywords="La Bamba" "2upload\2012-01-20_LaBamba (Original).JPG"
+
+exiftool.exe -q -ImageDescription="Hot Japanese Yam" -keywords="yam" "2upload\2012-01-19_JapaneseYam (Original).JPG"
+
+exiftool.exe -q -ImageDescription="This week is becoming a hotpot week (super cold week)" -keywords="hotpot" "2upload\2012-01-18_HotpotWeek (Original).JPG"
+
+exiftool.exe -q -ImageDescription="Hotpot for lunch and dinner :D" -keywords="hotpot" "2upload\2012-01-16_HotpotDay (Original).JPG"
+
+exiftool.exe -q -ImageDescription="Someone sabotaged the stove, so pizza it's" -keywords="pizza" "2upload\2012-01-15_Pizza (Original).JPG"
+
+exiftool.exe -q -ImageDescription="1 wk before Lunar New Year" -keywords="Chinatown" "2upload\2012-01-14_HairCutAndChinatown (Original).JPG"
+
+exiftool.exe -q -ImageDescription="52mm step up to 62mm filter has arrived" -keywords="adapter" -keywords="filter" 2upload\2012-01-13_FilterAdapter.JPG
+
+montage -background #336699 -tile 2x2 -geometry +2+2 P1020244.JPG P1020245.JPG P1020246.JPG P1020247.JPG FunPicturesInChinaTown.JPG
+
+exiftool.exe -q -ImageDescription="Lunch @ Mitsuwa" -keywords="lunch" 2upload\2012-01-12_Lunch.JPG
+
+exiftool.exe -q -ImageDescription="Test drive Lumia 710" -keywords="Nokia" -keywords="Microsoft" -keywords="Lumia" 2upload\2012-01-10_LumiaLaunch.JPG
+
+exiftool.exe -q -ImageDescription="Weekend hiking" -keywords="hiking" -keywords="windy hill" 2upload\2012-01-07_WindyHill.JPG
+
+exiftool.exe -q -ImageDescription="Delicious" -keywords="food" 2upload\2012-01-06_BarrioFiesta.JPG
+
+exiftool.exe -q -ImageDescription="Late grapes" -keywords="food" 2upload\2012-01-09_Grapes.JPG
+
+exiftool.exe -q -ImageDescription="Family meetup" -keywords="family" 2upload\2012-01-07_Meetup.JPG
+
+exiftool.exe -q -ImageDescription="They don't serve moose meat" -keywords="food" 2upload\2012-01-05_MooseTheyNotServe.jpg
+
+exiftool.exe -q -ImageDescription="Now, find me a typewriter" -keywords="supplies" 2upload\2012-01-04_PostHolidayBlues.jpg
+
+exiftool.exe -q -ImageDescription="The order from Snapfish has arrived" -keywords="sad" 2upload\2012-01-02_Back.JPG
+
+exiftool.exe -q -ImageDescription="Up the hill" -keywords="hollywood" -keywords="hiking" 2upload\2012-01-01_Hollywood.jpg
+
+exiftool.exe -q -ImageDescription="Pilgrimage" -keywords="food" 2upload\2011-12-31_President.jpg
+
+exiftool.exe -q -ImageDescription="Love this place" -keywords="bakery" 2upload\2011-12-30_CreamPan.JPG
+
+exiftool.exe -q -ImageDescription="Pretty dessert at Tokyo Table" -keywords="toast" 2upload\2011-12-29_Toast.jpg
+
+exiftool.exe -q -ImageDescription="The house of meh" -keywords="food" 2upload\2011-12-28_BorderGrill.JPG
+
+exiftool.exe -q -ImageDescription="Really hard to work with all the food around me" -keywords="workspace" 2upload\2011-12-27_EmergencyWorkspace.JPG
+
+exiftool.exe -q -ImageDescription="Griffith Observatorium" -keywords="Griffith" -keywords="Observatorium" 2upload\2011-12-26_Observatorium.JPG
+
+exiftool.exe -q -ImageDescription="Christmas Party" -keywords="party" 2upload\2011-12-25_Christmas.JPG
+
+exiftool.exe -q -ImageDescription="Sushi Gen, Downtown LA" -keywords="sushi" -keywords="food" -keywords="nom" 2upload\2011-12-24_Sushi.JPG
+
+exiftool.exe -q -ImageDescription="Minutes before disaster" -keywords="mistake" 2upload\uploaded\2011-12-23_Mistake.JPG
+
+exiftool.exe -q -ImageDescription="Smile :D" -keywords="shredder" 2upload\uploaded\2011-12-22_GirlWhoLikesToShred.JPG
+
+exiftool.exe -q -ImageDescription="Lunch" -keywords="lunch" 2upload\uploaded\2011-12-21_Lunch.JPG
+
+montage -background #336699 -tile 2x2 -geometry +5+5 P1020044.jpg P1020045.jpg P1020047.jpg P1020049.jpg BlowByBlows.jpg
+
+exiftool.exe -q -ImageDescription="Decided to pick WebWorks over Qt (NDK), and I'll be seeing a lot of this page" -keywords="BlackBerry" -keywords="WebWorks" -keywords="Ripple" 2upload\2011-12-20_RippleFail.png
+
+exiftool.exe -q -ImageDescription="BlackBerry Conference, time saver, no need for bloody copy and paste" -keywords="BlackBerry" 2upload\2011-12-19_BBConference.png
+
+exiftool.exe -q -ImageDescription="Crabs, big crabs" -keywords="Crab" 2upload\2011-12-18_Crabs.JPG
+
+exiftool.exe -q -ImageDescription="Fondue" -keywords="Fondue" 2upload\2011-12-17_Fondue.JPG
+
+exiftool.exe -q -ImageDescription="The last slice of the Vegetarian Mediterranean Quiche" -keywords="quiche" 2upload\2011-12-17_Pie.JPG
+
+exiftool.exe -q -ImageDescription="Wrapping night" -keywords="white elephant" 2upload\2011-12-15_2WrappingTheWhiteElephant.JPG
+
+exiftool.exe -q -ImageDescription="Stan visits" -keywords="wait" 2upload\2011-12-15_1Desk.JPG
+
+exiftool.exe -q -ImageDescription="No SMB from Playbook to other computer, this is super sux" -keywords="blackberry" -keywords="playbook" 2upload\2011-12-16_BBPlaybookNoSMB.jpg
+
+exiftool.exe -q -ImageDescription="News app @ BB Playbook" -keywords="blackberry" -keywords="playbook" 2upload\2011-12-12_BBPlaybookNewsApp.jpg
+
+exiftool.exe -q -ImageDescription="Somewhere in Nevada" -keywords="Grand Canyon" 2upload\2011-12-09_GrandCanyon.jpg
+
+exiftool.exe -q -ImageDescription="So I workout at 4AM in the morning instead" -keywords="hotel insomnia" 2upload\2011-12-08_CannotSleep.jpg
+
+exiftool.exe -q -ImageDescription="Mojo BBQ" -keywords="BBQ" 2upload\2011-12-07_MojoBBQ.jpg
+
+exiftool.exe -q -ImageDescription="Nice day" -keywords="Jacksonville" 2upload\2011-12-06_Jacksonville.jpg
+
+exiftool.exe -q -ImageDescription="St John River" -keywords="Jacksonville" 2upload\2011-12-05_StJohnRiver.jpg
+
+exiftool.exe -q -ImageDescription="Individual electric plug on each seat, SJC, Terminal B" -keywords="SJC" 2upload\2011-12-04_SJC.jpg
+
+exiftool.exe -q -ImageDescription="McWay Canyon, Julia Pfeiffer Burns State Park" -keywords="Big Sur" 2upload\2011-12-11_StatePark.JPG
+
+exiftool.exe -q -ImageDescription="Jellyfish" -keywords="Monterey Bay Aquarium" 2upload\2011-12-10_JellyFish.JPG
+
+exiftool.exe -q -ImageDescription="Mr Lucky, Global Winter Wonderland" -keywords="Luck" 2upload\2011-11-27_2031Heng.jpg
+
+exiftool.exe -q -ImageDescription="Let's play!" -keywords="blackberry" -keywords="playbook" 2upload\2011-12-13_Playbook.JPG
+
+exiftool.exe -q -ImageDescription="New batch of coffee" -keywords="coffee" -keywords="food" 2upload\2011-12-15_NewBatchOfJoe.JPG
+
+exiftool.exe -q -ImageDescription="Updating flickr" -keywords="flickr" 2upload\2011-11-24_SeriousWork.JPG
+
+exiftool.exe -q -ImageDescription="Seriously delicious" -keywords="snacks" 2upload\2011-11-23_Crakers.JPG
+
+exiftool.exe -q -ImageDescription="Flat bread" -keywords="food" 2upload\2011-11-19_2FlatBread.JPG
+
+exiftool.exe -q -ImageDescription="Peeled chestnuts" -keywords="chestnuts" 2upload\2011-12-01_1Chestnuts.JPG
+
+exiftool.exe -q -ImageDescription="Foggy morning in Bay Area" -keywords="fog" 2upload\2011-11-30_FoggyMorning.JPG
+
+exiftool.exe -q -ImageDescription="Totem @ SF" -keywords="totem" 2upload\2011-11-29_Totem.JPG
+
+exiftool.exe -q -ImageDescription="jcrew @ Palo Alto" -keywords="mall" 2upload\2011-11-26_MallRats.JPG
+
+exiftool.exe -q -ImageDescription="Garlic and pepper @ Orenchi" -keywords="condiments" -keywords="orenchi" 2upload\2011-11-25_Orenchi.JPG
+
+exiftool.exe -q -ImageDescription="Rental from the shop" -keywords="A5" -keywords="Audi" 2upload\2011-11-28_A5.JPG
+
+exiftool.exe -q -ImageDescription="Changed the sofa cover" -keywords="cover" 2upload\2011-11-19_1ChangeCover.JPG
+
+exiftool.exe -q -ImageDescription="Good weather" -keywords="weather" 2upload\2011-11-20_GoodWeather.JPG
+
+exiftool.exe -q -ImageDescription="Black friday @ Best Buy" -keywords="BlackFriday" 2upload\2011-11-25_1BestBuyNot.jpg
+
+exiftool.exe -q -ImageDescription="Joe distributing the loot" -keywords="HalfAndHalf" 2upload\2011-11-18_6HalfAndHalf.JPG
+
+exiftool.exe -q -ImageDescription="KunAn and YiTeng @ NOLA" -keywords="nola" 2upload\2011-11-18_5NolaAgain.JPG
+
+exiftool.exe -q -ImageDescription="Stupid notifications" -keywords="blackberry" 2upload\2011-11-20_1039BB.png
+
+exiftool.exe -q -ImageDescription="Hangout @ Angela's" -keywords="ssid" 2upload\2011-11-19_1VeryFast.png
+
+exiftool.exe -q -ImageDescription="NOLA again" -keywords="beads" 2upload\2011-11-18_4Beads.JPG
+
+exiftool.exe -q -ImageDescription="Phone case" -keywords="case" 2upload\2011-11-18_3Manik2.JPG
+
+exiftool.exe -q -ImageDescription="Fixing the fallout beads" -keywords="case" 2upload\2011-11-18_2Fix.JPG
+
+exiftool.exe -q -ImageDescription="Flat bread" -keywords="food" 2upload\2011-11-17_FlatBread.JPG
+
+exiftool.exe -q -ImageDescription="BakutTeh" -keywords="BakutTeh" 2upload\2011-11-16_BakutTeh.JPG
+
+exiftool.exe -q -ImageDescription="a lonely cup for 1.99" -keywords="bodum" 2upload\2011-11-28_Bodum.JPG
+
+exiftool.exe -q -ImageDescription="Christmas decoration at Macy" -keywords="Christmas" 2upload\2011-12-01_Christmas.JPG
+
+exiftool.exe -q -ImageDescription="35mm" -keywords="35mm" 2upload\2011-11-16_35mm.JPG
+
+exiftool.exe -q -ImageDescription="Stocking for the next adventure" -keywords="HKD" 2upload\2011-11-03_2HKD.JPG
+
+exiftool.exe -q -ImageDescription="Couch potatoes" -keywords="old habits" 2upload\2011-10-31_BackToOldProgramming.JPG
+
+exiftool.exe -q -ImageDescription="pixelated art" -keywords="hackerdojo" -keywords="art" 2upload\2011-11-18_1HackerDojoArt.JPG
+
+exiftool.exe -q -ImageDescription="Very cute SSID" -keywords="SSID" 2upload\2011-11-19_1VeryFast.png
+
+exiftool.exe -q -ImageDescription="Boxing day" -keywords="box" 2upload\2011-11-12_3BoxingAtNanik.JPG
+
+exiftool.exe -q -ImageDescription="KunAn visits Bay Area" -keywords="111111" 2upload\2011-11-11_KunAn.JPG
+
+exiftool.exe -q -ImageDescription="Sushi roll by Sam" -keywords="sushi" 2upload\2011-11-06_2Sushi.JPG
+
+exiftool.exe -q -ImageDescription="Reshuffling the mushrooms" -keywords="mushroom" 2upload\2011-11-06_1StuffingMushroom.JPG
+
+exiftool.exe -q -ImageDescription="Another cute stuff" -keywords="Moose" -keywords="sock puppet" 2upload\2011-11-12_2Moose.jpg
+
+exiftool.exe -q -ImageDescription="What is that?" -keywords="hackerdojo" 2upload\2011-11-08_HackerDojo.JPG
+
+exiftool.exe -q -ImageDescription="Cute stuff" -keywords="Porcupine" 2upload\2011-11-12_1RubberBall.jpg
+
+exiftool.exe -q -ImageDescription="Back and unpacking" 2upload\2011-10-30_7Back2Apt.JPG
+
+exiftool.exe -q -ImageDescription="Ida remembered that we have these beautiful things, 20 min before landing" -keywords="jerky" 2upload\2011-10-30_6BeeChengHiang.jpg
+
+exiftool.exe -q -ImageDescription="Extra layer of nothing" -keywords="insecurity" 2upload\2011-10-30_5Insecurity.JPG
+
+exiftool.exe -q -ImageDescription="The last one at the airport, before boarding" -keywords="GuiLingGao" -keywords="HKG" 2upload\2011-10-30_3GuiLingGao.JPG
+
+exiftool.exe -q -ImageDescription="Bored, playing with macros" -keywords="macros" 2upload\2011-10-30_2Fendi.JPG
+
+exiftool.exe -q -ImageDescription="Advertisement" -keywords="art" 2upload\2011-10-30_1Lipsticks.JPG
+
+exiftool.exe -q -ImageDescription="Novelty restaurant" -keywords="claypot" 2upload\2011-10-29_3HingKee.JPG
+
+exiftool.exe -q -ImageDescription="Yau Ma Tei" -keywords="MRT" 2upload\2011-10-29_2YauMaTei.JPG
+
+exiftool.exe -q -ImageDescription="Hongkong from Victoria Peak" -keywords="Victoria Peak" -keywords="Hongkong" 2upload\2011-10-29_1HK.JPG
+
+exiftool.exe -q -ImageDescription="Causeway Bay traffic jam" -keywords="taxi" 2upload\2011-10-28_4OTW2VictoriaPeak.JPG
+
+exiftool.exe -q -ImageDescription="It might be long, but we have a taxi in 10 min" -keywords="queue" 2upload\2011-10-28_3Queue4Taxi.JPG
+
+exiftool.exe -q -ImageDescription="The reason why the hotel room is extremely expensive" -keywords="exhibition" 2upload\2011-10-28_2ExpensiveRooms.JPG
+
+exiftool.exe -q -ImageDescription="I regret that I didn't take pictures of the plates of 108 Outlaws (other set is a gift to Stalin/USSR)" -keywords="2do" 2upload\2011-10-27_3mBowl.JPG
+
+exiftool.exe -q -ImageDescription="Guangzhou South HSR Station" -keywords="HSR" 2upload\2011-10-27_1aGuangZhouSouth.jpg
+
+exiftool.exe -q -ImageDescription="Press up to close, press down to lock - dont forget that" -keywords="HSR" 2upload\2011-10-26_8LockingMechanism.jpg
+
+exiftool.exe -q -ImageDescription="All public terminals are broken, since they all have USB, I will bring Linux distro next time" -keywords="Changsha South Station" 2upload\2011-10-26_PublicTerminal.jpg
+
+exiftool.exe -q -ImageDescription="See? It craps out again the next day" -keywords="QA" 2upload\2011-10-25_3aCrapOutAgain.jpg
+
+exiftool.exe -q -ImageDescription="Sweet hospital for sweet problem" -keywords="ED" 2upload\2011-10-27_4SweetHospital.JPG
+
+exiftool.exe -q -ImageDescription="Luring Fortune" -keywords="wth" 2upload\2011-10-27_3LuringFortune.JPG
+
+exiftool.exe -q -ImageDescription="One Link Plaza" -keywords="Guangzhou" 2upload\2011-10-27_2OneLinkPlaza.JPG
+
+exiftool.exe -q -ImageDescription="Hairy Crab" -keywords="crab" 2upload\2011-10-27_1HairyCrab.JPG
+
+exiftool.exe -q -ImageDescription="Somekind of plan ..." -keywords="plan" 2upload\2011-10-26_6ChangshaStation.JPG
+
+exiftool.exe -q -ImageDescription="Bamboo forrest behind Yue Lu Academy" -keywords="Yue Lu Academy" 2upload\2011-10-26_5Bamboo.JPG
+
+exiftool.exe -q -ImageDescription="Marshall He Long" -keywords="helong" 2upload\2011-10-24_5MarshallHeLong.JPG
+
+exiftool.exe -q -ImageDescription="Keeps Hunan people strong :D" -keywords="onions" -keywords="chilly" 2upload\2011-10-24_4WhatMakesHunanStrong.JPG
+
+exiftool.exe -q -ImageDescription="Hot water dispenser" -keywords="free" 2upload\2011-10-26_1cHotWater.jpg
+
+exiftool.exe -q -ImageDescription="Schwarzenegger would approve the capitalist remark" -keywords="Mao" -keywords="Capitalist" 2upload\2011-10-26_1bCapitalists.jpg
+
+exiftool.exe -q -ImageDescription="Stuff that you would normally find in gas stations" -keywords="snacks" 2upload\2011-10-26_1aSnacks.jpg
+
+exiftool.exe -q -ImageDescription="Back to HKG" -keywords="HKG" 2upload\2011-10-30_BackToSQ1.JPG
+
+exiftool.exe -q -ImageDescription="Good morning Changsha" -keywords="Changsha" 2upload\2011-10-26_4GoodMorning.JPG
+
+exiftool.exe -q -ImageDescription="The workers never sleep" -keywords="work" -keywords="overtime" 2upload\2011-10-26_OT.JPG
+
+exiftool.exe -q -ImageDescription="Huagongdian restaurant" -keywords="Huagongdian" 2upload\2011-10-26_2Huagongdian.JPG
+
+exiftool.exe -q -ImageDescription="On the way to Changsha" -keywords="travel" 2upload\2011-10-26_1OTH2Changsha.JPG
+
+exiftool.exe -q -ImageDescription="Qinghe Jin Jiang International Hotel, I love this old school hotel" -keywords="colonial" 2upload\2011-10-25_4QHJJ.JPG
+
+exiftool.exe -q -ImageDescription="The happiest time in China is to see this gadget again" -keywords="espresso" 2upload\2011-10-25_4EspressoMachine.jpg
+
+exiftool.exe -q -ImageDescription="Baofeng Lake" -keywords="lake" 2upload\2011-10-25_3BaofengLake.JPG
+
+exiftool.exe -q -ImageDescription="hated by UNESCO" -keywords="elevator" 2upload\2011-10-25_2Elevator.JPG
+
+exiftool.exe -q -ImageDescription="... thus renamed Halleluya" -keywords="marketing" 2upload\2011-10-25_1Halleluya.JPG
+
+exiftool.exe -q -ImageDescription="Huanglong cave, Zhangjiajie" -keywords="Huanglong cave" -keywords="Zhangjiajie" 2upload\2011-10-24_3HuanglongCave.JPG
+
+exiftool.exe -q -ImageDescription="Bring on Nagini" -keywords="movie" 2upload\2011-11-13_ReadyForTheHorrorFilm.JPG
+
+exiftool.exe -q -ImageDescription="Available on all 5* hotels" -keywords="socket" 2upload\2011-10-21_4LoveThisPlug.JPG
+
+exiftool.exe -q -ImageDescription="Geniuses" -keywords="thereifixit" 2upload\2011-10-21_3ThereIFixedIt.JPG
+
+exiftool.exe -q -ImageDescription="Sweets" -keywords="candy" 2upload\2011-10-20_5Sweets.JPG
+
+exiftool.exe -q -ImageDescription="Crane in the fog" -keywords="fog" -keywords="crane" 2upload\2011-10-22_8Fog.JPG
+
+exiftool.exe -q -ImageDescription="Fog over TianMenShan" -keywords="TianMenShan" 2upload\2011-10-22_7Fog.JPG
+
+exiftool.exe -q -ImageDescription="Although the government's intention should be applauded, it's near impossible for the mass to keep up" -keywords="Chinglish" 2upload\2011-10-22_6WTH.JPG
+
+exiftool.exe -q -ImageDescription="Simply delicious for the weather" -keywords="Hunan" 2upload\2011-10-22_3Goat.JPG
+
+exiftool.exe -q -ImageDescription="..." -keywords="Hunan" 2upload\2011-10-22_3Fish.JPG
+
+exiftool.exe -q -ImageDescription="GuanYue approves this restaurant" -keywords="Guan Yue" 2upload\2011-10-22_3GuanYueApproves.JPG
+
+exiftool.exe -q -ImageDescription="Metro underneath Baiyun Airport, I want this in LAX" -keywords="metro" -keywords="CAN" 2upload\2011-10-22_2MetroUnderneath.JPG
+
+exiftool.exe -q -ImageDescription="It seems that the airport is sponsored by Hyundai" -keywords="CAN" 2upload\2010-10-22_1SponsoredByHyundai.JPG
+
+exiftool.exe -q -ImageDescription="Construction everywhere ..." -keywords="building" 2upload\2011-10-21_1BigConstruction.JPG
+
+exiftool.exe -q -ImageDescription="Somewhere between Shenzhen and Guangzhou airport (Baiyun Airport/CAN)" -keywords="gasoline" 2upload\2011-10-21_1Pumps.JPG
+
+exiftool.exe -q -ImageDescription="Police monitoring the citizens" -keywords="HuaQiangBei" -keywords="police" 2upload\2011-10-20_5HuaQiangBei.JPG
+
+exiftool.exe -q -ImageDescription="I hate this city" -keywords="HK" 2upload\2011-10-20_4Birdcages.JPG
+
+exiftool.exe -q -ImageDescription="Flyer at the arrival gate of HKG" -keywords="HKG" 2upload\2011-10-20_2FlyerAtHKG.JPG
+
+exiftool.exe -q -ImageDescription="Multiple logs on foswiki, no extra tweaks" -keywords="foswiki" 2upload\2011-11-10_MultiLogs.png
+
+exiftool.exe -q -ImageDescription="It seens that QNAP supports AD" -keywords="QNAP" -keywords="ActiveDirectory" 2upload\2011-11-04_QNAP_AD.png
+
+exiftool.exe -q -ImageDescription="Yes, it's bad" -keywords="weather" 2upload\2011-11-03_SuckyWeather.png
+
+exiftool.exe -q -ImageDescription="Power settings when the lid is closed" -keywords="power management" 2upload\2011-11-02_WhenClosingTheLid.png
+
+exiftool.exe -q -ImageDescription="Yes, it's in HKD, but I still don't shit gold" -keywords="wifi" 2upload\2011-10-28_IDontShitGold.png
+
+exiftool.exe -q -ImageDescription="People in middle earth don't test their app extensively" -keywords="barf" 2upload\2011-10-24_AppMalfunction.jpg
+
+exiftool.exe -q -ImageDescription="Breakfast at HKG, need to get used to the more delicious but smaller portion food" -keywords="breakfast" 2upload\2011-10-20_2BreakfastAtHKG.jpg
+
+exiftool.exe -q -ImageDescription="Close to HKG" -keywords="CX873" 2upload\2011-10-20_1SomewhereOverPacific.jpg
+
+exiftool.exe -q -ImageDescription="The latest exhibition in SFO" -keywords="SFO" -keywords="Medrano Ceramics" 2upload\2011-10-19_3MedranoCeramics.JPG
+
+exiftool.exe -q -ImageDescription="Last lunch in USA for the month of Oct" -keywords="lunch" 2upload\2011-10-19_2LastLunchInUSA.JPG
+
+exiftool.exe -q -ImageDescription="Coffee break with amaretto" -keywords="break" -keywords="amaretto" 2upload\2011-10-19_1Amaretto.JPG
+
+exiftool.exe -q -ImageDescription="My emergency potable water system: bleach and nylon stocking, just in case" -keywords="bleach" 2upload\2011-10-18_3EmergencyPotableWaterSystem.JPG
+
+exiftool.exe -q -ImageDescription="The new configuration to survive China" -keywords="gadgets" 2upload\2011-10-18_2SurvivingChina.JPG
+
+"exiftool(-k).exe" -ImageDescription="rigged for the trip" 2upload\2011-10-18_1Standing.JPG
+
+"exiftool(-k).exe" 2upload\2011-10-17_LX5.JPG > 2upload\2011-10-17_LX5.EXIF.mod.txt
+
+"exiftool(-k).exe" -ImageDescription="It has arrived!" 2upload\2011-10-17_LX5.JPG
+
+"exiftool(-k).exe" 2upload\2011-10-17_LX5.JPG > 2upload\2011-10-17_LX5.EXIF.original.txt
+
+
+[montage]
+
+http://www.imagemagick.org/script/binary-releases.php
+http://www.imagemagick.org/download/binaries/ImageMagick-6.7.4-0-Q16-windows-dll.exe
+http://www.imagemagick.org/script/montage.php
+http://www.imagemagick.org/Usage/montage/
+
+montage -background #336699 -tile 1x2 -geometry +0+0 IMG_00000003.jpg IMG_00000005.jpg 2011-12-12_BBPlaybookNewsApp.jpg
+
+montage -background #336699 -tile 1x2 -geometry +0+0 IMG_00000008.jpg IMG_00000007.jpg 2011-12-16_BBPlaybookNoSMB.jpg
+
+
+[tag]
+
+http://www.flickr.com/groups/exiftool/discuss/72157603356128202/
+
+Here's what I've found today. To add a description, use the "Image Description" tag (plain "description" doesn't do it), newlines are okay:
+
+exiftool -ImageDescription='text here' IMAGE
+
+To add flickr tags, use one "keywords" tag each:
+
+exiftool -keywords="Multi Word Keyword" -keywords="another keyword" IMAGE
+
+If the keywords contain double-quotes ("), flickr will strip them out.
+
+The Model tag gets used to populate the "Taken with " info:
+
+exiftool -Model="My Special Camera 17MP"
+
+Of the eight or so date tags, just plain "Date" seems to be the one to use:
+
+exiftool -Date="2006:04:16 12:53:24" IMAGE 
+
