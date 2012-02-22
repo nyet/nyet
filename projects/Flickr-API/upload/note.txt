@@ -1,20 +1,95 @@
 montage -background #336699 -tile 2x2 -geometry +2+2 src1 trg1
 
-exiftool.exe -q -ImageDescription="" -keywords="" "2upload\
-
 WIYB
 
+exiftool.exe -q -ImageDescription="" -keywords="" "2upload\"
+
+exiftool.exe -q -ImageDescription="" -keywords="" "2upload\"
+
+exiftool.exe -q -ImageDescription="" -keywords="" "2upload\"
+
+exiftool.exe -q -ImageDescription="" -keywords="" "2upload\"
+
+exiftool.exe -q -ImageDescription="" -keywords="" "2upload\"
+
+exiftool.exe -q -ImageDescription="" -keywords="" "2upload\"
+
+exiftool.exe -q -ImageDescription="Spring is near" -keywords="cherry blossom" -keywords="saratoga" "2upload\2012-02-11_CherryBlossom.jpg"
+
+exiftool.exe -q -ImageDescription="Tomi @ Mt View" -keywords="food" -keywords="unagi" -keywords="tamago" "2upload\2012-02-06_TomiMtView.jpg"
+
+exiftool.exe -q -ImageDescription="Hangout @ Spicy Town" -keywords="hangout" "2upload\2012-02-10_2SpicyTown.JPG"
+
+exiftool.exe -q -ImageDescription="New batch of joe" -keywords="coffee" "2upload\2012-02-10_1MajorDickason.JPG"
+
+exiftool.exe -q -ImageDescription="Broccoli" -keywords="Broccoli" -keywords="food" "2upload\2012-02-07_Broccoli.JPG"
+
+exiftool.exe -q -ImageDescription="The bakers and the cake" -keywords="baker" "2upload\2012-02-05_TehBakers.JPG"
+
+exiftool.exe -q -ImageDescription="Sunset" -keywords="hiking" -keywords="mission peak" -keywords="sunset" "2upload\2012-02-04_2BigBallOfFire.JPG"
+
+exiftool.exe -q -ImageDescription="Tomato, macaroni, sausage and cheese" -keywords="breakfast" "2upload\2012-02-04_1HardyBreakfast.JPG"
+
+exiftool.exe -q -ImageDescription="Tulips are in season again" -keywords="Tulip" "2upload\2012-02-03_2Tulips.JPG"
+
+exiftool.exe -q -ImageDescription="Broke 1, bought 2 new ones" -keywords="Bowl" "2upload\2012-02-03_1ReplacementBowl.JPG"
+
+exiftool.exe -q -ImageDescription="Japanese Yam" -keywords="food" "2upload\2012-02-01_JapaneseYam.JPG"
+
+exiftool.exe -q -ImageDescription="Up the hill again" -keywords="hiking" -keywords="mission peak" "2upload\2012-01-31_Hiking.JPG"
+
+exiftool.exe -q -ImageDescription="Before starting the engine" -keywords="orange" "2upload\2012-01-30_Orange.JPG"
+
+exiftool.exe -q -ImageDescription="Pruned chocolates" -keywords="chocolate" -keywords="food" "2upload\2012-01-29_RelicFromLastYear.JPG"
+
+exiftool.exe -q -ImageDescription="Finished the aborted hike from yesterday" -keywords="mission peak" -keywords="hiking" "2upload\2012-01-28_MissionPeak.JPG"
+
+exiftool.exe -q -ImageDescription="Night hike @ Mission Peak" -keywords="mission peak" -keywords="hiking" "2upload\2012-01-27_2NightHike.JPG"
+
+exiftool.exe -q -ImageDescription="Healthy food, hard to swallow food" -keywords="Broccoli" -keywords="food" "2upload\2012-01-27_Broccoli (Original).JPG"
+exiftool.exe -q -ImageDescription="Healthy food, hard to swallow food" -keywords="Broccoli" -keywords="food" "2upload\2012-01-27_Broccoli.JPG"
+
+exiftool.exe -q -ImageDescription="Wash" -keywords="wash" "2upload\2012-01-26_Wash (Original).JPG"
+exiftool.exe -q -ImageDescription="Wash" -keywords="wash" "2upload\2012-01-26_Wash.JPG"
+
+exiftool.exe -q -ImageDescription="Nom nom pasta" -keywords="pasta" -keywords="food" "2upload\2012-01-25_2Pasta (Original).JPG"
+exiftool.exe -q -ImageDescription="Nom nom pasta" -keywords="pasta" -keywords="food" "2upload\2012-01-25_2Pasta.JPG"
+
+exiftool.exe -q -ImageDescription="Servicing the old typewriter" -keywords="typewriter" "2upload\2012-01-25_1Typewriter (Original).JPG"
+exiftool.exe -q -ImageDescription="Servicing the old typewriter" -keywords="typewriter" "2upload\2012-01-25_1Typewriter.JPG"
+
+exiftool.exe -q -ImageDescription="Pose before going to work" -keywords="work" "2upload\2012-01-24_Work (Original).JPG"
+exiftool.exe -q -ImageDescription="Pose before going to work" -keywords="work" "2upload\2012-01-24_Work.JPG"
+
+exiftool.exe -q -ImageDescription="Flavoured coffee..." -keywords="Tortuga" -keywords="Coffee" -keywords="food"  "2upload\2012-01-23_2NewBatchForTomorrow (Original).JPG"
+exiftool.exe -q -ImageDescription="Flavoured coffee..." -keywords="Tortuga" -keywords="Coffee" -keywords="food"  "2upload\2012-01-23_2NewBatchForTomorrow.JPG"
+
+exiftool.exe -q -ImageDescription="The last batch" -keywords="Coffee" -keywords="uzuri" -keywords="food" "2upload\2012-01-23_1LastOfTheUzuri (Original).JPG"
+exiftool.exe -q -ImageDescription="The last batch" -keywords="Coffee" -keywords="uzuri" -keywords="food" "2upload\2012-01-23_1LastOfTheUzuri.JPG"
+
+exiftool.exe -q -ImageDescription="Morning Acrobat" -keywords="juggle" "2upload\2012-01-22_MorningAcrobat (Original).JPG"
+exiftool.exe -q -ImageDescription="Morning Acrobat" -keywords="juggle" "2upload\uploaded\2012-01-22_MorningAcrobat.JPG"
+
+exiftool.exe -q -ImageDescription="Beesting Cake" -keywords="Bienenstich" -keywords="esther's bakery" -keywords="pastries" -keywords="food" "2upload\2012-01-21_Bienenstich (Original).JPG"
+exiftool.exe -q -ImageDescription="Beesting Cake" -keywords="Bienenstich" -keywords="esther's bakery" -keywords="pastries" -keywords="food" "2upload\uploaded\2012-01-21_Bienenstich.JPG"
+
 exiftool.exe -q -ImageDescription="Burritos" -keywords="La Bamba" "2upload\2012-01-20_LaBamba (Original).JPG"
+exiftool.exe -q -ImageDescription="Burritos" -keywords="La Bamba" "2upload\uploaded\2012-01-20_LaBamba.JPG"
 
 exiftool.exe -q -ImageDescription="Hot Japanese Yam" -keywords="yam" "2upload\2012-01-19_JapaneseYam (Original).JPG"
+exiftool.exe -q -ImageDescription="Hot Japanese Yam" -keywords="yam" "2upload\uploaded\2012-01-19_JapaneseYam.JPG"
 
 exiftool.exe -q -ImageDescription="This week is becoming a hotpot week (super cold week)" -keywords="hotpot" "2upload\2012-01-18_HotpotWeek (Original).JPG"
+exiftool.exe -q -ImageDescription="This week is becoming a hotpot week (super cold week)" -keywords="hotpot" "2upload\uploaded\2012-01-18_HotpotWeek.JPG"
 
 exiftool.exe -q -ImageDescription="Hotpot for lunch and dinner :D" -keywords="hotpot" "2upload\2012-01-16_HotpotDay (Original).JPG"
+exiftool.exe -q -ImageDescription="Hotpot for lunch and dinner :D" -keywords="hotpot" "2upload\uploaded\2012-01-16_HotpotDay.JPG"
 
 exiftool.exe -q -ImageDescription="Someone sabotaged the stove, so pizza it's" -keywords="pizza" "2upload\2012-01-15_Pizza (Original).JPG"
+exiftool.exe -q -ImageDescription="Someone sabotaged the stove, so pizza it's" -keywords="pizza" "2upload\uploaded\2012-01-15_Pizza.JPG"
 
 exiftool.exe -q -ImageDescription="1 wk before Lunar New Year" -keywords="Chinatown" "2upload\2012-01-14_HairCutAndChinatown (Original).JPG"
+exiftool.exe -q -ImageDescription="1 wk before Lunar New Year" -keywords="Chinatown" "2upload\uploaded\2012-01-14_HairCutAndChinatown.JPG"
 
 exiftool.exe -q -ImageDescription="52mm step up to 62mm filter has arrived" -keywords="adapter" -keywords="filter" 2upload\2012-01-13_FilterAdapter.JPG
 
