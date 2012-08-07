@@ -8,11 +8,65 @@ exiftool.exe -q -ImageDescription="" -keywords="" "2upload\"
 
 exiftool.exe -q -ImageDescription="" -keywords="" "2upload\"
 
-exiftool.exe -q -ImageDescription="" -keywords="" "2upload\"
+montage -geometry +1+1 P1030294.jpg P1030299.jpg P1030306.jpg AmericanLamb.jpg
 
-exiftool.exe -q -ImageDescription="" -keywords="" "2upload\"
+exiftool.exe -q -ImageDescription="Hiking @ Garrapata State Park" -keywords="garrapata state park" -keywords="hiking" "2upload\2012-03-10_Garrapata.JPG"
 
-exiftool.exe -q -ImageDescription="" -keywords="" "2upload\"
+exiftool.exe -q -ImageDescription="Peet's French Toast" -keywords="coffee" -keywords="food" "2upload\2012-03-14_NewBatchOfJoe.JPG"
+
+exiftool.exe -q -ImageDescription="Not enough devices" -keywords="gadgets" "2upload\2012-03-08_NotEnoughDevices.JPG"
+
+exiftool.exe -q -ImageDescription="New moka pot, prefer this over buying new gasket" -keywords="moka pot" "2upload\2012-03-12_MokaPot.JPG"
+
+exiftool.exe -q -ImageDescription="Spaghetti aglio, olio e peperoncino with sunny side up egg" -keywords="pasta" -keywords="food" "2upload\2012-03-07_Pasta.JPG"
+
+exiftool.exe -q -ImageDescription="Research" -keywords="joy" "2upload\2012-03-01_ResearchingJoy.JPG"
+
+exiftool.exe -q -ImageDescription="Catching up on work" -keywords="work" "2upload\2012-02-27_Madol.JPG"
+
+exiftool.exe -q -ImageDescription="Nothing to do this leap day" -keywords="leap day" "2upload\2012-02-29_Walnut.JPG"
+
+exiftool.exe -q -ImageDescription="Coffee place" -keywords="coffee" "2upload\2012-03-02_KopiTiam.jpg"
+
+exiftool.exe -q -ImageDescription="SQLSat109/Keynote" -keywords="SQLSat109" "2upload\2012-03-03_SQLSat109.JPG"
+
+exiftool.exe -q -ImageDescription="Avocado done right :D" -keywords="Avocado" "2upload\2012-02-26_2Avocado.JPG"
+
+exiftool.exe -q -ImageDescription="Testing the torch" -keywords="torch" "2upload\2012-02-11_2Testing.JPG"
+
+exiftool.exe -q -ImageDescription="Big prawn" -keywords="food" "2upload\2012-02-21_Food.JPG"
+
+exiftool.exe -q -ImageDescription="avocado + lime = bad stuff" -keywords="avocado" "2upload\2012-02-15_BadInvention.JPG"
+
+exiftool.exe -q -ImageDescription="New shoes" -keywords="Shoes" "2upload\2012-02-19_Merrell.JPG"
+
+exiftool.exe -q -ImageDescription="Chicken rice shack in downtown SJ" -keywords="food" "2upload\2012-02-18_3ComGaNamAn.JPG"
+
+exiftool.exe -q -ImageDescription="99 chicken" -keywords="food" "2upload\2012-02-17_99Chicken.jpg"
+
+exiftool.exe -q -ImageDescription="Valentine Dinner" -keywords="valentine" "2upload\2012-02-14_Valentine.jpg"
+
+exiftool.exe -q -ImageDescription="Pork with preserved vegetable" -keywords="pork" -keywords="joy" "2upload\2012-03-03_Joy.JPG"
+
+exiftool.exe -q -ImageDescription="Hiking @ Windy Hill" -keywords="windy hill" -keywords="hiking" "2upload\2012-02-26_WindyHill.JPG"
+
+exiftool.exe -q -ImageDescription="Sunset from the peak"  -keywords="Mission Peak" -keywords="hiking" "2upload\2012-02-19_MissionPeak.JPG"
+
+exiftool.exe -q -ImageDescription="Hike up the Peak again" -keywords="Mission Peak" -keywords="hiking" "2upload\2012-02-12_MissionPeak.JPG"
+
+exiftool.exe -q -ImageDescription="Night hike @ Mission Peak" -keywords="Mission Peak" -keywords="hiking" "2upload\2012-02-09_MissionPeak.JPG"
+
+exiftool.exe -q -ImageDescription="White Tulips" -keywords="tulip" "2upload\2012-02-18_Tulips.JPG"
+
+exiftool.exe -q -ImageDescription="Esther's Poppy Seed Strudle" -keywords="esther" "2upload\2012-02-25_PoppySeedStrudle.JPG"
+
+exiftool.exe -q -ImageDescription="Kitchen duty, sorting spices" -keywords="kitchen" "2upload\2012-02-24_Stool.JPG"
+
+exiftool.exe -q -ImageDescription="Testing the new tripod, to see if it's stable enough for D90 + Tamron 18-200mm" -keywords="tripod" "2upload\2012-02-22_NewTripodForD90.JPG"
+
+exiftool.exe -q -ImageDescription="Hiking @ Stanford Dish Trail" -keywords="stanford dish" -keywords="hiking" "2upload\2012-02-20_StanfordDish.JPG"
+
+exiftool.exe -q -ImageDescription="My first SSD, love it" -keywords="ssd" "2upload\2012-02-13_SSD.jpg"
 
 exiftool.exe -q -ImageDescription="Spring is near" -keywords="cherry blossom" -keywords="saratoga" "2upload\2012-02-11_CherryBlossom.jpg"
 

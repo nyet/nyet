@@ -1,0 +1,31 @@
+http://www.activexperts.com/admin/scripts/wmi/vbscript/0366/
+
+http://support.microsoft.com/default.aspx?scid=kb;en-us;306852 
+DOC: WMI: Win32_TemperatureProbe.CurrentReading Is Not Populated
+
+http://social.msdn.microsoft.com/forums/en-US/vblanguage/thread/18ce0701-e87d-4414-a8b5-8be3908a21b8/
+
+http://social.msdn.microsoft.com/forums/en-US/vblanguage/thread/19520825-b1fc-4778-8704-c492124bc029/
+
+http://blog.commandlinekungfu.com/2010_05_01_archive.html
+
+Run cmd as admin
+
+wmic /namespace:\\root\wmi PATH MSAcpi_ThermalZoneTemperature get CurrentTemperature
+
+CurrentTemperature
+3412
+
+
+PS C:\> (((Get-WmiObject -class "MSAcpi_ThermalZoneTemperature" -Namespace "root\WMI").CurrentTemperature / 10 - 233.15) * 9 / 5) - 40
+124.79
+
+X201
+
+ Intel(R) Core(TM) i7 CPU       M 620  @ 2.67GHz
+ Intel64 Family 6 Model 37 Stepping 5
+
+http://ark.intel.com/products/43560/Intel-Core-i7-620M-Processor-(4M-Cache-2_66-GHz)
+
+http://www.cpu-world.com/CPUs/Core_i7/Intel-Core%20i7%20Mobile%20I7-620M%20CP80617003981AH.html
+0°C - 105°C
