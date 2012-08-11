@@ -4,8 +4,13 @@ use Data::Dumper;
 use CPAN;
 use YAML::XS;
 use File::Path;
-
+use Cwd;
+#Can not open Perl5.16.0_64/I/IL/ILYAZ/modules/FreezeThaw-0.5001.tar.gz.txt at deps.pl line 271.
+#                                      ^       
+#                                      |- additional directory
 my $platform = 'Perl5.16.0_64';
+
+my $currDir = getcwd; #CPAN causes the current dir to change, use cwd.
 
 #get lib core folder
 (my $perlInstallDir = $^X) =~ s/[\\\/]bin[\\\/]perl.exe//;	#C:\CPANTesters\Perl5.16.0_64\bin\perl.exe
@@ -22,9 +27,8 @@ my $libCoreDir = "$perlInstallDir\\lib";
 my $mod = 'Catalyst::Action::Wizard';
 my $mod = 'App::RabbitTail';
 my $mod = 'Task::BeLike::LESPEA';
-my $mod = 'App::Mimosa';
+my $mod = 'App::Mimosa';						# borked.
 #my $mod = '';
-
 
 my $dependencies;
 my $modules_scanned = {};
@@ -65,7 +69,7 @@ sub getDeps {
 	print "deps1:".Dumper $deps;
 	my $lt = time;
 	(my $logFileName = $module) =~ s/\W/_/g; 
-	open my $LOG, ">$0-$logFileName-$lt.log" or die "Can not open $0-$logFileName-$lt.log";
+	open my $LOG, ">$currDir/$0-$logFileName-$lt.log" or die "Can not open $0-$logFileName-$lt.log";
 	say {$LOG} "perlInstallDir: $perlInstallDir";
 	say {$LOG} "libCoreDir: $libCoreDir";
 	say {$LOG} "module: $module";
@@ -262,10 +266,10 @@ sub getDeps {
 	
 	print {$LOG} "	deps:".Dumper($deps);
 	print        "	$moduleName:deps5:".Dumper($deps);
-	if (!-d "$platform/$dir1/$dir2/$cpanid") {
-		mkpath("$platform/$dir1/$dir2/$cpanid");
+	if (!-d "$currDir/$platform/$dir1/$dir2/$cpanid") {
+		mkpath("$currDir/$platform/$dir1/$dir2/$cpanid");
 	}
-	open YML, ">$platform/$dir1/$dir2/$module.txt" or die "Can not open $platform/$dir1/$dir2/$module.txt";
+	open YML, ">$currDir/$platform/$dir1/$dir2/$module.txt" or die "Can not open $platform/$dir1/$dir2/$module.txt";
 	print YML Dump($deps);
 	close YML;
 	
