@@ -2,12 +2,12 @@ use strict;
 use v5.10.1;
 use Data::Dumper;
 use CPAN;
+use LWP::UserAgent;
 use YAML::XS;
+use File::Basename;
 use File::Path;
 use Cwd;
-#Can not open Perl5.16.0_64/I/IL/ILYAZ/modules/FreezeThaw-0.5001.tar.gz.txt at deps.pl line 271.
-#                                      ^       
-#                                      |- additional directory
+
 my $platform = 'Perl5.16.0_64';
 
 my $currDir = getcwd; #CPAN causes the current dir to change, use cwd.
@@ -16,18 +16,27 @@ my $currDir = getcwd; #CPAN causes the current dir to change, use cwd.
 (my $perlInstallDir = $^X) =~ s/[\\\/]bin[\\\/]perl.exe//;	#C:\CPANTesters\Perl5.16.0_64\bin\perl.exe
 my $libCoreDir = "$perlInstallDir\\lib";
 
-#my $mod = 'MooseX::Types::Moose';
-#my $mod = 'PHAYLON/MooseX-Types-0.34.tar.gz';
-#my $mod = 'Elastic::Model';
-#my $mod = 'HTML::Tested::JavaScript';
-#my $mod = 'Juno'; #-> Invalid version format (version required) at C:\CPANTesters\Perl5.16.0_64\site\lib/strictures.pm line 21.
-#my $mod = 'App::EvalServer'; -> POE cause infinite loop dependencies.
-#my $mod = 'Perinci'; #-> borked.
-#my $mod = 'Plack';
-my $mod = 'Catalyst::Action::Wizard';
-my $mod = 'App::RabbitTail';
-my $mod = 'Task::BeLike::LESPEA';
-my $mod = 'App::Mimosa';						# borked.
+# test:
+#my $mod = 'FreezeThaw';
+#   Can not open Perl5.16.0_64/I/IL/ILYAZ/modules/FreezeThaw-0.5001.tar.gz.txt at deps.pl line 271.
+#                                         ^       
+#                                         |- additional directory
+#my $mod = 'Task::BeLike::LESPEA';
+#   Warning: 362 subroutine calls had negative time! The clock being used (-1) is probably unstable, so the results will be as well.
+#   This is ok.
+#my $mod = 'HTML::Tested::JavaScript'; 
+#   Invalid version format (version required) at C:\CPANTesters\Perl5.16.0_64\site\lib/strictures.pm line 21.
+#   2012/08/12: the error msg above is not reproduced anymore.
+#my $mod = 'App::EvalServer';  
+#   POE cause infinite loop dependencies.
+#   2012/08/12: fixed.
+#my $mod = 'App::RabbitTail';										# OK
+#my $mod = 'Perinci'; 												# OK 
+#TODO: Find mod that doesn't have Meta.YML
+################################################################################
+#notes:
+#my $mod = 'Test::Fork';
+# -> This is ok: Could not read metadata file. Falling back to other methods to determine prerequisites
 #my $mod = '';
 
 my $dependencies;
@@ -110,8 +119,26 @@ sub getDeps {
 	my $file = "C:/CPANTesters/cpan/sources/authors/id/$dir1/$dir2/$module";
 	say "	file: $file";
 	if (!-f $file) {
-		CPAN::Shell->get($module);
-		say {$LOG} "	CPAN::Shell->get($module)";
+		#CPAN::Shell->get($module); #Don't use this: http://stackoverflow.com/questions/11926684/any-idea-why-cpan-is-locked-in-circular-dependencies-although-i-only-issue-get/
+		#say {$LOG} "	CPAN::Shell->get($module)";
+		
+		my $ua = LWP::UserAgent->new;
+		$ua->agent("FetchAlaNyet/0.1");
+		my $req = HTTP::Request->new(GET => "cpan:modules/by-authors/id/$dir1/$dir2/$module");
+		my $res = $ua->request($req);
+		if ($res->is_success) {
+			mkpath(dirname($file)) if !-d dirname($file);
+			open my $DISTRO, ">", $file or die "Can not open $file";
+			binmode $DISTRO;
+			print {$DISTRO} $res->content;
+			close $DISTRO;
+		}
+		else {
+			say {$LOG} "	ERROR: failed fetching $module, stat: ".$res->status_line;
+			close $LOG;
+			die $res->status_line;
+		}
+		say {$LOG} "	fetched $module -> $file";
 	}
 	else {
 		say {$LOG} "	file($file) exists";
@@ -266,10 +293,11 @@ sub getDeps {
 	
 	print {$LOG} "	deps:".Dumper($deps);
 	print        "	$moduleName:deps5:".Dumper($deps);
-	if (!-d "$currDir/$platform/$dir1/$dir2/$cpanid") {
-		mkpath("$currDir/$platform/$dir1/$dir2/$cpanid");
+	my $ymlDumpFile = "$currDir/$platform/$dir1/$dir2/$module.txt";
+	if (!-d dirname($ymlDumpFile)) {
+		mkpath(dirname($ymlDumpFile));
 	}
-	open YML, ">$currDir/$platform/$dir1/$dir2/$module.txt" or die "Can not open $platform/$dir1/$dir2/$module.txt";
+	open YML, ">$ymlDumpFile" or die "Can not open $ymlDumpFile";
 	print YML Dump($deps);
 	close YML;
 	
