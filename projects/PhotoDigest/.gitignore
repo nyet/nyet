@@ -1,0 +1,7 @@
+*.conf
+*.ini
+*.lnk
+*.log
+*.xml
+*~
+*/
