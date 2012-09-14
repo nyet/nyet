@@ -196,3 +196,19 @@ C:\CPANTesters\temp_metabase\trace_1send.pl.lsusanto-h2.P5.12.4.normalized.txt
 >> PERL/lib/Socket.pm:4: $VERSION = "1.87_01";
 
 
+wget -p -k -H --user-agent="Mozilla/5.0 (Linux; U; Android 0.5; en-us) AppleWebKit/522+ (KHTML, like Gecko) Safari/419.3" http://gnuwin32.sourceforge.net/packages.html
+wget/gnuwin32.sourceforge.net/packages.html
+
+
+asciichart.htm
+[nothing here]
+wget -p -k -H --user-agent="Mozilla/5.0 (Linux; U; Android 0.5; en-us) AppleWebKit/522+ (KHTML, like Gecko) Safari/419.3" http://gnuwin32.sourceforge.net/packages/asciichart.htm
+
+
+barcode.htm
+[Binaries, Dependencies, Developer files, Documentation, Sources]
+wget -p -k -H --user-agent="Mozilla/5.0 (Linux; U; Android 0.5; en-us) AppleWebKit/522+ (KHTML, like Gecko) Safari/419.3" http://gnuwin32.sourceforge.net/packages/barcode.htm
+
+zlib.htm
+[Binaries, Developer files, Documentation, Sources] => zip files
+http://gnuwin32.sourceforge.net/packages/zlib.htm
