@@ -1,3 +1,8 @@
+
+
+CDCSLRGNAPP01-T
+
+
 10.212.61.180	DDCSLRCTRL01A-T
 10.212.61.181	DDCSLRGEN01A-T
 10.212.61.182	DDCSLRGEN01B-T
@@ -30,15 +35,33 @@ some LR pref authentication changes-> not helping. win 12002 error still happens
 Set both to no minimum: -> 12002 error count is cut.
 	Network security: Minimum session security for NTLM SSP based (including secure RPC) clients
 	Network security: Minimum session security for NTLM SSP based (including secure RPC) servers
+	set secpol.msc
 enable iphlpsvc -> LR11 is full ipv6 compliant.
+	bcdedit /set nx AlwaysOff
 
+	need to hack the host file.
 
-
+	install Load Generator Patch1 Critical Update on DDCSLRGEN01B-T
 
 	some reading
 	NTLM and Kerberos within Windows 7, Windows Server 2008	http://www.icranium.com/blog/?p=1218
 
+These steps seems to fix Win12002 for C and D on TW project
+	host file hack.
+	disable DEP
+	install Load Generator Patch1 Critical Update
 
+
+
+C:\Windows\System32\drivers\etc\hosts
+\\DDCSLRGEN01A-T\C$\Windows\System32\drivers\etc\hosts
+
+\\jaxdevstorage\Software\MercuryInteractive\LR 11.50
+Load Generator Patch1 Critical Update
+
+http://blogs.technet.com/b/fdcc/archive/2008/05/07/lgpo-utilities.aspx
+C:\Users\vmuser\Desktop\New folder (2)
+Set_FDCC_LGPO.exe /Sec /log Set_FDCC_LGPO.log /error Set_FDCC_LGPO.error.log 
 
 sc \\DDCSLRCTRL01A-T config "Spooler" start= disabled
 sc \\DDCSLRGEN01A-T config "Spooler" start= disabled
@@ -65,6 +88,27 @@ Departing Dryden on the morning of September 20, NASA 905 with Endeavour will he
 http://www.nasa.gov/centers/ames/news/releases/2012/M12-64.html
 
 Libyan mob kills US ambassador from California
+
+
+Mt Shasta
+1. Irwan
+2. Leo
+3. Ida
+4. Vera 
+5. Alwin
+6. Silvia
+7. Hoe Hin
+8. Joanna
+9. Lieman
+10. Nanik
+
+
+
+
+
+
+
+
 
 subhendu.mangaraj@fnfindia.co.in
 SubhenduMangarajStatus
@@ -212,3 +256,273 @@ wget -p -k -H --user-agent="Mozilla/5.0 (Linux; U; Android 0.5; en-us) AppleWebK
 zlib.htm
 [Binaries, Developer files, Documentation, Sources] => zip files
 http://gnuwin32.sourceforge.net/packages/zlib.htm
+
+
+##############################	
+TODO:lsusanto-m3v1@C:\PerformanceTest\CommerceVelocity\CV\TestResults is  1.8GB - trim
+
+##############################	
+communicator is not working anymore
+##############################	
+
+
+
+
+Impact script
+  1. private void Impact_Login() -> no change
+  2. _testContext.BeginTimer("Impact_RequestNewFile");
+	deleting Statement111(); - Statement130();
+  3. _testContext.BeginTimer("Impact_SelectUnderwriter");
+	old: Statement131(); - Statement144(); //[dbo].[isp_ReleaseLock]
+	new: Statement111(); - Statement114();
+  4. _testContext.BeginTimer("Impact_DoNotCreateReceipt");
+	old: Statement145(); - Statement162();
+	new: Statement115(); - Statement123();
+  too lazy to catalog
+
+  5. _testContext.BeginTimer("Impact_NextToTitleInformation");
+	old: Statement285(); - Statement292();
+	new: Statement230(); - Statement231();
+  6. _testContext.BeginTimer("Impact_NextToPrelimDistributionList");
+	old: Statement293(); - Statement305();
+	new: Statement232(); - Statement238();
+  7. _testContext.BeginTimer("Impact_NextToOrderTitleSearch");
+	old: Statement306(); - Statement313();
+	new: Statement239(); - Statement311();
+
+private void Statement24()
+private void Statement31()
+private void Statement64()
+private void Statement73()
+	@RETURN_VALUE = [dbo].[Isp_AddHistoryUpdated]
+private void Statement83()
+	UPDATE [dbo].[Escmst_Escrow]
+private void Statement84()
+	Tbl_Esc_Auto_Ticklers 
+private void Statement112()
+private void Statement110()
+private void Statement312()	-> possible: private void Statement976()
+	"UPDATE [dbo].[Escmst_Escrow]	
+private void Statement322()
+	@"UPDATE [dbo].[Escmst_Escrow]
+private void Statement324()
+	FROM [dbo].[NameXrf] AS [t0]
+private void Statement347()
+	SELECT * FROM Tbl_Esc_Auto_Ticklers WHERE
+private void Statement419() ->         private void Statement565()
+private void Statement465()
+	@"SELECT [t0].[No] AS [FileNumber], [t0].[Ldg_Bal] 
+private void Statement466()
+	@RETURN_VALUE = [dbo].[isp_ObtainLock]
+private void Statement515()
+private void Statement671()
+private void Statement700()
+
+
+5B0217	newOrderNumber
+
+TODO
+private void Statement309() -> work on diff
+private void Statement329() -> diff with new version
+	UPDATE [Marketing_Escrow] SET [Search_Ordered_By]
+private void Statement346() -> diff with new version
+	@"UPDATE [dbo].[Escmst_Escrow]
+private void Statement353() -> diff with new version
+	@"UPDATE [dbo].[Escmst_Escrow]
+private void Statement360() -> diff with new version
+	@"UPDATE [dbo].[Escmst_Escrow]
+private void Statement368() -> diff with new version
+Statement424 -> what is this?
+private void Statement477()
+	Statement594();
+private void Statement601()
+	"Deposit_Ticket_Number""='000000000001539'
+private void Statement647()
+	Nullable<SqlGuid> p0 = new Guid("8f90ffca-59d0-11e1-b354-005056850035");
+
+
+
+
+FNF_QA_TEST_DATAsp_stored_procedures5()
+FNF_QA_TEST_Datasp_stored_procedures5()
+
+
+##############################	
+1. our team can see the page (doouble authentication?)
+
+go through the modules in http://win32.perl.org/wiki/index.php?title=Vanilla_Perl_Problem_Modules 
+and write it up
+
+
+FIXING Impact Script:
+
+I fixed the county, apparently I need to change the .class:  USADSI.UI.Common.NewLookupCommonInfo`1[[USADSI.Root.Data.County, USADSI.Root, Version=8.0.119.0, Culture=neutral, PublicKeyToken=null]]
+
+C:\FT\Impact\Modules\OpenOrder\PrelimDistributionList.xls
+Escrow -> Deposit Slips -> Check All -> checkbox (chkSelectAll)
+
+Impact	Escrow -> New Entry -> window	focus			|SKIP|
+Transaction: NextToOrderTitleSearch	Impact		type			%f
+
+
+############################
+every monday
+
+C:\Documents and Settings\lsusanto\Desktop\WILY CEM weeklydata
+
+> perl getWeeklyDat
+a.pl
+year: 2012
+year: 2
+week: 9
+
+> perl ALL_AJAX_HTML.pl AJAX-Y2012-W8.csv
+
+> perl ALL_POST_HTML.pl POST-Y2012-W8.csv
+
+edit trend.pl 
+ time stamp sunday.
+
+> perl trend.pl
+
+meeting w Karthik monday.
+
+doc on foswiki
+############################
+
+
+
+Foswiki register everybody: 
+	http://qaweb-jax01:8080/foswiki/bin/view/System/UserRegistration
+	PeterKelly		Peter.Kelly@fnf.com
+	Daniel Wells	
+	Craig Rapin
+	Wei Zhang
+	KarthikeyanKandasamy 	[karthikeyan.kandasamy@fnfindia.co.in]
+	In Yung Phang 		InYung.Phang@fnf.com
+	AndrewPham
+	SusanTyszkiewicz
+	JonathanHorowitz	Jonathan.Horowitz@fnf.com
+	CatherineHung		Catherine.Hung@fnf.com
+	YumyMorris		Yumy.Morris@fnf.com
+	MayraLemus		Mayra.Lemus@fnf.com
+	QaScript		qascript@fnf.com
+	Password: sqapassword
+	You can change it by visiting this page: http://qaweb-jax01:8080/foswiki/bin/view/System/ChangePassword
+
+	http://qaweb-jax01:8080/foswiki/bin/view/Main/WikiGroups
+
+   * Set USERSTYLEURL = %PUBURLPATH%/%SYSTEMWEB%/FnfCustomCss/hideEditButton.css
+
+Main.Work.Status.Perf
+Main.Work.Status.Auto
+Main.Work.Status.SNATesters
+http://localhost/foswiki/bin/view/Main/Work/Status/Auto/WeiZhangStatus
+http://localhost/foswiki/bin/view/Main/Work/Status/Perf/DanielWellsStatus
+http://localhost/foswiki/bin/view/Main/Work/Status/Perf/LeoSusantoStatus
+http://localhost/foswiki/bin/view/Main/Work/Status/Perf/TeamStatusGend
+
+
+<!--
+*Permission*:
+   * Set ALLOWTOPICCHANGE = %USERSWEB%.CatherineHung, %USERSWEB%.QAManagerGroup, %USERSWEB%.AdminGroup
+-->
+
+SET ALLOWTOPICCHANGE = QaScript, QAManagerGroup
+
+QAManager
+
+   * [[TeamStatusGend][Performance Team Status Page]]
+
+
+CREATE PDF
+get rid of legend
+
+alsutojo@yahoo.com
+
+
+http://khlo.co.uk/index.php/1404-internet-explorer-javascript-errors
+/foswiki/pub/System/EditRowPlugin/erp.js?version=1.0		(1,6399)
+
+/foswiki/pub/System/JSCalendarContrib/calendar-setup.js		(62)
+
+
+"C:\Program Files\7-Zip\7z.exe" a FoswikiMain-2012-02-28.zip Main
+
+	my $rc = system(qq{"C:\\Program Files\\7-Zip\\7z.exe" a $year-$mon-SearchPerl.zip $year-$mon-SearchPerl\\});
+
+C:\work\projects\tests\smtp.bat
+
+
+
+
+
+##############################	
+http://social.technet.microsoft.com/Forums/en-US/w7itprovirt/thread/44f2c975-de65-4415-b124-c666df00379e
+	
+	Can you please try the following:
+	
+	1.    Ensure that the VM (and may be even vpc.exe) is not running.
+	2.    Go to %LOCALAPPDATA%\Microsoft\Windows Virtual PC\
+	3.    Open Virtual Windows XP.vmc file
+	4.    Go to the <ui_options> tag and add a sub tag:
+	<audio_redirect type="boolean">false</audio_redirect>
+	5.    Start the VM/Virtual Application
+	
+	You may now run your vm with integration features. Please let us know if this works/does not work.
+	##############################
+	Hi ....again :-)
+	
+	Now it works.
+	
+	Found a setting in the .vmc where I changed from false to true:
+	  <sound>
+		<sound_adapter>
+		 <enable type="boolean">true</enable>
+		</sound_adapter>
+	  </sound>
+	
+	I don't get the built in microphone to work (why??), but the microphone in my MS web-cam works.
+	
+##############################	
+http://www.seagate.com/staticfiles/support/downloads/seatools/SeaToolsforWindowsSetup-1206.exe
+
+
+##############################	
+$49.95
+http://www.sierratradingpost.com/komperdell-southern-cross-trekking-poles-pair~p~3124u/?filterString=s~hiking-pole%2F&colorFamily=99
+Weight: 1 lb. 1 oz. pr. = 17oz
+
+$59.95
+http://www.sierratradingpost.com/komperdell-trekking-poles-standard-pair~p~98978/?filterString=s~hiking-pole%2F&colorFamily=99
+Weight: 1 lb. pr.
+
+$82.95
+http://www.sierratradingpost.com/leki-luau-trekking-poles-pair-for-women~p~2785w/?filterString=s~hiking-pole%2F&colorFamily=99
+Weight: 13.8 oz. pr.
+
+$109.95
+http://www.sierratradingpost.com/komperdell-contour-titanal-trekking-poles-anti-shock-pair~p~3124m/?filterString=s~hiking-pole%2F&colorFamily=99
+Weight: 15.8 oz. pr.
+
+$99.95 -<NG
+http://www.sierratradingpost.com/black-diamond-equipment-contour-elliptic-compact-trekking-poles-anti-shock-pair~p~4634w/?filterString=s~hiking-pole%2F&colorFamily=99
+Weight: 1 lb. 8 oz. pair
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
