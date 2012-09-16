@@ -1,5 +1,3 @@
-
-
 CDCSLRGNAPP01-T
 
 
@@ -102,31 +100,14 @@ Mt Shasta
 9. Lieman
 10. Nanik
 
-
-
-
-
-
-
-
-
-subhendu.mangaraj@fnfindia.co.in
-SubhenduMangarajStatus
-SubhenduMangaraj
-password
-
-
-
-NOW PLAYING: Janelle Monae "Tightrope (Feat. Big Boi)"
-NOW PLAYING: Foster The People "Pumped Up Kicks"
-
-
-
-
-
-
-
-
+##############################################
+Order this to go, for Yosemite 8/15:
+RENDANG 
+RED CURRY DUCK
+SOP BUNTUT
+PEPES IKAN
+##############################################
+weather mission peak fremont
 
 Glenwood Estates, Fremont	212 ft	http://www.wunderground.com/cgi-bin/findweather/getForecast?query=94538
 
@@ -135,6 +116,8 @@ http://www.wunderground.com/cgi-bin/findweather/getForecast?query=95035&sp=KCAMI
 
 ##############################################
 
+NOW PLAYING: Janelle Monae "Tightrope (Feat. Big Boi)"
+NOW PLAYING: Foster The People "Pumped Up Kicks"
 
 NOW PLAYING: Robyn "Indestructible"
 
@@ -389,9 +372,6 @@ meeting w Karthik monday.
 
 doc on foswiki
 ############################
-
-
-
 Foswiki register everybody: 
 	http://qaweb-jax01:8080/foswiki/bin/view/System/UserRegistration
 	PeterKelly		Peter.Kelly@fnf.com
@@ -407,7 +387,9 @@ Foswiki register everybody:
 	YumyMorris		Yumy.Morris@fnf.com
 	MayraLemus		Mayra.Lemus@fnf.com
 	QaScript		qascript@fnf.com
-	Password: sqapassword
+	SubhenduMangaraj	subhendu.mangaraj@fnfindia.co.in
+
+	Password: 
 	You can change it by visiting this page: http://qaweb-jax01:8080/foswiki/bin/view/System/ChangePassword
 
 	http://qaweb-jax01:8080/foswiki/bin/view/Main/WikiGroups
@@ -452,11 +434,6 @@ http://khlo.co.uk/index.php/1404-internet-explorer-javascript-errors
 	my $rc = system(qq{"C:\\Program Files\\7-Zip\\7z.exe" a $year-$mon-SearchPerl.zip $year-$mon-SearchPerl\\});
 
 C:\work\projects\tests\smtp.bat
-
-
-
-
-
 ##############################	
 http://social.technet.microsoft.com/Forums/en-US/w7itprovirt/thread/44f2c975-de65-4415-b124-c666df00379e
 	
@@ -488,7 +465,8 @@ http://social.technet.microsoft.com/Forums/en-US/w7itprovirt/thread/44f2c975-de6
 http://www.seagate.com/staticfiles/support/downloads/seatools/SeaToolsforWindowsSetup-1206.exe
 
 
-##############################	
+##############################
+Hiking Poles:
 $49.95
 http://www.sierratradingpost.com/komperdell-southern-cross-trekking-poles-pair~p~3124u/?filterString=s~hiking-pole%2F&colorFamily=99
 Weight: 1 lb. 1 oz. pr. = 17oz
@@ -509,8 +487,14 @@ $99.95 -<NG
 http://www.sierratradingpost.com/black-diamond-equipment-contour-elliptic-compact-trekking-poles-anti-shock-pair~p~4634w/?filterString=s~hiking-pole%2F&colorFamily=99
 Weight: 1 lb. 8 oz. pair
 
+##############################
 
-
+DVD Releases
+2012/10/23	[[http://www.imdb.com/title/tt1307068/][Seeking a Friend for the End of the World (2012)]]
+		[[http://www.imdb.com/title/tt1560747/][The Master (2012)]]
+		[[http://www.imdb.com/title/tt1872818/][Liberal Arts (2012)]]
+		
+http://www.dvdsreleasedates.com/
 
 
 
