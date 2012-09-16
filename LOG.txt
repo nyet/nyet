@@ -115,15 +115,6 @@ http://www.wunderground.com/cgi-bin/findweather/getForecast?query=95035&sp=KCAMI
 
 
 ##############################################
-
-NOW PLAYING: Janelle Monae "Tightrope (Feat. Big Boi)"
-NOW PLAYING: Foster The People "Pumped Up Kicks"
-
-NOW PLAYING: Robyn "Indestructible"
-
-The Supreme Court	DVD 347.7326 S	https://milcat.sunnyvalelibrary.org/record=b1249741~S10
-DUE 02-13-12
-
 28 Palms, Fremont			http://www.wunderground.com/cgi-bin/findweather/getForecast?query=94538
 Niles, Fremont			80 ft	http://www.wunderground.com/cgi-bin/findweather/getForecast?query=94538
 Mt Allison, Milpitas		2600 ft	http://www.wunderground.com/cgi-bin/findweather/getForecast?query=94538
@@ -487,15 +478,49 @@ $99.95 -<NG
 http://www.sierratradingpost.com/black-diamond-equipment-contour-elliptic-compact-trekking-poles-anti-shock-pair~p~4634w/?filterString=s~hiking-pole%2F&colorFamily=99
 Weight: 1 lb. 8 oz. pair
 
-##############################
 
+##############################
+lsusanto-m6, only have 3.8GB of RAM, what happened?
+	2.99 GB RAM out of 4 T510 W7 64 Bit
+	http://forum.notebookreview.com/lenovo-ibm/491897-2-99-gb-ram-out-4-t510-w7-64-bit.html
+
+##############################
+Sync BB w/ itunes http://na.blackberry.com/eng/services/media/mediasync.jsp
+http://bighugelabs.com/onblack.php?id=4600059366&size=large
+
+
+http://blogs.msdn.com/rds/archive/tags/API/default.aspx
+http://blogs.msdn.com/rds/rss.xml
+
+
+##############################
 DVD Releases
 2012/10/23	[[http://www.imdb.com/title/tt1307068/][Seeking a Friend for the End of the World (2012)]]
 		[[http://www.imdb.com/title/tt1560747/][The Master (2012)]]
 		[[http://www.imdb.com/title/tt1872818/][Liberal Arts (2012)]]
 		
 http://www.dvdsreleasedates.com/
+##############################
+	Dierks Bentley is not bad: Listened to "Up On the Ridge"
+	Islands in the Stream, Dolly Parton &amp; Kenny Rogers
+	Dissolve, Chemical Brothers, The Further
+	Star Guitar, Chemical Brothers, The Come With Us
+	Hey Boy Hey Girl, Chemical Brothers, The Surrender
+	In Dust We Trust, Chemical Brothers, The Exit Planet Dust
+	Battle Scars, Chemical Brothers, The We Are the Night
+	Duck Face (The Martin Brothers), Dirtybird, Five Years of Dirtybird
+	Vocal Chords, Dirtybird, Bird Brain
+	Any songs from Kraftwek, Tour de France Soundtracks
+	The Robots, Kraftwek, The Mix
+	Hank Williams
+	Ashton Shepherd
+	God's Gonna Cut you Down, Johnny Cash, American VA - Hundred Highways
+	Black Betty, Ram Jam
+	Paranoid, ozzy
 
+NOW PLAYING: Janelle Monae "Tightrope (Feat. Big Boi)"
+NOW PLAYING: Foster The People "Pumped Up Kicks"
+NOW PLAYING: Robyn "Indestructible"
 
 
 
