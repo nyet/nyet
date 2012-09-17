@@ -1,0 +1,37 @@
+C:\work\bin\devcon.exe hwids "*" > C:\hwids.txt
+
+PCI\VEN_168C&DEV_002A&SUBSYS_10671A3B&REV_01\4&38185522&0&00A8
+    Name: Atheros AR928X Wireless Network Adapter
+    Hardware ID's:
+        PCI\VEN_168C&DEV_002A&SUBSYS_10671A3B&REV_01
+        PCI\VEN_168C&DEV_002A&SUBSYS_10671A3B
+        PCI\VEN_168C&DEV_002A&CC_028000
+        PCI\VEN_168C&DEV_002A&CC_0280
+    Compatible ID's:
+        PCI\VEN_168C&DEV_002A&REV_01
+        PCI\VEN_168C&DEV_002A
+        PCI\VEN_168C&CC_028000
+        PCI\VEN_168C&CC_0280
+        PCI\VEN_168C
+        PCI\CC_028000
+        PCI\CC_0280
+
+DEV_002A
+
+C:\work\bin\devcon.exe disable *DEV_002A*
+
+PCI\VEN_168C&DEV_002A&SUBSYS_10671A3B&REV_01\4&38185522&0&00A8: Disabled
+1 device(s) disabled.
+
+C:\work\bin\devcon.exe enable *DEV_002A*
+
+netsh interface show interface
+
+Admin State    State          Type             Interface Name
+-------------------------------------------------------------------------
+Enabled                       Dedicated        Wireless Network Connection
+Enabled                       Dedicated        Local Area Connection 2
+Enabled                       Internal         Internal
+Enabled                       Loopback         Loopback
+
+
