@@ -50,6 +50,40 @@ These steps seems to fix Win12002 for C and D on TW project
 	install Load Generator Patch1 Critical Update
 
 
+Windows 2008: 	LR 11 and LR 11.5 can NOT play back WinINET protocol. 
+		LR 11 can not playback NTLM script, recorded using LR9.52 (socket)
+		LR 11 can playback NTLM script recorded using LR11 (socket)
+Windows 2003: 	LR 11 and LR 11.5 LR can play back WinINET protocol. 
+
+
+
+
+##############################################
+Ref:   WFM ID: 4642056831 -- Case Analysis & Suggestions
+
+Please try using Socket level capture for recording and during replay uncheck “use wininet level replay instead of sockets”.
+
+http://support.openview.hp.com/selfsolve/document/KM184757
+
+In the other application you showed me I saw “invalid Server name” error due to Kerberos. Please see KB article given below:
+
+http://support.openview.hp.com/selfsolve/document/KM493445?searchIdentifier=-274b8497%3a139cca66fd1%3a75aa&resultType=document&documentURL=KM493445&resultsURL=%2fselfsolve%2fdocuments&allowReturn=true&searchString=enable+integrated+authentication+in+runtime+settings&searchKey=
+
+Please replay the Cognos script with extended logging as given below:
+
+1) Go to run time settings -> Log -> Extended Log. Please check all three options namely parameterization, data returned by server and advanced trace.
+ 
+2) Replay the script.
+ 
+3) Go to File -> Zip Operations -> Export to Zip.
+
+Please upload the above generated zip file to the case attachments or to the FTP site given below and let me know.
+
+ftp://SC06f22c:H3no.UK7@ftp.usa.hp.com/
+
+http://support.openview.hp.com/selfsolve/document/KM493445
+##############################################
+
 
 C:\Windows\System32\drivers\etc\hosts
 \\DDCSLRGEN01A-T\C$\Windows\System32\drivers\etc\hosts
@@ -137,6 +171,11 @@ http://www.gorissen.info/Pierre/maps/googleMapLocation.php?lat=37.504167&lon=-12
 
 http://marmot.com/products/gorge_component_jacket
 http://marmot.com/products/frontside_component_jacket
+
+
+Authen::Passphrase
+	Crypt::UnixCrypt_XS
+
 
 perl 2-6.pl C:/CPANTesters/testdevcode/dev/dev-2012-01-30-03.txt
 
