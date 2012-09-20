@@ -1,3 +1,19 @@
+
+11:12 AM 9/20/2012
+	C:\CPANTesters\cpan\build\XML-LibXML-2.0004-gFSS5I
+	perl Makefile.PL 2>&1| tee -a 1Makefile.txt
+	dmake 2>&1| tee -a 2dmake.txt
+
+	cd C:\CPANTesters\bin\XML-LibXML\lib
+	dumpbin.exe /exports libxml2.lib > libxml2.lib.dumpbin.txt
+	dumpbin.exe /exports libxml2_a.lib > libxml2_a.lib.dumpbin.txt
+	dumpbin.exe /exports libxml2_a_dll.lib > libxml2_a_dll.lib.dumpbin.txt
+	
+	C:\CPANTesters\bin\XML-LibXML\lib\libxml2.lib.dumpbin.txt
+	C:\CPANTesters\cpan\build\XML-LibXML-2.0004-gFSS5I\2dmake.txt
+	
+
+
 XML::LibXML
 Use of uninitialized value $config{"LIBS"} in pattern match -> this is nothing.
 
