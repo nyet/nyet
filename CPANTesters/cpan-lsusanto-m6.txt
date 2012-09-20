@@ -1,0 +1,265 @@
+C:\PERL51~1.4_6 -> C:\Perl5.12.4_64
+
+Important modules:
+	DB_File
+	cpan IO::Async
+	cpan XML::LibXML
+		Devel.xs:28:30: fatal error: libxml/xmlmemory.h: No such file or directory
+
+		cd C:\CPANTesters\cpan\build\XML-LibXML-2.0004-VyhHPP
+		perl Makefile.PL INC=-IC:\CPANTesters\bin\XML-LibXML\include LIBS=-LC:\CPANTesters\bin\XML-LibXML\lib 2>&1| tee -a 1Makefile.txt
+		dmake 2>&1| tee -a 2dmake.txt
+
+		combines:
+			libxml2-2.7.8.win32.zip
+			libxslt-1.1.26.win32.zip
+			openssl-0.9.8a.win32.zip
+			libxmlsec-1.2.18.win32.zip
+			iconv-1.9.2.win32.zip
+			zlib-1.2.5.win32.zip
+			xsldbg-3.1.7.win32.zip
+		into C:\CPANTesters\bin\LibXML
+		
+		LibXML.o:LibXML.c:(.text+0x29b33): undefined reference to `xmlSetStructuredErrorFunc'
+
+		Install MSys
+		Launch Msys
+
+		cd /C/CPANTesters/archives/libxml2-2.8.0/win32
+		
+		cscript.exe configure.js compiler=mingw prefix=D:\soft\Qt\2010.03\mingw  debug=yes static=yes
+		mingw32-make -f Makefile.mingw
+
+		9:51 PM 9/19/2012 
+			cpan PAJAS/XML-LibXML-1.70.tar.gz
+			LibXML.xs:34:31: fatal error: libxml/xmlversion.h: No such file or directory
+
+			cd C:\CPANTesters\cpan\build\XML-LibXML-1.70-WWvYac
+			C:/CPANTE~1/PERL51~1.0_6/site/bin/gcc.exe -c    -DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DWIN64 -DCONSERVATIVE -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 -DVERSION=\"1.70\" -DXS_VERSION=\"1.70\"  "-IC:\CPANTesters\Perl5.16.0_64\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK LibXML.c
+			C:/CPANTE~1/PERL51~1.0_6/site/bin/gcc.exe -c    "-IC:\CPANTesters\Perl5.16.0_64\lib\CORE" LibXML.c
+			LibXML.xs:34:31: fatal error: libxml/xmlversion.h: No such file or directory
+			
+			
+			IF EXIST C:\CPANTesters\bin\XML-LibXML\include\libxml\xmlversion.h ECHO Cogito ergo sum
+			IF EXIST %INCLUDE%\libxml\xmlversion.h ECHO Cogito ergo sum
+			IF EXIST %INCLUDE%/libxml/xmlversion.h ECHO Cogito ergo sum
+
+
+	12:26 PM 9/2/2012 cpan Text::Iconv
+		C:\CPANTesters\cpan\build\Text-Iconv-1.7-bwcFoe
+
+		perl Makefile.PL LIBS='-LC:/CPANTesters/bin/iconv-1.9.2.win32/lib' INC='-IC:/CPANTesters/bin/iconv-1.9.2.win32/include'
+		Checking for iconv ... fail
+		perl Makefile.PL LIBS='-L/C/CPANTesters/bin/iconv-1.9.2.win32/lib' INC='-I/C/CPANTesters/bin/iconv-1.9.2.win32/include'
+		Checking for iconv ... fail
+		perl Makefile.PL LIBS="-LC:/CPANTesters/bin/iconv-1.9.2.win32/lib" INC="-IC:/CPANTesters/bin/iconv-1.9.2.win32/include"
+		Checking for iconv ... fail
+
+		wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.14.tar.gz
+		tar xvjf libiconv-1.14.tar.gz - FAIL
+		cd /C/CPANTesters/archives/libiconv-1.14
+		./configure
+		make install
+
+cd man && make install prefix='/usr/local' exec_prefix='/usr/local' datarootdir='/usr/local/share' datadir='/usr/local/share' mandir='/usr/local/share/man'
+make[1]: Entering directory `/C/CPANTesters/archives/libiconv-1.14/man'
+if [ ! -d /usr/local/share/man/man1 ] ; then /bin/sh ../build-aux/mkinstalldirs/usr/local/share/man/man1 ; fi
+mkdir -p -- /usr/local/share/man/man1
+builddir="`pwd`"; cd . && for f in *.1 ; do (cd "$builddir"; echo /bin/install -c -m 644 ./$f /usr/local/share/man/man1/$f ; /bin/install -c -m 644 ./$f /usr/local/share/man/man1/$f) ; done
+/bin/install -c -m 644 ./iconv.1 /usr/local/share/man/man1/iconv.1
+if [ ! -d /usr/local/share/man/man3 ] ; then /bin/sh ../build-aux/mkinstalldirs/usr/local/share/man/man3 ; fi
+mkdir -p -- /usr/local/share/man/man3
+builddir="`pwd`"; cd . && for f in *.3 ; do (cd "$builddir"; echo /bin/install -c -m 644 ./$f /usr/local/share/man/man3/$f ; /bin/install -c -m 644 ./$f /usr/local/share/man/man3/$f) ; done
+/bin/install -c -m 644 ./iconv.3 /usr/local/share/man/man3/iconv.3
+/bin/install -c -m 644 ./iconv_close.3 /usr/local/share/man/man3/iconv_close.3
+/bin/install -c -m 644 ./iconv_open.3 /usr/local/share/man/man3/iconv_open.3
+/bin/install -c -m 644 ./iconv_open_into.3 /usr/local/share/man/man3/iconv_open_into.3
+/bin/install -c -m 644 ./iconvctl.3 /usr/local/share/man/man3/iconvctl.3
+if [ ! -d /usr/local/share/doc/libiconv ] ; then /bin/sh ../build-aux/mkinstalldirs /usr/local/share/doc/libiconv ; fi
+mkdir -p -- /usr/local/share/doc/libiconv
+builddir="`pwd`"; cd . && for f in *.html ; do (cd "$builddir"; echo /bin/install -c -m 644 ./$f /usr/local/share/doc/libiconv/$f ; /bin/install -c -m 644 ./$f/usr/local/share/doc/libiconv/$f) ; done
+/bin/install -c -m 644 ./iconv.1.html /usr/local/share/doc/libiconv/iconv.1.html
+/bin/install -c -m 644 ./iconv.3.html /usr/local/share/doc/libiconv/iconv.3.html
+/bin/install -c -m 644 ./iconv_close.3.html /usr/local/share/doc/libiconv/iconv_close.3.html
+/bin/install -c -m 644 ./iconv_open.3.html /usr/local/share/doc/libiconv/iconv_open.3.html
+/bin/install -c -m 644 ./iconv_open_into.3.html /usr/local/share/doc/libiconv/iconv_open_into.3.html
+/bin/install -c -m 644 ./iconvctl.3.html /usr/local/share/doc/libiconv/iconvctl.3.html
+make[1]: Leaving directory `/C/CPANTesters/archives/libiconv-1.14/man'
+
+		http://kemovitra.blogspot.com/2009/06/mingw-building-iconv-for-windows.html
+
+		cd /C/CPANTesters/archives/libiconv-1.14
+		make clean
+		./configure --prefix=/usr/local                               -> FAIL
+		make
+		make install
+
+		make clean
+		./configure --prefix=/usr/local --disable-shared              -> FAIL
+		make
+		make install
+
+
+		http://www.gaia-gis.it/gaia-sins/mingw64_how_to.html#libiconv
+
+		cd /C/CPANTesters/archives/libiconv-1.14
+		make clean
+		./configure --prefix=/usr/local --host=x86_64-w64-mingw32
+		make
+		make install-strip
+
+
+		./configure --prefix=/usr/local
+			checking build system type... i686-pc-mingw32
+			checking host system type... i686-pc-mingw32
+
+		cd C:\CPANTesters\cpan\build\Text-Iconv-1.7-V9Fwvs
+		perl Makefile.PL LIBS='-LC:/CPANTesters/bin/msys/1.0.11/local/lib' INC='-IC:/CPANTesters/bin/msys/1.0.11/local/include'
+		Checking for iconv ... fail
+		perl Makefile.PL LIBS="-LC:/CPANTesters/bin/msys/1.0.11/local/lib" INC="-IC:/CPANTesters/bin/msys/1.0.11/local/include"
+		dmake
+
+Iconv.o:Iconv.c:(.text+0xab): undefined reference to `libiconv_close'
+Iconv.o:Iconv.c:(.text+0x795): undefined reference to `libiconv_open'
+Iconv.o:Iconv.c:(.text+0xaf6): undefined reference to `libiconvctl'
+Iconv.o:Iconv.c:(.text+0xda9): undefined reference to `libiconvctl'
+Iconv.o:Iconv.c:(.text+0xfa1): undefined reference to `libiconv'
+Iconv.o:Iconv.c:(.text+0x101a): undefined reference to `libiconv'
+Iconv.o:Iconv.c:(.text+0x166c): undefined reference to `libiconvctl'
+collect2: ld returned 1 exit status
+dmake.exe:  Error code 129, while making 'blib\arch\auto\Text\Iconv\Iconv.dll'
+
+		C:\CPANTesters\bin\msys\1.0.11\local\lib
+		dumpbin /exports libiconv.dll.a
+
+
+	9:23 PM 9/1/2012 cpan Dist::Zilla - FAIL
+		Perl/PrereqScanner
+	8:09 PM 9/1/2012 cpan DBD::Oracle
+	7:56 PM 9/1/2012 cpan DBD::mysql - FAIL
+		start "mysqld" mysqld
+		cpan DBD::mysql -> FAIL
+	7:52 PM 9/1/2012 cpan Mojolicious
+	3:55 PM 8/1/2012 cpan CPAN
+	
+
+Bad too much errors:
+	10:03 PM 9/1/2012 cpan Crypt::Random
+		needs Math::Pari
+
+	10:01 PM 9/1/2012 cpan Crypt::OpenSSL::Random
+		Random.xs:5:26: fatal error: openssl/rand.h: No such file or directory
+
+	10:01 PM 9/1/2012 cpan Data::ObjectDriver - FAIL
+		Can't teardown global: Permission denied at t/lib/db-common.pl line 29.
+
+	9:59 PM 9/1/2012 cpan Expect
+		Needs IO::Tty
+
+	9:58 PM 9/1/2012 cpan IO::Tty
+		Tty.xs:54:23: fatal error: sys/ioctl.h: No such file or directory
+
+	ExtUtils::MakeMaker -> ExtUtils-MakeMaker-6.62.tar.gz ERR
+	 ExtUtils-MakeMaker = 6.56
+	cpan MSTROUT/ExtUtils-MakeMaker-6.59.tar.gz
+
+	Module::Signature
+		need to install gpg
+
+	Carp-1.26.tar.gz -> ERROR
+		ZEFRAM/Carp-1.25.tar.gz - ERROR
+		ZEFRAM/Carp-1.24.tar.gz - ERROR
+		ZEFRAM/Carp-1.23.tar.gz - ERROR
+
+TODO:
+	Latex::Driver	http://www.latexbuch.de/install-latex-windows-7/
+
+
+
+11:27 PM 7/1/2012
+
+Test::Pod -> Test-Pod-1.45.tar.gz ok
+Test::Pod::Coverage -> Test-Pod-Coverage-1.08.tar.gz ok
+Test::Perl::Critic -> Test-Perl-Critic-1.02.tar.gz ok
+YAML -> YAML-0.81.tar.gz ok
+DateTime -> DateTime-0.75.tar.gz ok
+Test::Taint -> Test-Taint-1.04.tar.gz ok
+Perl::Tidy -> Perl-Tidy-20120619.tar.gz ok
+CPAN::Testers::WWW::Statistics -> CPAN-Testers-WWW-Statistics-1.00.tar.gz ok
+Image::Info -> Image-Info-1.32.tar.gz ok
+Image::Size -> Image-Size-3.232.tar.gz ok
+Pod::POM -> Pod-POM-0.27.tar.gz ok
+String::Diff -> String-Diff-0.06.tar.gz ok
+HTML::Tree -> HTML-Tree-5.02.tar.gz ok
+Test::LeakTrace -> Test-LeakTrace-0.14.tar.gz ok
+
+
+https://metacpan.org/module/App%3a%3acpanminus
+
+App::cpanminus
+
+CPANPLUS
+
+get Devel::Declare
+
+CPAN Terminal> d Devel::Declare
+
+Successfully fetched 'Devel::Declare' to 'C:\Users\lsusanto\AppData\Roaming\.cpa
+nplus\authors\id\Z\ZE\ZEFRAM\Devel-Declare-0.006011.tar.gz'
+
+
+
+
+
+CPAN-Meta-2.120921
+Parse-CPAN-Meta-1.4404
+CPAN-Meta-Requirements-2.122
+
+get Devel::Declare
+
+
+
+String-Diff
+	cpan String::Diff
+		-> this install YAML succesfully
+	Can't locate YAML/Base.pm in @INC (@INC contains: C:\CPANTesters\cpan\build\String-Diff-0.04-mvQSs2\inc C:\CPANTesters\cpan\build\String-Diff-0.04-mvQSs2\blib\lib C:\CPANTesters\cpan\build\String-Diff-0.04-mvQSs2\blib\arch C:/CPANTesters/Perl5.10.1/site/lib C:/CPANTesters/Perl5.10.1/lib .) at C:\CPANTesters\cpan\build\String-Diff-0.04-mvQSs2\inc/YAML.pm line 3, <DATA> line 1.
+	Will try to install YAML::Base first and install this separately, see what happens.
+	> cpan YAML::Base
+		Warning: Cannot install YAML::Base, don't know what it is.
+	This module is broken
+
+RDF-Trine-Serializer-SparqlUpdate
+	depends on RDF::Endpoint and this module hangs
+
+MooseX-Semantic
+	depends on String::Diff and RDF::Endpoint, bth moduls are broken.
+
+Term-ReadLine-TTYtter
+	This module is broken.
+
+Bundle-dualLived
+	Will not test this module.
+
+Bundle::Elkhound
+	RDF-Trine is broken
+
+Task-Jenkins
+	depends on TAP-Formatter-JUnit takes too long?
+	> cpan TAP::Formatter::JUnit
+		hangs @ t\tap2junit-filter.t .. 1/2	
+		
+App-Validation-Automation
+	depends on Net-SSH-Perl (broken)
+	
+Pod-Wordlist-hanekomu
+	depends on Test::Spelling (hangs) -> test it out
+	> cpan Test::Spelling -this looks good on kgsusanto-m8
+	
+Make chain of dependencies
+
+What happen to the module test with log file that doesn't have "goto end"?
+	20120130_145423.cpan-t.M_MN_MNUNBERG_Log-Fu-0.22.tar.gz.log has no "goto end" but the test is good. 
+		is it because go to test? IF -t == -t GOTO test <- YA, this is the answer
+		
+Make new succesful termination.
+	
