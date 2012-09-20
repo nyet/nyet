@@ -1,0 +1,31 @@
+Set up gcc environment - gcc.exe (rubenvb-4.5.4) 4.5.4
+enable native perl UTF8
+Use of uninitialized value $config{"LIBS"} in pattern match (m//) at Makefile.PL line 283.
+looking for -lxml2... yes
+Checking if your kit is complete...
+Looks good
+Note (probably harmless): No library found for -llibxml2
+Note (probably harmless): No library found for -lzlib
+Note (probably harmless): No library found for -llibgettextlib.dll
+Note (probably harmless): No library found for -lzlib
+Note (probably harmless): No library found for -lkernel32
+Note (probably harmless): No library found for -luser32
+Note (probably harmless): No library found for -lgdi32
+Note (probably harmless): No library found for -lwinspool
+Note (probably harmless): No library found for -lcomdlg32
+Note (probably harmless): No library found for -ladvapi32
+Note (probably harmless): No library found for -lshell32
+Note (probably harmless): No library found for -lole32
+Note (probably harmless): No library found for -loleaut32
+Note (probably harmless): No library found for -lnetapi32
+Note (probably harmless): No library found for -luuid
+Note (probably harmless): No library found for -lws2_32
+Note (probably harmless): No library found for -lmpr
+Note (probably harmless): No library found for -lwinmm
+Note (probably harmless): No library found for -lversion
+Note (probably harmless): No library found for -lodbc32
+Note (probably harmless): No library found for -lodbccp32
+Note (probably harmless): No library found for -lcomctl32
+Note (probably harmless): No library found for -lmsvcrt
+Writing Makefile for XML::LibXML
+Writing MYMETA.yml and MYMETA.json

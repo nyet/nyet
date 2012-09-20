@@ -1,0 +1,17 @@
+Microsoft (R) COFF/PE Dumper Version 10.00.40219.01
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file libxml2_a.lib
+
+File Type: LIBRARY
+
+  Summary
+
+         E34 .bss
+         FB8 .data
+        B5F0 .debug$F
+        1434 .debug$S
+         84A .drectve
+       20CE7 .rdata
+       B1EF0 .text
