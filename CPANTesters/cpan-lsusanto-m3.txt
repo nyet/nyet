@@ -1,0 +1,202 @@
+XML::LibXML
+Use of uninitialized value $config{"LIBS"} in pattern match -> this is nothing.
+
+
+C:/CPANTE~1/PERL51~1.0_6/site/bin/gcc.exe -c    -DNDEBUG -DWIN32 -D_CONSOLE -DNO
+_STRICT -DWIN64 -DCONSERVATIVE -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPER
+L_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -DHASATTRIBUTE -fno-strict-a
+liasing -mms-bitfields -O2        -DVERSION=\"2.0003\"  -DXS_VERSION=\"2.0003\"
+ "-IC:\CPANTesters\Perl5.16.0_64\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK Devel.c
+Devel.xs:28:30: fatal error: libxml/xmlmemory.h: No such file or directory
+compilation terminated.
+dmake.exe:  Error code 129, while making 'Devel.o'
+
+C:\CPANTesters\cpan\build\XML-LibXML-2.0003-e871sO
+
+perl Makefile.PL verbose
+perl Makefile.PL verbose >makefile.log 2>&1 
+###############
+search fail report
+grade : fail
+
+###############
+test PASS Lingua-StopWords-0.09 (perl-5.14.0) MSWin32-x86-multi-thread 5.2
+make UNKNOWN KinoSearch-0.313 (perl-5.14.0) MSWin32-x86-multi-thread 5.2
+test DISCARD PGXN-API-Searcher-v0.9.3 (perl-5.14.0) MSWin32-x86-multi-thread 5.2
+test PASS Text-Textile-2.12 (perl-5.14.0) MSWin32-x86-multi-thread 5.2
+###############
+
+
+MooseX-Params-0.008 -> Lexical-SealRequireHints-0.006	fail
+DateTimeX-Factory-0.01 -> Test-LoadAllModules-0.021	fail
+CGI-Buffer -> CGI-Buffer-0.28	pass
+CGI-Buffer-0.24 -> CGI-Buffer-0.24	pass
+XML-Compile-WSS -> Running make for M/MA/MARKOV/XML-Compile-WSS-0.13.tar.gz
+	XML-Compile-Cache-0.991	pass
+	XML-Compile-SOAP-2.25	pass
+
+
+
+
+
+$dep{XML-Compile-WSS}{status}=na
+$dep{XML-Compile-WSS}{dep}{XML-Compile-Cache-0.991}{status}=pass
+
+
+
+
+XML-Compile-WSS
+	XML-Compile-Cache-0.991	pass
+	XML-Compile-SOAP-2.25	pass
+XML-Compile-Cache-0.991
+
+CGI-Buffer
+	CGI-Buffer-0.28	pass
+CGI-Buffer-0.28
+	CGI-Buffer-0.28	pass
+CGI-Buffer-0.24
+	CGI-Buffer-0.24	pass
+MooseX-Params
+	Lexical-SealRequireHints-0.006	fail
+MooseX-Params-0.008
+	Lexical-SealRequireHints-0.006	fail
+
+
+20120204_035433.cpan-i.Mail.log
+	Warning: Cannot install Mail, don't know what it is.
+20120204_050209.cpan-i.Lazy.log
+	Warning: Cannot install Lazy, don't know what it is.
+20120204_060446.cpan-i.Dist.log
+	Don't be silly, you can't install Taneli Kaivola ;-)
+20120204_063630.cpan-i.CPAN.log
+	CPAN::Reporter: Test result is 'fail', One or more tests failed.
+	CPAN::Reporter: preparing a CPAN Testers report for CPAN-1.9800
+20120204_025217.cpan-i.POE.log
+	CPAN::Reporter: Test result is 'fail', One or more tests failed.
+	CPAN::Reporter: preparing a CPAN Testers report for POE-1.350
+
+
+
+How about allowance? 2 failures per month per platform.
+
+
+my %core_installs;
+if (-f "C:/CPANTesters/testdevcode/dev/core-install-attempts-$]-$month.txt") {
+	open FILE, "C:/CPANTesters/testdevcode/dev/core-install-attempts-$]-$month.txt";
+	while (my $line = <FILE>) {
+		chomp $line;
+		my ($module, $count) = split /\t/, $line;
+		$core_installs{$month_current}{$module} = $count;
+	}
+	close FILE;
+}
+
+
+
+
+
+
+my $screenLogFile = Utility::timeStampString()."P$].pre-req.log";
+screenLogFile
+.P$]
+C:\Windows\SysWOW64\java.exe -Xmx192M -jar "C:\Program Files\jEdit\jedit.jar" -reuseview
+C:\Windows\SysWOW64\java.exe -Xmx192M -jar "C:\Program Files\jEdit\jedit.jar"
+
+12:41 PM 2/8/2012
+
+### 1 ####################
+20120208_120033:Loading RULES.txt - start
+20120208_120033:Loading RULES.txt - end
+20120208_120033:opening devfile: dev/dev.txt
+20120208_120033:Get from file: T/TH/THALJEF/Pinto-0.030.tar.gz
+20120208_120033:	No need to reload RULES.txt, nothing changed.
+20120208_120033:	Trapped, eval line: T/TH/THALJEF/Pinto-0.030.tar.gz with (?-xism:Pinto)
+20120208_120033:	Captured using %rules, will not run T/TH/THALJEF/Pinto-0.030.tar.gz, need PerlIO-gzip
+20120208_120033:Done with T/TH/THALJEF/Pinto-0.030.tar.gz
+20120208_120033:Get from file: T/TH/THALJEF/Pinto-Server-0.029.tar.gz
+20120208_120033:	No need to reload RULES.txt, nothing changed.
+20120208_120033:	This module is already tested.                        <- not captured.
+20120208_120033:Done with T/TH/THALJEF/Pinto-Server-0.029.tar.gz
+20120208_120033:Get from file: C/CA/CAPTTOFU/DBD-mysql-4.019.tar.gz
+20120208_120033:	No need to reload RULES.txt, nothing changed.
+20120208_120033:	Trapped, eval line: C/CA/CAPTTOFU/DBD-mysql-4.019.tar.gz with (?i-xsm:DBD-mysql-)
+20120208_120033:	Captured using %rules, will not run C/CA/CAPTTOFU/DBD-mysql-4.019.tar.gz, have not setup mysql yet
+20120208_120033:Done with C/CA/CAPTTOFU/DBD-mysql-4.019.tar.gz
+20120208_120033:cpan_sendreport - start
+20120208_120142:Loading RULES.txt - start
+20120208_120142:Loading RULES.txt - end
+20120208_120142:opening devfile: C:/CPANTesters/testdevcode/dev/dev.txt
+20120208_120142:Get from file: T/TH/THALJEF/Pinto-0.030.tar.gz
+20120208_120142:	No need to reload RULES.txt, nothing changed.
+20120208_120142:	Trapped, eval line: T/TH/THALJEF/Pinto-0.030.tar.gz with (?-xism:Pinto)
+20120208_120142:	Captured using %rules, will not run T/TH/THALJEF/Pinto-0.030.tar.gz, need PerlIO-gzip
+20120208_120142:Done with T/TH/THALJEF/Pinto-0.030.tar.gz
+20120208_120142:Get from file: T/TH/THALJEF/Pinto-Server-0.029.tar.gz
+20120208_120142:	No need to reload RULES.txt, nothing changed.
+20120208_120142:	This module is already tested.
+20120208_120142:Done with T/TH/THALJEF/Pinto-Server-0.029.tar.gz
+20120208_120142:Get from file: C/CA/CAPTTOFU/DBD-mysql-4.019.tar.gz
+20120208_120142:	No need to reload RULES.txt, nothing changed.
+20120208_120142:	Trapped, eval line: C/CA/CAPTTOFU/DBD-mysql-4.019.tar.gz with (?i-xsm:DBD-mysql-)
+20120208_120142:	Captured using %rules, will not run C/CA/CAPTTOFU/DBD-mysql-4.019.tar.gz, have not setup mysql yet
+20120208_120142:Done with C/CA/CAPTTOFU/DBD-mysql-4.019.tar.gz
+20120208_120142:cpan_sendreport - start
+20120208_120202:cpan_sendreport - end
+### 2 ####################
+20120208_120619:opening devfile: C:/CPANTesters/testdevcode/dev/dev.txt
+20120208_120620:Get from file: T/TH/THALJEF/Pinto-0.030.tar.gz
+20120208_120620:	No need to reload RULES.txt, nothing changed.
+20120208_120620:	Trapped, eval line: T/TH/THALJEF/Pinto-0.030.tar.gz with (?-xism:Pinto)
+20120208_120620:	Captured using %rules, will not run T/TH/THALJEF/Pinto-0.030.tar.gz, need PerlIO-gzip
+20120208_120620:Done with T/TH/THALJEF/Pinto-0.030.tar.gz
+20120208_120620:Get from file: T/TH/THALJEF/Pinto-Server-0.029.tar.gz
+20120208_120620:	No need to reload RULES.txt, nothing changed.
+20120208_120620:	This module is already tested.
+20120208_120620:Done with T/TH/THALJEF/Pinto-Server-0.029.tar.gz
+20120208_120620:Get from file: T/TH/THALJEF/Pinto-Remote-0.030.tar.gz
+20120208_120620:	No need to reload RULES.txt, nothing changed.
+20120208_120620:	Trapped, eval line: T/TH/THALJEF/Pinto-Remote-0.030.tar.gz with (?-xism:Pinto)
+20120208_120620:	Captured using %rules, will not run T/TH/THALJEF/Pinto-Remote-0.030.tar.gz, need PerlIO-gzip
+20120208_120620:Done with T/TH/THALJEF/Pinto-Remote-0.030.tar.gz
+20120208_120620:Get from file: T/TH/THALJEF/Dist-Zilla-Plugin-Pinto-Add-0.030.tar.gz
+20120208_120620:	No need to reload RULES.txt, nothing changed.
+20120208_120620:	Processing T/TH/THALJEF/Dist-Zilla-Plugin-Pinto-Add-0.030.tar.gz
+20120208_120620:	cpan_cmdline(Dist::Zilla::Plugin::Pinto::Add -i) - start > 20120208_120620.cpan-i.Dist-Zilla-Plugin-Pinto-Add.log
+20120208_120620:		C:\CPANTesters\Perl5.010.001_MSSDK7.1_cpan.bat Dist::Zilla::Plugin::Pinto::Add -i
+### 3 - reload rules everytime ####################
+20120208_120619:Loading RULES.txt - start
+20120208_120619:Loading RULES.txt - end
+20120208_120844:Loading RULES.txt - start
+20120208_120844:Loading RULES.txt - end
+20120208_120844:opening devfile: C:/CPANTesters/testdevcode/dev/dev.txt
+20120208_120844:Get from file: T/TH/THALJEF/Pinto-0.030.tar.gz
+20120208_120844:	Loading RULES.txt - start
+20120208_120844:	Loading RULES.txt - end
+20120208_120844:	Trapped, eval line: T/TH/THALJEF/Pinto-0.030.tar.gz with (?-xism:Pinto)
+20120208_120844:	Captured using %rules, will not run T/TH/THALJEF/Pinto-0.030.tar.gz, need PerlIO-gzip
+20120208_120844:Done with T/TH/THALJEF/Pinto-0.030.tar.gz
+20120208_120844:Get from file: T/TH/THALJEF/Pinto-Server-0.029.tar.gz
+20120208_120844:	Loading RULES.txt - start
+20120208_120844:	Loading RULES.txt - end
+20120208_120844:	Trapped, eval line: T/TH/THALJEF/Pinto-Server-0.029.tar.gz with (?-xism:Pinto)
+20120208_120844:	Captured using %rules, will not run T/TH/THALJEF/Pinto-Server-0.029.tar.gz, need PerlIO-gzip
+20120208_120844:Done with T/TH/THALJEF/Pinto-Server-0.029.tar.gz
+20120208_120844:Get from file: T/TH/THALJEF/Pinto-Remote-0.030.tar.gz
+20120208_120844:	Loading RULES.txt - start
+20120208_120844:	Loading RULES.txt - end
+20120208_120844:	Trapped, eval line: T/TH/THALJEF/Pinto-Remote-0.030.tar.gz with (?-xism:Pinto)
+20120208_120844:	Captured using %rules, will not run T/TH/THALJEF/Pinto-Remote-0.030.tar.gz, need PerlIO-gzip
+20120208_120844:Done with T/TH/THALJEF/Pinto-Remote-0.030.tar.gz
+20120208_120844:Get from file: T/TH/THALJEF/Dist-Zilla-Plugin-Pinto-Add-0.030.tar.gz
+20120208_120844:	Loading RULES.txt - start
+20120208_120844:	Loading RULES.txt - end
+20120208_120844:	Trapped, eval line: T/TH/THALJEF/Dist-Zilla-Plugin-Pinto-Add-0.030.tar.gz with (?-xism:/Dist-Zilla)
+20120208_120844:	Captured using %rules, will not run T/TH/THALJEF/Dist-Zilla-Plugin-Pinto-Add-0.030.tar.gz, Test takes a long time to run
+20120208_120844:Done with T/TH/THALJEF/Dist-Zilla-Plugin-Pinto-Add-0.030.tar.gz
+20120208_120844:Get from file: C/CA/CAPTTOFU/DBD-mysql-4.019.tar.gz
+20120208_120844:	Loading RULES.txt - start
+20120208_120844:	Loading RULES.txt - end
+20120208_120844:	Trapped, eval line: C/CA/CAPTTOFU/DBD-mysql-4.019.tar.gz with (?i-xsm:DBD-mysql-)
+20120208_120844:	Captured using %rules, will not run C/CA/CAPTTOFU/DBD-mysql-4.019.tar.gz, have not setup mysql yet
+20120208_120844:Done with C/CA/CAPTTOFU/DBD-mysql-4.019.tar.gz
+20120208_120844:cpan_sendreport - start
