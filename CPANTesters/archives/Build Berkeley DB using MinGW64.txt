@@ -1,0 +1,36 @@
+C:\msys\1.0\msys.bat -rxvt
+Edit msys.bat to include PATH
+
+https://users.cs.jmu.edu/bernstdh/web/common/help/cpp_mingw-faq.php
+echo $PATH
+
+https://bitcointalk.org/index.php?topic=45507.0
+
+launch MSYS
+
+/c/CPANTesters/archives/db-4.8.30/build_unix
+
+../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+
+Edit db.h in build_unix/
+@ Line 113 Replace
+	typedef pthread_t db_threadid_t;
+with
+	typedef u_int32_t db_threadid_t;
+
+
+
+copy C:\CPANTesters\archives\db-4.8.30\build_unix\libdb.a C:\CPANTesters\lib\libdb.a
+copy C:\CPANTesters\archives\db-4.8.30\build_unix\*.h C:\CPANTesters\include\db
+
+
+cd C:\CPANTesters\Fix\DB_File-1.826-r3rp0s
+
+edit config.in
+	INCLUDE	= C:/CPANTesters/include/db
+	LIB	= C:/CPANTesters/lib
+	DBNAME = -ldb
+
+
+###########
+db-4.8.30-mingw64 -> 
