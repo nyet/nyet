@@ -44,6 +44,80 @@ Important modules:
 			IF EXIST %INCLUDE%\libxml\xmlversion.h ECHO Cogito ergo sum
 			IF EXIST %INCLUDE%/libxml/xmlversion.h ECHO Cogito ergo sum
 
+		6:35 PM 9/20/2012
+			cpan XML::LibXML
+			cd C:\CPANTesters\cpan\build\XML-LibXML-2.0004-ra9t31
+			perl Makefile.PL INC=-IC:\CPANTesters\bin\XML-LibXML\include LIBS=-LC:\CPANTesters\bin\XML-LibXML\lib 2>&1| tee -a 1Makefile.txt
+			dmake 2>&1| tee -a 2dmake.txt
+
+		6:54 PM 9/20/2012
+			cmd
+			cd C:\CPANTesters\archives\libxml2-2.8.0\win32
+			cscript.exe configure.js compiler=mingw prefix=C:\CPANTesters\archives\libxml2-2.8.0-mingw64  debug=yes static=yes
+			dmake -f Makefile.mingw
+			crapped:
+			dmake.exe:  Makefile.mingw:  line 340:  Warning: -- Duplicate target [bin.mingw\testThreadsWin32.exe]
+			dmake.exe:  Error: -- Two comma-seperated arguments expected in [subst .o,.c,$(subst $(XML_INTDIR)/,$(XML_SRCDIR)/,$(XML_OBJS))].
+
+			msys
+			cd /c/CPANTesters/archives/libxml2-2.8.0
+			NG -> ./configure --prefix=/usr/local --disable-shared
+			./configure --prefix=/usr/local --enable-shared --with-threads=no  CFLAGS=-O2 -> http://trac.osgeo.org/postgis/wiki/DevWikiWinMingW64
+			make
+			make install
+			CMD
+			cd C:\CPANTesters\cpan\build\XML-LibXML-2.0004-ra9t31
+			perl Makefile.PL INC=-IC:\CPANTesters\archives\libxml2-2.8.0-mingw64\include LIBS=-LC:\CPANTesters\archives\libxml2-2.8.0-mingw64\lib 2>&1| tee -a 1Makefile.txt
+			dmake 2>&1| tee -a 2dmake.txt
+
+			Devel.o:Devel.c:(.text+0xb3c): undefined reference to `__imp_xmlMemStrdup'
+			LibXML.o:LibXML.c:(.text+0x4ff): undefined reference to `__imp_xmlFree'
+
+			MSVC 2010 CMD
+			cd C:\CPANTesters\archives\libxml2-2.8.0-mingw64\lib
+			dumpbin /exports libxml2.la
+			
+			Read through this: https://mail.gnome.org/archives/xml/2009-November/msg00005.html
+			
+		9:44 PM 9/20/2012
+			http://www.daa.com.au/pipermail/pygtk/2011-March/019610.html
+			http://ftp.gnome.org/pub/GNOME/binaries/win64/dependencies/libxml2-dev_2.7.7-1_win64.zip
+			http://ftp.gnome.org/pub/GNOME/binaries/win64/dependencies/libxml2_2.7.7-1_win64.zip
+			
+			cd C:\CPANTesters\cpan\build\XML-LibXML-2.0004-ra9t31
+			perl Makefile.PL INC=-IC:\CPANTesters\bin\libxml2_2.7.7-1_win64\include LIBS=-LC:\CPANTesters\bin\libxml2_2.7.7-1_win64\lib 2>&1| tee -a 1Makefile.txt
+			dmake 2>&1| tee -a 2dmake.txt
+			dmake test
+			
+			perl -MXML::SAX -e "XML::SAX->add_parser(q(XML::SAX::PurePerl))->save_parsers()"
+
+		10:40 PM 9/20/2012
+			cd C:\CPANTesters\cpan\build\XML-LibXML-2.0004-ra9t31
+			perl Makefile.PL INC=-IC:\CPANTesters\bin\gnome-deps-win64\include LIBS=-LC:\CPANTesters\bin\gnome-deps-win64\lib 2>&1| tee -a 1Makefile.txt
+			dmake 2>&1| tee -a 2dmake.txt
+			dmake test
+			
+			crap.
+
+
+		ftp.gnome.org\pub\GNOME\binaries\win64\dependencies
+		ftp.gnome.org\pub\GNOME\binaries\win64\glib\2.26
+		http://ftp.gnome.org/pub/GNOME/
+
+
+		12:00 AM 9/21/2012
+			C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\x64
+			
+			cd C:\CPANTesters\bin\gnome-deps-win64\bin
+			dumpbin /exports libxml2-2.dll
+
+			mt -nologo -dll:libxml2-2.dll -out:libxml2-2.dll.manifest
+
+			C:\CPANTesters\cpan\build\XML-LibXML-1.70-WWvYac
+			perl Makefile.PL INC=-IC:\CPANTesters\bin\gnome-deps-win64\include LIBS=-LC:\CPANTesters\bin\gnome-deps-win64\lib 2>&1| tee -a 1Makefile.txt
+			dmake 2>&1| tee -a 2dmake.txt
+			dmake test
+
 
 	12:26 PM 9/2/2012 cpan Text::Iconv
 		C:\CPANTesters\cpan\build\Text-Iconv-1.7-bwcFoe
