@@ -59,6 +59,15 @@ Windows 2003: 	LR 11 and LR 11.5 LR can play back WinINET protocol.
 ##############################################
 Perl module timing exercise.
 C:\CPANTesters\Perl5.012.004_MSSDK7.1_cpan.bat Devel::Trepan -i 2>&1| tee -a 20120921_190500.P5.012004.cpan-i.Devel-Trepan.log
+BOT Fri 09/21/2012 19:05:49.10
+EOT Fri 09/21/2012 19:25:27.88
+C:\CPANTesters\Perl5.014.001_MSSDK7.1_cpan.bat Devel::Trepan -i 2>&1| tee -a 20120921_192600.P5.014001.cpan-i.Devel-Trepan.log
+BOT Fri 09/21/2012 19:27:00.35
+EOT Fri 09/21/2012 19:42:35.69
+C:\CPANTesters\Perl5.014.001_MSSDK7.1_cpan.bat Microsoft::AdCenter -i 2>&1| tee -a 20120921_235800.P5.014001.cpan-i.Microsoft-AdCenter.log
+
+Devel::Callsite
+
 ##############################################
 CPAN long runs: file://///lsusanto-h2/c$/CPANTesters/testdevcode/test-duration.html
 12:42 PM 9/21/2012	
