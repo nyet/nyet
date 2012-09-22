@@ -56,7 +56,12 @@ Windows 2008: 	LR 11 and LR 11.5 can NOT play back WinINET protocol.
 Windows 2003: 	LR 11 and LR 11.5 LR can play back WinINET protocol. 
 
 
-
+##############################################
+Perl module timing exercise.
+C:\CPANTesters\Perl5.012.004_MSSDK7.1_cpan.bat Devel::Trepan -i 2>&1| tee -a 20120921_190500.P5.012004.cpan-i.Devel-Trepan.log
+##############################################
+CPAN long runs: file://///lsusanto-h2/c$/CPANTesters/testdevcode/test-duration.html
+12:42 PM 9/21/2012	
 
 ##############################################
 Ref:   WFM ID: 4642056831 -- Case Analysis & Suggestions

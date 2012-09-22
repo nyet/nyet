@@ -1,3 +1,16 @@
+11:51 AM 9/21/2012
+	cpan SHLOMIF/XML-LibXML-1.90.tar.gz
+	C:\CPANTesters\cpan\build\XML-LibXML-1.90-rIyuyW
+
+	cd C:\CPANTesters\cpan\build\XML-LibXML-1.70-K0ZPDC
+	perl Makefile.PL INC=-IC:\CPANTesters\bin\gnome-deps-win64\include LIBS=-LC:\CPANTesters\bin\gnome-deps-win64\lib
+	
+
+10:24 AM 9/21/2012
+	cd C:\CPANTesters\cpan\build\XML-LibXML-2.0004-Dsek1j
+	perl Makefile.PL INC=-IC:\CPANTesters\bin\gnome-deps-win64\include LIBS=-LC:\CPANTesters\bin\gnome-deps-win64\lib 2>&1| tee -a 1Makefile.txt
+	dmake 2>&1| tee -a 2dmake.txt
+	dmake test
 
 11:12 AM 9/20/2012
 	C:\CPANTesters\cpan\build\XML-LibXML-2.0004-gFSS5I
