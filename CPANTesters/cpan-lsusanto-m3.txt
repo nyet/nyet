@@ -1,3 +1,20 @@
+
+
+
+9:11 PM 9/24/2012
+	Last command line when fixing Net-HTTPS-6.02.pm problem
+
+	perl -d:Trace 1send.pl 2> trace_1send.pl.txt
+
+	cd C:\CPANTesters\cpan\build\XML-LibXML-2.0004-Dsek1j
+	dmake clean
+	perl Makefile.PL INC=-IC:\CPANTesters\bin\gnome-deps-win64\include LIBS=-LC:\CPANTesters\bin\gnome-deps-win64\lib
+	dmake
+	dmake test
+	C:\CPANTesters\Perl5.16.0_64\bin\perl.exe "-MExtUtils::Command::MM" "-e" "test_harness(0, 'blib\lib', 'blib\arch')" t/*.t	
+	C:\CPANTesters\Perl5.16.0_64\bin\perl.exe -d:Trace "-MExtUtils::Command::MM" "-e" "test_harness(0, 'blib\lib', 'blib\arch')" t/01basic.t  2> trace_01basic.txt
+	C:\CPANTesters\Perl5.16.0_64\bin\perl.exe -d:Trace "-MExtUtils::Command::MM" "-e" "test_harness(1, 'blib\lib', 'blib\arch')" t/01basic.t  2> trace_01basic_lvl1.txt
+
 11:51 AM 9/21/2012
 	cpan SHLOMIF/XML-LibXML-1.90.tar.gz
 	C:\CPANTesters\cpan\build\XML-LibXML-1.90-rIyuyW
