@@ -1,0 +1,2 @@
+	C:\CPANTesters\Perl5.16.0_64\bin\perl.exe -d:Trace "-MExtUtils::Command::MM" "-e" "test_harness(0, 'blib\lib', 'blib\arch')" t/01basic.t  2> trace_01basic.txt
+	C:\CPANTesters\Perl5.16.0_64\bin\perl.exe -d:Trace "-MExtUtils::Command::MM" "-e" "test_harness(1, 'blib\lib', 'blib\arch')" t/01basic.t  2> trace_01basic_lvl1.txt
