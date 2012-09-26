@@ -128,6 +128,27 @@ shutdown /m \\CDCSLRGNAPP02-T /r /f /t 5 /c "reset LR gen"
 shutdown /m \\CDCSLRGNAPP03-T /r /f /t 5 /c "reset LR gen"
 shutdown /m \\CDCSLRGNAPP04-T /r /f /t 5 /c "reset LR gen"
 
+
+10:57 AM 9/26/2012
+	invalid SSL_version specified at C:/Perl5.16.1/lib/IO/Socket/SSL.pm line 332.
+	- SSL_version	=>	"SSLv3 TLSv1")){ 
+	+ SSL_version	=>	"TLSv1")){
+
+1:01 PM 9/25/2012
+	Test drive GetGnuWin32
+	D:\GetGnuWin32\GetGnuWin32
+		download.bat to download all of the packages.
+
+12:13 PM 9/25/2012
+	"The Connected Company" September 27, 2012 at 10:00 AM
+	
+	http://downloads.sourceforge.net/gnuwin32/grep-2.5.4-bin.zip
+	mkdir downloads.sourceforge.net\gnuwin32
+	I:\CPANTesters\archives\downloads.sourceforge.net\gnuwin32
+
+
+	WackGetPortable_1.2.4_English.paf.exe -> useless crap (use wget instead)
+
 http://www.examiner.com/article/nasa-shuttle-carrier-aircraft-florida-for-endeavour-s-ride-to-california
 Departing Dryden on the morning of September 20, NASA 905 with Endeavour will head north towards the Bay Area and perform low-level flyovers of NASA’s Ames Research Center at Moffett Field and various landmarks over San Francisco and Sacramento. 
 
