@@ -128,6 +128,59 @@ shutdown /m \\CDCSLRGNAPP02-T /r /f /t 5 /c "reset LR gen"
 shutdown /m \\CDCSLRGNAPP03-T /r /f /t 5 /c "reset LR gen"
 shutdown /m \\CDCSLRGNAPP04-T /r /f /t 5 /c "reset LR gen"
 
+11:28 AM 9/28/2012
+	setup ASO to test CPAN (only for last resort since it's taking a lot of resources).
+	
+
+11:16 AM 9/28/2012
+	ASO revoked SSH priviledge
+	Your Ticket ID is: WTZ-938-76689
+	https://customers.asmallorange.com/viewticket.php?cid=145681&tid=662256&did=WTZ-938-76689
+
+
+2:21 PM 9/27/2012
+	cpan Data::Float
+
+
+12:49 PM 9/27/2012
+	TODO: Sync gmail contact with outlook contact
+
+	http://gmailblog.blogspot.com/2012/09/a-new-way-to-sync-google-contacts.html
+	CalDAV to outlook contacts?
+
+	
+10:55 AM 9/27/2012
+	Net::SSLeay could not find a random number generator on your system.     This will likely cause most of the tests
+
+	http://egd.sourceforge.net
+	http://egdw.sourceforge.net/
+
+	https://www.google.com/search?q=Net%3A%3ASSLeay+egd
+
+	cd C:\private__\egdw-0.1.0
+	egdw.exe --close
+	egdw.exe --with-gui
+	
+	On lsusanto-h2
+	cd C:\private__\egd-0.9\examples
+	> perl egc.pl localhost:708 read 10
+	got 10 bytes of entropy: 892e86e03ee0bf749fc7
+	> perl egc.pl lsusanto-h2:708 read 10
+	couldn't contact daemon: No connection could be made because the target machine
+	actively refused it. at egc.pl line 27.
+	> perl egc.pl 192.168.1.101:708 read 10
+	couldn't contact daemon: No connection could be made because the target machine
+	actively refused it. at egc.pl line 27.
+
+	set EGD_PATH=localhost:708
+	cpan IO::Socket::SSL -> can not find a random number generator
+
+	set SKIP_RNG_TEST=1
+
+	TODO: Give stackoverflow a chance:
+	http://stackoverflow.com/questions/12630011/how-to-setup-netssleay-to-use-egdw
+	
+
 
 10:57 AM 9/26/2012
 	invalid SSL_version specified at C:/Perl5.16.1/lib/IO/Socket/SSL.pm line 332.
@@ -138,6 +191,7 @@ shutdown /m \\CDCSLRGNAPP04-T /r /f /t 5 /c "reset LR gen"
 	Test drive GetGnuWin32
 	D:\GetGnuWin32\GetGnuWin32
 		download.bat to download all of the packages.
+	TODO:
 
 12:13 PM 9/25/2012
 	"The Connected Company" September 27, 2012 at 10:00 AM

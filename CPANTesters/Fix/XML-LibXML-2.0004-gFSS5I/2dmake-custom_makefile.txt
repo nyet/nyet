@@ -1,3 +1,5 @@
+# perl Makefile.PL INC=-IC:\CPANTesters\bin\gnome-deps-win64\include LIBS=-LC:\CPANTesters\bin\gnome-deps-win64\lib
+
 cp lib/XML/LibXML/Devel.pm blib\lib\XML\LibXML\Devel.pm
 cp lib/XML/LibXML/DOM.pod blib\lib\XML\LibXML\DOM.pod
 cp lib/XML/LibXML/ErrNo.pod blib\lib\XML\LibXML\ErrNo.pod
