@@ -34,3 +34,47 @@ edit config.in
 
 ###########
 db-4.8.30-mingw64 -> 
+
+
+###########
+cd /c/CPANTesters/archives/db-5.3.21/build_unix
+../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local 2>&1 > configure.log
+#configure: WARNING: Neither mmap/munmap(2) or shmget(2) library functions.
+make 2>&1 > make.log
+mkdir C:\CPANTesters\archives\db-5.3.21-mingw64\lib
+mkdir C:\CPANTesters\archives\db-5.3.21-mingw64\include\db
+copy C:\CPANTesters\archives\db-5.3.21\build_unix\libdb.a C:\CPANTesters\archives\db-5.3.21-mingw64\lib\libdb.a
+copy C:\CPANTesters\archives\db-5.3.21\build_unix\*.h C:\CPANTesters\archives\db-5.3.21-mingw64\include\db
+
+cd C:\CPANTesters\cpan\build\DB_File-1.827-yKOkDN
+edit config.in
+	INCLUDE	= C:\CPANTesters\archives\db-5.3.21-mingw64\include\db
+	LIB	= C:\CPANTesters\archives\db-5.3.21-mingw64\lib
+	DBNAME = -ldb
+
+C:\CPANTesters\archives\db-5.3.21-mingw64\lib\libdb.a(os_pid.o):os_pid.c:(.text+
+0x22): undefined reference to `pthread_self'
+collect2: ld returned 1 exit status
+
+it seems that db-5.3.21 is not working with DB_File.
+editing or not editing db.h produces the same result.
+###########
+cd /c/CPANTesters/archives/db-5.2.42/build_unix
+../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+didn't edit the db.h
+#configure: WARNING: Neither mmap/munmap(2) or shmget(2) library functions.
+make
+#no error
+mkdir C:\CPANTesters\archives\db-5.2.42-mingw64\lib
+mkdir C:\CPANTesters\archives\db-5.2.42-mingw64\include\db
+copy C:\CPANTesters\archives\db-5.2.42\build_unix\libdb.a C:\CPANTesters\archives\db-5.2.42-mingw64\lib\libdb.a
+copy C:\CPANTesters\archives\db-5.2.42\build_unix\*.h C:\CPANTesters\archives\db-5.2.42-mingw64\include\db
+
+cd C:\CPANTesters\cpan\build\DB_File-1.827-yKOkDN
+edit config.in
+	INCLUDE	= C:\CPANTesters\archives\db-5.2.42-mingw64\include\db
+	LIB	= C:\CPANTesters\archives\db-5.2.42-mingw64\lib
+	DBNAME = -ldb
+perl Makefile.pl
+dmake -> ok
+dmake test -> ok 
