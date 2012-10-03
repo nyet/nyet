@@ -1,0 +1,20 @@
+---
+comment: |
+
+  things that hang or must be skipped for some other reasons in *my*
+  CPAN smokers, eg
+
+  things that have too interactive tests, that cannot be easily
+  automated
+
+  things that need ressources we don't have
+
+match:
+  distribution: |
+    ^(?x:
+    .^   # never matches, only purpose is to let things align nicely
+    |AWRIGLEY/App-Control-\d                 # endless loop
+    |BKCHAPIN/DBIx-Perform-\d                # curses login (?)
+    |ZSTEVENS/Alien-ActiveMQ-\d              # downloads 50MB and leaves them in /tmp/
+    )|
+disabled: 1
