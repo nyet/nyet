@@ -1,5 +1,7 @@
-
-
+	cd C:\CPANTesters\cpan\build\XML-LibXML-2.0004-Dsek1j
+	dmake clean
+	perl Makefile.PL INC=-IC:\CPANTesters\bin\gnome-deps-win64\include LIBS=-LC:\CPANTesters\bin\gnome-deps-win64\lib
+	dmake 2>&1| tee -a 2dmake-custom_makefile.txt
 
 9:11 PM 9/24/2012
 	Last command line when fixing Net-HTTPS-6.02.pm problem

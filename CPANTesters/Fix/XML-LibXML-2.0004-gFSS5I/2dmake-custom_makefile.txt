@@ -1,0 +1,68 @@
+# perl Makefile.PL INC=-IC:\CPANTesters\bin\gnome-deps-win64\include LIBS=-LC:\CPANTesters\bin\gnome-deps-win64\lib
+
+cp lib/XML/LibXML/Devel.pm blib\lib\XML\LibXML\Devel.pm
+cp lib/XML/LibXML/DOM.pod blib\lib\XML\LibXML\DOM.pod
+cp lib/XML/LibXML/ErrNo.pod blib\lib\XML\LibXML\ErrNo.pod
+cp lib/XML/LibXML/SAX/Builder.pm blib\lib\XML\LibXML\SAX\Builder.pm
+cp lib/XML/LibXML/DocumentFragment.pod blib\lib\XML\LibXML\DocumentFragment.pod
+cp lib/XML/LibXML/Reader.pm blib\lib\XML\LibXML\Reader.pm
+cp lib/XML/LibXML/XPathContext.pod blib\lib\XML\LibXML\XPathContext.pod
+cp lib/XML/LibXML/InputCallback.pod blib\lib\XML\LibXML\InputCallback.pod
+cp lib/XML/LibXML/Namespace.pod blib\lib\XML\LibXML\Namespace.pod
+cp lib/XML/LibXML/SAX/Builder.pod blib\lib\XML\LibXML\SAX\Builder.pod
+cp lib/XML/LibXML/Document.pod blib\lib\XML\LibXML\Document.pod
+cp lib/XML/LibXML/Attr.pod blib\lib\XML\LibXML\Attr.pod
+cp lib/XML/LibXML/SAX/Generator.pm blib\lib\XML\LibXML\SAX\Generator.pm
+cp lib/XML/LibXML/CDATASection.pod blib\lib\XML\LibXML\CDATASection.pod
+cp lib/XML/LibXML/Reader.pod blib\lib\XML\LibXML\Reader.pod
+cp LibXML.pod blib\lib\XML\LibXML.pod
+cp lib/XML/LibXML/Common.pod blib\lib\XML\LibXML\Common.pod
+cp lib/XML/LibXML/RelaxNG.pod blib\lib\XML\LibXML\RelaxNG.pod
+cp lib/XML/LibXML/ErrNo.pm blib\lib\XML\LibXML\ErrNo.pm
+cp lib/XML/LibXML/PI.pod blib\lib\XML\LibXML\PI.pod
+cp lib/XML/LibXML/Number.pm blib\lib\XML\LibXML\Number.pm
+cp lib/XML/LibXML/SAX.pm blib\lib\XML\LibXML\SAX.pm
+cp lib/XML/LibXML/Node.pod blib\lib\XML\LibXML\Node.pod
+cp lib/XML/LibXML/Literal.pm blib\lib\XML\LibXML\Literal.pm
+cp lib/XML/LibXML/Parser.pod blib\lib\XML\LibXML\Parser.pod
+cp LibXML.pm blib\lib\XML\LibXML.pm
+cp lib/XML/LibXML/XPathExpression.pod blib\lib\XML\LibXML\XPathExpression.pod
+cp lib/XML/LibXML/Element.pod blib\lib\XML\LibXML\Element.pod
+cp lib/XML/LibXML/SAX/Parser.pm blib\lib\XML\LibXML\SAX\Parser.pm
+cp lib/XML/LibXML/SAX.pod blib\lib\XML\LibXML\SAX.pod
+cp lib/XML/LibXML/Common.pm blib\lib\XML\LibXML\Common.pm
+cp lib/XML/LibXML/XPathContext.pm blib\lib\XML\LibXML\XPathContext.pm
+cp lib/XML/LibXML/Error.pm blib\lib\XML\LibXML\Error.pm
+cp lib/XML/LibXML/Text.pod blib\lib\XML\LibXML\Text.pod
+cp lib/XML/LibXML/AttributeHash.pm blib\lib\XML\LibXML\AttributeHash.pm
+cp lib/XML/LibXML/Boolean.pm blib\lib\XML\LibXML\Boolean.pm
+cp lib/XML/LibXML/RegExp.pod blib\lib\XML\LibXML\RegExp.pod
+cp lib/XML/LibXML/Schema.pod blib\lib\XML\LibXML\Schema.pod
+cp lib/XML/LibXML/Error.pod blib\lib\XML\LibXML\Error.pod
+cp lib/XML/LibXML/Dtd.pod blib\lib\XML\LibXML\Dtd.pod
+cp lib/XML/LibXML/Comment.pod blib\lib\XML\LibXML\Comment.pod
+cp lib/XML/LibXML/Pattern.pod blib\lib\XML\LibXML\Pattern.pod
+cp lib/XML/LibXML/NodeList.pm blib\lib\XML\LibXML\NodeList.pm
+C:/CPANTE~1/PERL51~1.0_6/site/bin/gcc.exe -c  -IC:\CPANTesters\bin\gnome-deps-win64\include 	-DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DWIN64 -DCONSERVATIVE -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 	  -DVERSION=\"2.0004\" 	-DXS_VERSION=\"2.0004\"  "-IC:\CPANTesters\Perl5.16.0_64\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK Av_CharPtrPtr.c
+C:\CPANTesters\Perl5.16.0_64\bin\perl.exe C:\CPANTesters\Perl5.16.0_64\lib\ExtUtils\xsubpp  -typemap C:\CPANTesters\Perl5.16.0_64\lib\ExtUtils\typemap -typemap typemap  Devel.xs > Devel.xsc && C:\CPANTesters\Perl5.16.0_64\bin\perl.exe -MExtUtils::Command -e mv -- Devel.xsc Devel.c
+C:/CPANTE~1/PERL51~1.0_6/site/bin/gcc.exe -c  -IC:\CPANTesters\bin\gnome-deps-win64\include 	-DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DWIN64 -DCONSERVATIVE -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 	  -DVERSION=\"2.0004\" 	-DXS_VERSION=\"2.0004\"  "-IC:\CPANTesters\Perl5.16.0_64\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK Devel.c
+C:\CPANTesters\Perl5.16.0_64\bin\perl.exe C:\CPANTesters\Perl5.16.0_64\lib\ExtUtils\xsubpp  -typemap C:\CPANTesters\Perl5.16.0_64\lib\ExtUtils\typemap -typemap typemap  LibXML.xs > LibXML.xsc && C:\CPANTesters\Perl5.16.0_64\bin\perl.exe -MExtUtils::Command -e mv -- LibXML.xsc LibXML.c
+C:/CPANTE~1/PERL51~1.0_6/site/bin/gcc.exe -c  -IC:\CPANTesters\bin\gnome-deps-win64\include 	-DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DWIN64 -DCONSERVATIVE -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 	  -DVERSION=\"2.0004\" 	-DXS_VERSION=\"2.0004\"  "-IC:\CPANTesters\Perl5.16.0_64\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK LibXML.c
+C:/CPANTE~1/PERL51~1.0_6/site/bin/gcc.exe -c  -IC:\CPANTesters\bin\gnome-deps-win64\include 	-DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DWIN64 -DCONSERVATIVE -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 	  -DVERSION=\"2.0004\" 	-DXS_VERSION=\"2.0004\"  "-IC:\CPANTesters\Perl5.16.0_64\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK dom.c
+C:/CPANTE~1/PERL51~1.0_6/site/bin/gcc.exe -c  -IC:\CPANTesters\bin\gnome-deps-win64\include 	-DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DWIN64 -DCONSERVATIVE -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 	  -DVERSION=\"2.0004\" 	-DXS_VERSION=\"2.0004\"  "-IC:\CPANTesters\Perl5.16.0_64\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK perl-libxml-mm.c
+perl-libxml-mm.c: In function 'PmmRegistryName':
+perl-libxml-mm.c:165:24: warning: cast from pointer to integer of different size
+C:/CPANTE~1/PERL51~1.0_6/site/bin/gcc.exe -c  -IC:\CPANTesters\bin\gnome-deps-win64\include 	-DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DWIN64 -DCONSERVATIVE -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 	  -DVERSION=\"2.0004\" 	-DXS_VERSION=\"2.0004\"  "-IC:\CPANTesters\Perl5.16.0_64\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK perl-libxml-sax.c
+C:/CPANTE~1/PERL51~1.0_6/site/bin/gcc.exe -c  -IC:\CPANTesters\bin\gnome-deps-win64\include 	-DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DWIN64 -DCONSERVATIVE -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 	  -DVERSION=\"2.0004\" 	-DXS_VERSION=\"2.0004\"  "-IC:\CPANTesters\Perl5.16.0_64\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK xpath.c
+Running Mkbootstrap for XML::LibXML ()
+C:\CPANTesters\Perl5.16.0_64\bin\perl.exe -MExtUtils::Command -e chmod -- 644 LibXML.bs
+C:\CPANTesters\Perl5.16.0_64\bin\perl.exe -MExtUtils::Mksymlists \
+     -e "Mksymlists('NAME'=>\"XML::LibXML\", 'DLBASE' => 'LibXML', 'DL_FUNCS' => {  }, 'FUNCLIST' => [], 'IMPORTS' => {  }, 'DL_VARS' => []);"
+Set up gcc environment - gcc.exe (rubenvb-4.5.4) 4.5.4
+dlltool --def LibXML.def --output-exp dll.exp
+C:\CPANTE~1\PERL51~1.0_6\site\bin\g++.exe -o blib\arch\auto\XML\LibXML\LibXML.dll -Wl,--base-file -Wl,dll.base -mdll -L"C:\CPANTesters\Perl5.16.0_64\lib\CORE" Av_CharPtrPtr.o 	Devel.o 	LibXML.o 	dom.o 	perl-libxml-mm.o 	perl-libxml-sax.o 	xpath.o   C:\CPANTesters\Perl5.16.0_64\lib\CORE\perl516.lib C:\CPANTesters\bin\gnome-deps-win64\lib\libxml2.lib C:\CPANTesters\bin\gnome-deps-win64\lib\libgettextlib.dll.a dll.exp
+dlltool --def LibXML.def --base-file dll.base --output-exp dll.exp
+C:\CPANTE~1\PERL51~1.0_6\site\bin\g++.exe -o blib\arch\auto\XML\LibXML\LibXML.dll -mdll -L"C:\CPANTesters\Perl5.16.0_64\lib\CORE" Av_CharPtrPtr.o 	Devel.o 	LibXML.o 	dom.o 	perl-libxml-mm.o 	perl-libxml-sax.o 	xpath.o   C:\CPANTesters\Perl5.16.0_64\lib\CORE\perl516.lib C:\CPANTesters\bin\gnome-deps-win64\lib\libxml2.lib C:\CPANTesters\bin\gnome-deps-win64\lib\libgettextlib.dll.a dll.exp 
+C:\CPANTesters\Perl5.16.0_64\bin\perl.exe -MExtUtils::Command -e chmod -- 755 blib\arch\auto\XML\LibXML\LibXML.dll
+C:\CPANTesters\Perl5.16.0_64\bin\perl.exe -MExtUtils::Command -e cp -- LibXML.bs blib\arch\auto\XML\LibXML\LibXML.bs
+C:\CPANTesters\Perl5.16.0_64\bin\perl.exe -MExtUtils::Command -e chmod -- 644 blib\arch\auto\XML\LibXML\LibXML.bs
