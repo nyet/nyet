@@ -1,0 +1,119 @@
+C:\CPANTesters\Perl5.16.1\bin\perl.exe "-MExtUtils::Command::MM" "-e" "test_harness(0, 'blib\lib', 'blib\arch')" t/*.t
+# 
+# 
+# Compiled against libxml2 version: 20708
+# Running libxml2 version:          20708
+# 
+t/01basic.t ......................... ok
+t/02parse.t ......................... ok
+t/03doc.t ........................... ok
+t/04node.t .......................... ok
+t/05text.t .......................... ok
+t/06elements.t ...................... ok
+t/07dtd.t ........................... ok
+t/08findnodes.t ..................... ok
+t/09xpath.t ......................... ok
+t/10ns.t ............................ ok
+t/11memory.t ........................ skipped: linux platform only.
+t/12html.t .......................... ok
+t/13dtd.t ........................... ok
+t/14sax.t ........................... ok
+t/15nodelist.t ...................... ok
+t/16docnodes.t ...................... ok
+t/17callbacks.t ..................... ok
+t/18docfree.t ....................... ok
+t/19die_on_invalid_utf8_rt_58848.t .. ok
+t/19encoding.t ...................... ok
+t/20extras.t ........................ ok
+t/21catalog.t ....................... ok
+t/23rawfunctions.t .................. ok
+t/24c14n.t .......................... ok
+t/25relaxng.t ....................... ok
+t/26schema.t ........................ ok
+t/27new_callbacks_simple.t .......... ok
+t/28new_callbacks_multiple.t ........ ok
+t/29id.t ............................ ok
+t/30keep_blanks.t ................... ok
+t/30xpathcontext.t .................. ok
+t/31xpc_functions.t ................. ok
+t/32xpc_variables.t ................. ok
+t/40reader.t ........................ ok
+t/41xinclude.t ...................... ok
+t/42common.t ........................ ok
+t/43options.t ....................... ok
+t/44extent.t ........................ ok
+t/45regex.t ......................... ok
+t/46err_column.t .................... ok
+t/47load_xml_callbacks.t ............ ok
+t/48_rt55000.t ...................... ok
+t/48importing_nodes_IDs_rt_69520.t .. ok
+t/49_load_html.t .................... ok
+t/49callbacks_returning_undef.t ..... ok
+t/49global_extent.t ................. ok
+
+#   Failed test at t/50devel.t line 27.
+#          got: '644'
+#     expected: '632'
+
+#   Failed test at t/50devel.t line 50.
+#          got: '656'
+#     expected: '644'
+
+#   Failed test at t/50devel.t line 89.
+#          got: '773'
+#     expected: '656'
+# Looks like you failed 3 tests of 18.
+Memory tag error occurs :0025F860 
+	 bye
+xmlMemFree(25F878) error
+xmlMallocBreakpoint reached on block 0
+Memory tag error occurs :02798B90 
+	 bye
+xmlMemFree(2798BA8) error
+xmlMallocBreakpoint reached on block 0
+Memory tag error occurs :0025F870 
+	 bye
+xmlMemFree(25F888) error
+xmlMallocBreakpoint reached on block 0
+Memory tag error occurs :02798B60 
+	 bye
+xmlMemFree(2798B78) error
+xmlMallocBreakpoint reached on block 0
+Memory tag error occurs :0025F880 
+	 bye
+xmlMemFree(25F898) error
+xmlMallocBreakpoint reached on block 0
+Memory tag error occurs :02798B78 
+	 bye
+xmlMemFree(2798B90) error
+xmlMallocBreakpoint reached on block 0
+Memory tag error occurs :025E26F0 
+	 bye
+xmlMemFree(25E2708) error
+xmlMallocBreakpoint reached on block 0
+Memory tag error occurs :0025F890 
+	 bye
+xmlMemFree(25F8A8) error
+xmlMallocBreakpoint reached on block 0
+t/50devel.t ......................... 
+Dubious, test returned 3 (wstat 768, 0x300)
+Failed 3/18 subtests 
+t/60error_prev_chain.t .............. ok
+t/60struct_error.t .................. ok
+t/61error.t ......................... ok
+t/62overload.t ...................... ok
+t/71overloads.t ..................... ok
+t/72destruction.t ................... ok
+t/80registryleak.t .................. ok
+t/90threads.t ....................... skipped: optional (set THREAD_TEST=1 to run these tests)
+t/pod.t ............................. ok
+
+Test Summary Report
+-------------------
+t/50devel.t                       (Wstat: 768 Tests: 18 Failed: 3)
+  Failed tests:  3, 7, 18
+  Non-zero exit status: 3
+Files=56, Tests=2443, 10 wallclock secs ( 0.48 usr +  0.05 sys =  0.53 CPU)
+Result: FAIL
+Failed 1/56 test programs. 3/2443 subtests failed.
+dmake.exe:  Error code 255, while making 'test_dynamic'

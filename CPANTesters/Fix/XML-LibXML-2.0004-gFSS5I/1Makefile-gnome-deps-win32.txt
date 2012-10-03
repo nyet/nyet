@@ -1,0 +1,10 @@
+> perl Makefile.PL INC=-IC:\CPANTesters\bin\gnome-deps-win32\include\libxml2 LIBS=-LC:\CPANTesters\bin\gnome-deps-win32\lib
+Set up gcc environment - 4.6.2
+enable native perl UTF8
+looking for -lxml2... yes
+Checking if your kit is complete...
+Looks good
+Note (probably harmless): No library found for -lzlib
+Note (probably harmless): No library found for -lzlib
+Writing Makefile for XML::LibXML
+Writing MYMETA.yml and MYMETA.json

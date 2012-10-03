@@ -1,0 +1,6 @@
+> perl Makefile.PL INC=-IC:\CPANTesters\bin\libxml2-zlatkovic\include LIBS=-LC:\CPANTesters\bin\libxml2-zlatkovic\lib
+Set up gcc environment - 4.6.2
+enable native perl UTF8
+looking for -lxml2... yes
+Writing Makefile for XML::LibXML
+Writing MYMETA.yml and MYMETA.json

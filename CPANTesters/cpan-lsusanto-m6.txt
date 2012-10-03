@@ -4,6 +4,21 @@ Important modules:
 	DB_File
 	cpan IO::Async
 	cpan XML::LibXML
+		11:33 PM 10/2/2012
+		Perl5.016.001_MinGW_LibXML2-Zlatkovic.bat
+		cd C:\CPANTesters\cpan\build\XML-LibXML-2.0004-otCUso
+		perl Makefile.PL INC=-IC:\CPANTesters\bin\libxml2-zlatkovic\include LIBS=-LC:\CPANTesters\bin\libxml2-zlatkovic\lib 2>&1| tee -a 1Makefile-LibXML2-zlatkovic.txt
+		dmake 2>&1| tee -a 2dmake-LibXML2-zlatkovic.txt
+		dmake test 2>&1| tee -a 3dmake-test-LibXML2-zlatkovic.txt
+
+		Perl5.016.001_MinGW.bat
+		cd C:\CPANTesters\cpan\build\XML-LibXML-2.0004-otCUso
+		perl Makefile.PL INC=-IC:\CPANTesters\bin\gnome-deps-win32\include\libxml2 LIBS=-LC:\CPANTesters\bin\gnome-deps-win32\lib 2>&1| tee -a 1Makefile-gnome-deps-win32.txt
+		dmake 2>&1| tee -a 2dmake-gnome-deps-win32.txt
+		dmake test 2>&1| tee -a 3dmake-test-gnome-deps-win32.txt
+		-> good.txt
+		############################
+
 		Devel.xs:28:30: fatal error: libxml/xmlmemory.h: No such file or directory
 
 		cd C:\CPANTesters\cpan\build\XML-LibXML-2.0004-VyhHPP
@@ -118,6 +133,30 @@ Important modules:
 			dmake 2>&1| tee -a 2dmake.txt
 			dmake test
 
+
+	8:06 PM 10/2/2012 cpan Win32::Process::List
+
+		C:\CPANTesters\MinGW-get\MinGW\bin>mingw32-make.exe -v
+		GNU Make 3.82
+		Built for i386-pc-mingw32
+		C:\CPANTesters\MinGW-get\MinGW\bin>gcc --version
+		gcc (GCC) 4.6.2
+	
+		C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW\bin>mingw32-make.exe -v
+		GNU Make 3.81
+		C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW\bin>gcc --version
+		gcc (GCC) 3.4.5 (mingw-vista special r3)
+
+		C:\CPANTesters\testdevcode>which dmake
+		C:\CPANTesters\Perl5.16.1\site\bin\dmake.EXE
+		C:\CPANTesters\testdevcode>which gcc
+		C:\CPANTesters\MinGW-get\MinGW\bin\gcc.EXE
+		cpan -t Win32::Process::List -> good.
+
+		Can't load dll, load_file:Invalid access to memory location 
+		at C:/CPANTesters/Perl5.16.1/lib/DynaLoader.pm line 191.
+
+		C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\bin
 
 	12:26 PM 9/2/2012 cpan Text::Iconv
 		C:\CPANTesters\cpan\build\Text-Iconv-1.7-bwcFoe

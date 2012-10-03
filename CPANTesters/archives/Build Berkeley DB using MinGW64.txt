@@ -60,10 +60,10 @@ it seems that db-5.3.21 is not working with DB_File.
 editing or not editing db.h produces the same result.
 ###########
 cd /c/CPANTesters/archives/db-5.2.42/build_unix
-../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local > 1configure.log 2>&1
 didn't edit the db.h
 #configure: WARNING: Neither mmap/munmap(2) or shmget(2) library functions.
-make
+make > make.log 2>&1
 #no error
 mkdir C:\CPANTesters\archives\db-5.2.42-mingw64\lib
 mkdir C:\CPANTesters\archives\db-5.2.42-mingw64\include\db
