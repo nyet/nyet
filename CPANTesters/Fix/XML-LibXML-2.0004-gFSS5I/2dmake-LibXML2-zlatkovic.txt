@@ -1,0 +1,59 @@
+Skip blib\lib\XML\LibXML\Devel.pm (unchanged)
+Skip blib\lib\XML\LibXML\DOM.pod (unchanged)
+Skip blib\lib\XML\LibXML\ErrNo.pod (unchanged)
+Skip blib\lib\XML\LibXML\SAX\Builder.pm (unchanged)
+Skip blib\lib\XML\LibXML\DocumentFragment.pod (unchanged)
+Skip blib\lib\XML\LibXML\Reader.pm (unchanged)
+Skip blib\lib\XML\LibXML\XPathContext.pod (unchanged)
+Skip blib\lib\XML\LibXML\InputCallback.pod (unchanged)
+Skip blib\lib\XML\LibXML\Namespace.pod (unchanged)
+Skip blib\lib\XML\LibXML\SAX\Builder.pod (unchanged)
+Skip blib\lib\XML\LibXML\Document.pod (unchanged)
+Skip blib\lib\XML\LibXML\Attr.pod (unchanged)
+Skip blib\lib\XML\LibXML\SAX\Generator.pm (unchanged)
+Skip blib\lib\XML\LibXML\CDATASection.pod (unchanged)
+Skip blib\lib\XML\LibXML\Reader.pod (unchanged)
+Skip blib\lib\XML\LibXML.pod (unchanged)
+Skip blib\lib\XML\LibXML\Common.pod (unchanged)
+Skip blib\lib\XML\LibXML\RelaxNG.pod (unchanged)
+Skip blib\lib\XML\LibXML\ErrNo.pm (unchanged)
+Skip blib\lib\XML\LibXML\PI.pod (unchanged)
+Skip blib\lib\XML\LibXML\Number.pm (unchanged)
+Skip blib\lib\XML\LibXML\SAX.pm (unchanged)
+Skip blib\lib\XML\LibXML\Node.pod (unchanged)
+Skip blib\lib\XML\LibXML\Literal.pm (unchanged)
+Skip blib\lib\XML\LibXML\Parser.pod (unchanged)
+Skip blib\lib\XML\LibXML.pm (unchanged)
+Skip blib\lib\XML\LibXML\XPathExpression.pod (unchanged)
+Skip blib\lib\XML\LibXML\Element.pod (unchanged)
+Skip blib\lib\XML\LibXML\SAX\Parser.pm (unchanged)
+Skip blib\lib\XML\LibXML\SAX.pod (unchanged)
+Skip blib\lib\XML\LibXML\Common.pm (unchanged)
+Skip blib\lib\XML\LibXML\XPathContext.pm (unchanged)
+Skip blib\lib\XML\LibXML\Error.pm (unchanged)
+Skip blib\lib\XML\LibXML\Text.pod (unchanged)
+Skip blib\lib\XML\LibXML\AttributeHash.pm (unchanged)
+Skip blib\lib\XML\LibXML\Boolean.pm (unchanged)
+Skip blib\lib\XML\LibXML\RegExp.pod (unchanged)
+Skip blib\lib\XML\LibXML\Schema.pod (unchanged)
+Skip blib\lib\XML\LibXML\Error.pod (unchanged)
+Skip blib\lib\XML\LibXML\Dtd.pod (unchanged)
+Skip blib\lib\XML\LibXML\Comment.pod (unchanged)
+Skip blib\lib\XML\LibXML\Pattern.pod (unchanged)
+Skip blib\lib\XML\LibXML\NodeList.pm (unchanged)
+C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\gcc.exe -c  -IC:\CPANTesters\bin\libxml2-zlatkovic\include 	-DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D_USE_32BIT_TIME_T -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 	  -DVERSION=\"2.0004\" 	-DXS_VERSION=\"2.0004\"  "-IC:\CPANTesters\Perl5.16.1\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK Av_CharPtrPtr.c
+C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\gcc.exe -c  -IC:\CPANTesters\bin\libxml2-zlatkovic\include 	-DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D_USE_32BIT_TIME_T -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 	  -DVERSION=\"2.0004\" 	-DXS_VERSION=\"2.0004\"  "-IC:\CPANTesters\Perl5.16.1\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK Devel.c
+C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\gcc.exe -c  -IC:\CPANTesters\bin\libxml2-zlatkovic\include 	-DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D_USE_32BIT_TIME_T -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 	  -DVERSION=\"2.0004\" 	-DXS_VERSION=\"2.0004\"  "-IC:\CPANTesters\Perl5.16.1\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK LibXML.c
+C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\gcc.exe -c  -IC:\CPANTesters\bin\libxml2-zlatkovic\include 	-DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D_USE_32BIT_TIME_T -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 	  -DVERSION=\"2.0004\" 	-DXS_VERSION=\"2.0004\"  "-IC:\CPANTesters\Perl5.16.1\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK dom.c
+C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\gcc.exe -c  -IC:\CPANTesters\bin\libxml2-zlatkovic\include 	-DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D_USE_32BIT_TIME_T -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 	  -DVERSION=\"2.0004\" 	-DXS_VERSION=\"2.0004\"  "-IC:\CPANTesters\Perl5.16.1\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK perl-libxml-mm.c
+C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\gcc.exe -c  -IC:\CPANTesters\bin\libxml2-zlatkovic\include 	-DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D_USE_32BIT_TIME_T -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 	  -DVERSION=\"2.0004\" 	-DXS_VERSION=\"2.0004\"  "-IC:\CPANTesters\Perl5.16.1\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK perl-libxml-sax.c
+C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\gcc.exe -c  -IC:\CPANTesters\bin\libxml2-zlatkovic\include 	-DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D_USE_32BIT_TIME_T -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 	  -DVERSION=\"2.0004\" 	-DXS_VERSION=\"2.0004\"  "-IC:\CPANTesters\Perl5.16.1\lib\CORE"  -DHAVE_UTF8 -DHAVE_BLANK xpath.c
+Running Mkbootstrap for XML::LibXML ()
+C:\CPANTesters\Perl5.16.1\bin\perl.exe -MExtUtils::Command -e chmod -- 644 LibXML.bs
+C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\dlltool.exe --def LibXML.def --output-exp dll.exp
+C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\g++.exe -o blib\arch\auto\XML\LibXML\LibXML.dll -Wl,--base-file -Wl,dll.base -mdll -L"C:\CPANTesters\Perl5.16.1\lib\CORE" Av_CharPtrPtr.o 	Devel.o 	LibXML.o 	dom.o 	perl-libxml-mm.o 	perl-libxml-sax.o 	xpath.o   C:\CPANTesters\Perl5.16.1\lib\CORE\perl516.lib C:\CPANTesters\bin\libxml2-zlatkovic\lib\libxml2.lib C:\CPANTesters\bin\libxml2-zlatkovic\lib\zlib.lib C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libgettextlib.dll.a C:\CPANTesters\bin\libxml2-zlatkovic\lib\zlib.lib C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libkernel32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libuser32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libgdi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libwinspool.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libcomdlg32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libadvapi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libshell32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libole32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\liboleaut32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libnetapi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libuuid.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libws2_32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libmpr.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libwinmm.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libversion.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libodbc32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libodbccp32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libcomctl32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libmsvcrt.a dll.exp
+C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\dlltool.exe --def LibXML.def --base-file dll.base --output-exp dll.exp
+C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\g++.exe -o blib\arch\auto\XML\LibXML\LibXML.dll -mdll -L"C:\CPANTesters\Perl5.16.1\lib\CORE" Av_CharPtrPtr.o 	Devel.o 	LibXML.o 	dom.o 	perl-libxml-mm.o 	perl-libxml-sax.o 	xpath.o   C:\CPANTesters\Perl5.16.1\lib\CORE\perl516.lib C:\CPANTesters\bin\libxml2-zlatkovic\lib\libxml2.lib C:\CPANTesters\bin\libxml2-zlatkovic\lib\zlib.lib C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libgettextlib.dll.a C:\CPANTesters\bin\libxml2-zlatkovic\lib\zlib.lib C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libkernel32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libuser32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libgdi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libwinspool.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libcomdlg32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libadvapi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libshell32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libole32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\liboleaut32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libnetapi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libuuid.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libws2_32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libmpr.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libwinmm.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libversion.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libodbc32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libodbccp32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libcomctl32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libmsvcrt.a dll.exp 
+C:\CPANTesters\Perl5.16.1\bin\perl.exe -MExtUtils::Command -e chmod -- 755 blib\arch\auto\XML\LibXML\LibXML.dll
+C:\CPANTesters\Perl5.16.1\bin\perl.exe -MExtUtils::Command -e cp -- LibXML.bs blib\arch\auto\XML\LibXML\LibXML.bs
+C:\CPANTesters\Perl5.16.1\bin\perl.exe -MExtUtils::Command -e chmod -- 644 blib\arch\auto\XML\LibXML\LibXML.bs
