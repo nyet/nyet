@@ -1,3 +1,775 @@
+
+
+
+
+11:08 PM 10/3/2012 cpan DB_FIle
+	###############################
+	restore C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include\pthread.h
+	cd /C/CPANTesters/archives/db-5.3.21/build_unix
+
+	Edit db.h in /C/CPANTesters/archives/db-5.3.21/build_unix
+		-typedef pthread_t db_threadid_t;
+		+typedef u_int32_t db_threadid_t;
+
+	make
+
+	libtool: compile:  cc -c -I. -I../src -O3 ../src/os/os_path.c -o os_path.o >/dev/null 2>&1
+	./libtool --mode=compile cc -c -I. -I../src  -O3  ../src/os/os_pid.c
+	libtool: compile:  cc -c -I. -I../src -O3 ../src/os/os_pid.c  -DDLL_EXPORT -DPIC -o .libs/os_pid.o
+	../src/os/os_pid.c: In function '__os_id':
+	../src/os/os_pid.c:51:9: error: incompatible types when assigning to type 'db_threadid_t' from type 'pthread_t'
+	make: *** [os_pid.lo] Error 1
+
+	###############################
+	restore C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include\pthread.h
+	cd /C/CPANTesters/archives/db-5.2.42/build_unix
+	../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+
+	Edit db.h in /C/CPANTesters/archives/db-5.2.42/build_unix
+		-typedef pthread_t db_threadid_t;
+		+typedef u_int32_t db_threadid_t;
+
+	make
+	make install
+
+	move
+	   C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\local		
+	   C:\CPANTesters\bin\db-5.2.42-mingw32
+	   mingw32-4.6.2-db-5.2.42-build_unix-1.zip
+
+	   C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\local\docs
+	   C:\CPANTesters\bin\db-5.2.42-mingw32-docs
+
+	cd C:\CPANTesters\cpan\build\DB_File-1.827-cHJiYo
+	dmake clean
+	
+	edit config.in
+		INCLUDE	= C:\CPANTesters\bin\db-5.2.42-mingw32\include
+		LIB	= C:\CPANTesters\bin\db-5.2.42-mingw32\lib
+		PREFIX	= size_t
+		HASH	= u_int32_t
+		DBNAME	= -ldb
+
+	perl Makefile.PL 2>&1| tee -a 1MakeFile.PL-mingw32-8.txt
+	save Makefile as 1Makefile-mingw32-8
+
+	edit C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include\pthread.h
+	-PTHREAD_CREATE_JOINABLE       = 0,  /* Default */
+
+	dmake 2>&1| tee -a 2dmake-mingw32-8.txt
+	dmake test 2>&1| tee -a 3dmake-test-mingw32-8.txt -> good!
+	dmake install 2>&1| tee -a 4dmake-install-mingw32-8.txt
+	###############################
+	cd /C/CPANTesters/archives/db-5.1.29/build_unix
+	../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+	make clean
+	Edit db.h in /C/CPANTesters/archives/db-5.1.29/build_unix
+		-typedef pthread_t db_threadid_t;
+		+typedef u_int32_t db_threadid_t;
+	make -> good
+	make install
+	
+	move
+	   C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\local		
+	   C:\CPANTesters\bin\db-5.1.29-mingw32
+	   mingw32-4.6.2-db-5.1.29-build_unix-1.zip
+
+	   C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\local\docs
+	   C:\CPANTesters\bin\db-5.1.29-mingw32-docs
+
+	cd C:\CPANTesters\cpan\build\DB_File-1.827-cHJiYo
+	dmake clean
+	
+	edit config.in
+		INCLUDE	= C:\CPANTesters\bin\db-5.1.29-mingw32\include
+		LIB	= C:\CPANTesters\bin\db-5.1.29-mingw32\lib
+		PREFIX	= size_t
+		HASH	= u_int32_t
+		DBNAME	= -ldb
+
+	perl Makefile.PL 2>&1| tee -a 1MakeFile.PL-mingw32-7.txt
+	save Makefile as 1Makefile-mingw32-7
+
+	edit C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include\pthread.h
+	-PTHREAD_CREATE_JOINABLE       = 0,  /* Default */
+
+	dmake 2>&1| tee -a 2dmake-mingw32-7.txt
+	dmake test 2>&1| tee -a 3dmake-test-mingw32-7.txt -> good!
+	dmake install 2>&1| tee -a 4dmake-install-mingw32-7.txt
+	###############################
+	switching to db-5.1.29
+	cd /C/CPANTesters/archives/db-5.1.29/build_unix
+	../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+	make
+
+	libtool: compile:  cc -c -I. -I../src -O3 ../src/mutex/mut_alloc.c -o mut_alloc.o >/dev/null 2>&1
+	./libtool --mode=compile cc -c -I. -I../src  -O3  ../src/mutex/mut_failchk.c
+	libtool: compile:  cc -c -I. -I../src -O3 ../src/mutex/mut_failchk.c  -DDLL_EXPORT -DPIC -o .libs/mut_failchk.o
+	../src/mutex/mut_failchk.c: In function '__mut_failchk':
+	../src/mutex/mut_failchk.c:53:7: error: incompatible type for argument 3 of 'dbenv->is_alive'
+	../src/mutex/mut_failchk.c:53:7: note: expected 'db_threadid_t' but argument is of type 'int'
+	../src/mutex/mut_failchk.c:57:7: error: incompatible type for argument 3 of 'dbenv->thread_id_string'
+	../src/mutex/mut_failchk.c:57:7: note: expected 'db_threadid_t' but argument is of type 'int'
+	make: *** [mut_failchk.lo] Error 1
+
+	###############################
+	db-5.2.42 is not good =>  can not be compiled using mingw32.
+	###############################
+	restore C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include\pthread.h
+	cd /C/CPANTesters/archives/db-5.2.42/build_unix
+	../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+	make
+
+	./libtool --mode=compile cc -c -I. -I../src  -O3  ../src/mutex/mut_failchk.c
+	libtool: compile:  cc -c -I. -I../src -O3 ../src/mutex/mut_failchk.c  -DDLL_EXPORT -DPIC -o .libs/mut_failchk.o
+	../src/mutex/mut_failchk.c: In function '__mut_failchk':
+	../src/mutex/mut_failchk.c:56:7: error: incompatible type for argument 3 of 'dbenv->is_alive'
+	../src/mutex/mut_failchk.c:56:7: note: expected 'db_threadid_t' but argument is of type 'int'
+	../src/mutex/mut_failchk.c:61:7: error: incompatible type for argument 3 of 'dbenv->thread_id_string'
+	../src/mutex/mut_failchk.c:61:7: note: expected 'db_threadid_t' but argument isof type 'int'
+	make: *** [mut_failchk.lo] Error 1
+
+	###############################
+	cd /C/CPANTesters/archives/db-5.2.42/build_unix
+	../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+	make
+
+	libtool: compile:  cc -c -I. -I../src -O3 ../src/mutex/mut_alloc.c -o mut_alloc.o >/dev/null 2>&1
+	./libtool --mode=compile cc -c -I. -I../src  -O3  ../src/mutex/mut_failchk.c
+	libtool: compile:  cc -c -I. -I../src -O3 ../src/mutex/mut_failchk.c  -DDLL_EXPORT -DPIC -o .libs/mut_failchk.o
+	../src/mutex/mut_failchk.c: In function '__mut_failchk':
+	../src/mutex/mut_failchk.c:56:7: error: incompatible type for argument 3 of 'dbenv->is_alive'
+	../src/mutex/mut_failchk.c:56:7: note: expected 'db_threadid_t' but argument is of type 'int'
+	../src/mutex/mut_failchk.c:61:7: error: incompatible type for argument 3 of 'dbenv->thread_id_string'
+	../src/mutex/mut_failchk.c:61:7: note: expected 'db_threadid_t' but argument is of type 'int'
+	make: *** [mut_failchk.lo] Error 1
+
+	FUCK! me forgetting to restore C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include\pthread.h
+
+	###############################
+	db-5.3.21 is not good.
+	###############################
+	cd /C/CPANTesters/archives/db-5.3.21/build_unix
+	make clean
+
+	Edit db.h in /C/CPANTesters/archives/db-5.3.21/build_unix
+		-typedef pthread_t db_threadid_t;
+		+typedef u_int32_t db_threadid_t;
+	
+	make
+
+	./libtool --mode=compile cc -c -I. -I../src  -O3  ../src/os/os_pid.c
+	libtool: compile:  cc -c -I. -I../src -O3 ../src/os/os_pid.c  -DDLL_EXPORT -DPIC -o .libs/os_pid.o
+	../src/os/os_pid.c: In function '__os_id':
+	../src/os/os_pid.c:51:9: error: incompatible types when assigning to type 'db_threadid_t' from type 'pthread_t'
+	make: *** [os_pid.lo] Error 1
+
+	###############################
+	cd /C/CPANTesters/archives/db-5.3.21/build_unix
+	../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+	make
+	make install
+
+	move
+	   C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\local		
+	   C:\CPANTesters\bin\db-5.3.21-mingw32
+
+	mingw32-4.6.2-db-5.3.21-build_unix-3.zip
+	
+	cd C:\CPANTesters\cpan\build\DB_File-1.827-cHJiYo
+	dmake clean
+	
+	edit config.in
+		INCLUDE	= C:\CPANTesters\bin\db-5.3.21-mingw32\include
+		LIB	= C:\CPANTesters\bin\db-5.3.21-mingw32\lib
+		PREFIX	= size_t
+		HASH	= u_int32_t
+		DBNAME	= -ldb
+
+	perl Makefile.PL 2>&1| tee -a 1MakeFile.PL-mingw32-6.txt
+	save Makefile as 1Makefile-mingw32-6
+
+	edit C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include\pthread.h
+	-PTHREAD_CREATE_JOINABLE       = 0,  /* Default */
+
+	dmake 2>&1| tee -a 2dmake-mingw32-6.txt
+
+	C:\CPANTesters\bin\db-5.3.21-mingw32\lib\libdb.a(os_pid.o):os_pid.c:(.text+0x24): undefined reference to `_imp__pthread_self'
+	collect2: ld returned 1 exit status
+	dmake.exe:  Error code 129, while making 'blib\arch\auto\DB_File\DB_File.dll'
+	###############################
+	Perl5.016.001_MinGW.bat
+	REM @Set LIB=C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\lib
+	REM @Set INCLUDE=C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include
+
+	Perl5.016.001_MinGW.bat
+	cd C:\CPANTesters\cpan\build\DB_File-1.827-cHJiYo
+	perl Makefile.PL 2>&1| tee -a 1MakeFile.PL-mingw32-5.txt
+	save Makefile as 1Makefile-mingw32-5
+	dmake 2>&1| tee -a 2dmake-mingw32-5.txt
+
+	C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\gcc.exe -c  -IC:\CPANTesters\bin\db-4.8.30-mingw32\include  -DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS-DUSE_PERLIO -D_USE_32BIT_TIME_T -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2           -DVERSION=\"1.827\"   -DXS_VERSION=\"1.827\"  "-IC:\CPANTesters\Perl5.16.1\lib\CORE"  -D_NOT_CORE  -DmDB_Prefix_t=size_t -DmDB_Hash_t=u_int32_t version.c
+	In file included from C:\CPANTesters\bin\db-4.8.30-mingw32\include/db.h:30:0,
+	                 from version.c:30:
+	c:\cpante~1\perl51~1.1\site\lib\auto\mingw-~1.2\bin\../lib/gcc/mingw32/4.6.2/../../../../include/pthread.h:612:3: error: expected identifier before numeric constant
+	dmake.exe:  Error code 129, while making 'version.o'
+
+	still need to edit C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include\pthread.h
+	###############################
+	Edit C:\CPANTesters\Perl5.16.1\lib\CORE\thread.h
+		Comment out PTHREAD_CREATE_JOINABLE
+
+	cd /C/CPANTesters/archives/db-4.8.30/build_unix	
+	../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+
+	Edit db.h in /C/CPANTesters/archives/db-4.8.30/build_unix
+		-typedef pthread_t db_threadid_t;
+		+typedef u_int32_t db_threadid_t;
+	
+	make
+	make install
+
+	move
+	   C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\local		
+	   C:\CPANTesters\bin\db-4.8.30-mingw32-2	
+
+	compare
+	   C:\CPANTesters\bin\db-4.8.30-mingw32
+	   C:\CPANTesters\bin\db-4.8.30-mingw32-2
+	nothing change, C:\CPANTesters\Perl5.16.1\lib\CORE\thread.h is not affecting the build. 
+	db-4.8.30-mingw32-2.zip
+	mingw32-4.6.2-db-4.8.30-build_unix-2.zip
+
+	cd C:\CPANTesters\cpan\build\DB_File-1.827-cHJiYo
+	dmake clean
+	perl Makefile.PL 2>&1| tee -a 1MakeFile.PL-mingw32-4.txt
+	save Makefile as 1Makefile-mingw32-4
+	dmake 2>&1| tee -a 2dmake-mingw32-4.txt
+	dmake test 2>&1| tee -a 3dmake-test-mingw32-4.txt
+
+	cannot open dbr7676: Permission denied at t/db-recno.t line 1385.
+	t/db-recno.t ..
+	Dubious, test returned 13 (wstat 3328, 0xd00)
+	Failed 6/204 subtests
+
+	it seems that changing C:\CPANTesters\Perl5.16.1\lib\CORE\thread.h is affecting the test.
+
+	edit C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include\pthread.h
+	-PTHREAD_CREATE_JOINABLE       = 0,  /* Default */
+
+	dmake test 2>&1| tee -a 3dmake-test-mingw32-4-1.txt
+
+	###############################
+	GOOD:
+	cd /C/CPANTesters/archives/db-4.8.30/build_unix	
+	../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+
+	Edit db.h in /C/CPANTesters/archives/db-4.8.30/build_unix
+		-typedef pthread_t db_threadid_t;
+		+typedef u_int32_t db_threadid_t;
+
+	make
+	make install
+
+	mingw32-4.6.2-db-4.8.30-build_unix-1.zip
+
+	move
+	   C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\local		
+	   C:\CPANTesters\bin\db-4.8.30-mingw32
+	   
+	   C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\local\docs
+	   C:\CPANTesters\bin\db-4.8.30-mingw32-docs
+	
+	db-4.8.30-mingw32-1.zip
+
+	no db path information in the Perl5.016.001_MinGW.bat.
+
+	Perl5.016.001_MinGW.bat
+
+	cd C:\CPANTesters\cpan\build\DB_File-1.827-cHJiYo
+	dmake clean
+
+	edit config.in
+		INCLUDE	= C:\CPANTesters\bin\db-4.8.30-mingw32\include
+		LIB	= C:\CPANTesters\bin\db-4.8.30-mingw32\lib
+		PREFIX	= size_t
+		HASH	= u_int32_t
+		DBNAME	= -ldb
+	
+	perl Makefile.PL 2>&1| tee -a 1MakeFile.PL-mingw32-3.txt
+	save Makefile as 1Makefile-mingw32-3
+
+	edit C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include\pthread.h
+	-PTHREAD_CREATE_JOINABLE       = 0,  /* Default */
+
+	dmake 2>&1| tee -a 2dmake-mingw32-3.txt
+	dmake test 2>&1| tee -a 3dmake-test-mingw32-3.txt
+	###############################
+	merge 
+	   C:\CPANTesters\Perl5.16.1
+	   C:\Perl5.16.1
+
+	   G:\CPANTesters\MinGW-get\MinGW
+	   C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2
+
+	everything is good.
+	###############################
+	restore C:\CPANTesters\Perl5.16.1\lib\CORE\thread.h (don't use //)
+	../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+	make
+
+	libtool: compile:  cc -c -I. -I../dist/.. -O3 ../dist/../mutex/mut_alloc.c -o mut_alloc.o >/dev/null 2>&1
+	./libtool --mode=compile cc -c -I. -I../dist/..  -O3  ../dist/../mutex/mut_failchk.c
+	libtool: compile:  cc -c -I. -I../dist/.. -O3 ../dist/../mutex/mut_failchk.c  -DDLL_EXPORT -DPIC -o .libs/mut_failchk.o
+	../dist/../mutex/mut_failchk.c: In function '__mut_failchk':
+	../dist/../mutex/mut_failchk.c:53:7: error: incompatible type for argument 3 of 'dbenv->is_alive'
+	../dist/../mutex/mut_failchk.c:53:7: note: expected 'db_threadid_t' but argument is of type 'int'
+	../dist/../mutex/mut_failchk.c:57:7: error: incompatible type for argument 3 of 'dbenv->thread_id_string'
+	../dist/../mutex/mut_failchk.c:57:7: note: expected 'db_threadid_t' but argument is of type 'int'
+	make: *** [mut_failchk.lo] Error 1
+	###############################
+	restore C:\CPANTesters\Perl5.16.1\lib\CORE\thread.h
+	restore C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include\pthread.h
+	cd /C/CPANTesters/archives/db-4.8.30/build_unix	
+	../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+	make 
+
+	./libtool --mode=compile cc -c -I. -I../dist/..  -O3  ../dist/../mutex/mut_failchk.c
+	libtool: compile:  cc -c -I. -I../dist/.. -O3 ../dist/../mutex/mut_failchk.c  -DDLL_EXPORT -DPIC -o .libs/mut_failchk.o
+	../dist/../mutex/mut_failchk.c: In function '__mut_failchk':
+	../dist/../mutex/mut_failchk.c:53:7: error: incompatible type for argument 3 of 'dbenv->is_alive'
+	../dist/../mutex/mut_failchk.c:53:7: note: expected 'db_threadid_t' but argument is of type 'int'
+	../dist/../mutex/mut_failchk.c:57:7: error: incompatible type for argument 3 of 'dbenv->thread_id_string'
+	../dist/../mutex/mut_failchk.c:57:7: note: expected 'db_threadid_t' but argument is of type 'int'
+	make: *** [mut_failchk.lo] Error 1
+	
+	something is really wrong.
+	###############################
+	try using 4.8.30 
+
+	restore C:\CPANTesters\Perl5.16.1\lib\CORE\thread.h
+	edit C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include\pthread.h
+	-PTHREAD_CREATE_JOINABLE       = 0,  /* Default */
+
+	cd /C/CPANTesters/archives/db-4.8.30/build_unix	
+	../dist/configure --disable-replication --enable-mingw --prefix=/usr/local
+	make 
+
+	libtool: compile:  cc -c -I. -I../dist/.. -O3 ../dist/../mutex/mut_failchk.c  -DDLL_EXPORT -DPIC -o .libs/mut_failchk.o
+	../dist/../mutex/mut_failchk.c: In function '__mut_failchk':
+	../dist/../mutex/mut_failchk.c:53:7: error: incompatible type for argument 3 of 'dbenv->is_alive'
+	../dist/../mutex/mut_failchk.c:53:7: note: expected 'db_threadid_t' but argument is of type 'int'
+	../dist/../mutex/mut_failchk.c:57:7: error: incompatible type for argument 3 of 'dbenv->thread_id_string'
+	../dist/../mutex/mut_failchk.c:57:7: note: expected 'db_threadid_t' but argument is of type 'int'
+	make: *** [mut_failchk.lo] Error 1
+
+	###############################
+	restore C:\CPANTesters\Perl5.16.1\lib\CORE\thread.h
+	edit C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include\pthread.h
+	-PTHREAD_CREATE_JOINABLE       = 0,  /* Default */
+
+	cd /C/CPANTesters/archives/db-5.3.21/build_unix
+	../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+	make
+	make install
+
+	move
+	   C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\local		
+	   C:\CPANTesters\bin\db-5.3.21-mingw32
+
+	C:\CPANTesters\cpan\build\DB_File-1.827-cHJiYo
+	perl Makefile.PL 2>&1| tee -a 1MakeFile.PL-mingw32-2.txt
+	save Makefile as 1Makefile-mingw32-2
+	dmake 2>&1| tee -a 2dmake-mingw32-2.txt
+	dmake test 2>&1| tee -a 3dmake-test-mingw32.txt
+
+	C:\CPANTesters\bin\db-5.3.21-mingw32\lib\libdb.a(os_pid.o):os_pid.c:(.text+0x24): undefined reference to `_imp__pthread_self'
+	collect2: ld returned 1 exit status
+	dmake.exe:  Error code 129, while making 'blib\arch\auto\DB_File\DB_File.dll'
+
+	db-5.3.21-mingw32-2.zip
+	mingw32-4.6.2-db-5.3.21-build_unix-2.zip
+	###############################
+	Let's try this again:
+	
+	cd /C/CPANTesters/archives/db-5.3.21/build_unix
+	../dist/configure --disable-replication --enable-mingw --prefix=/usr/local
+	make 
+	make install
+
+	/usr/local -> C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\local
+	
+	move
+	   C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\local		
+	   C:\CPANTesters\bin\db-5.3.21-mingw32
+
+	C:\CPANTesters\cpan\build\DB_File-1.827-cHJiYo
+	edit config.in
+		INCLUDE	= C:\CPANTesters\bin\db-5.3.21-mingw32\include
+		LIB	= C:\CPANTesters\bin\db-5.3.21-mingw32\lib
+		PREFIX	=	size_t
+		HASH	=	u_int32_t
+		DBNAME	= -ldb
+	dmake clean
+	perl Makefile.PL 2>&1| tee -a 1MakeFile.PL-mingw32-1.txt
+	save Makefile as 1Makefile-mingw32-1
+	dmake 2>&1| tee -a 2dmake-mingw32-1.txt
+
+	C:\CPANTesters\bin\db-5.3.21-mingw32\lib\libdb.a(os_pid.o):os_pid.c:(.text+0x24)
+	: undefined reference to `_imp__pthread_self'
+	collect2: ld returned 1 exit status
+	dmake.exe:  Error code 129, while making 'blib\arch\auto\DB_File\DB_File.dll'
+
+	db-5.3.21-mingw32-1.zip
+	mingw32-4.6.2-db-5.3.21-build_unix-1.zip
+	1MakeFile.PL-mingw32-1.txt
+	1Makefile-mingw32-1
+	2dmake-mingw32-1.txt
+	###############################
+	//http://stackoverflow.com/questions/6755145/strange-objective-c-c-enum-behavior
+	//PTHREAD_CREATE_JOINABLE       = 0,  /* Default */ <- defined here: C:\CPANTesters\Perl5.16.1\lib\CORE\thread.h
+	###############################
+	cd C:\CPANTesters\cpan\build\DB_File-1.827-cHJiYo
+	config.ini
+		INCLUDE	= C:\CPANTesters\bin\db-4.8.30-mingw32-4.6.2-no-pthread\include
+		LIB	= C:\CPANTesters\bin\db-4.8.30-mingw32-4.6.2-no-pthread\lib
+	edit C:\CPANTesters\bin\db-4.8.30-mingw32-4.6.2-no-pthread\include\db.h
+		-#include <pthread.h>
+	dmake
+	###############################
+	Edit Perl5.016.001_MinGW.bat: flip these two lines.
+		@Set Path=C:\CPANTesters\Perl5.16.1\site\bin;C:\CPANTesters\Perl5.16.1\bin
+		@Set Path=%PATH%;C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\bin
+	Perl5.016.001_MinGW.bat
+	cd C:\CPANTesters\cpan\build\DB_File-1.827-cHJiYo
+	perl Makefile.PL 2>&1| tee -a 1MakeFile.PL-mingw32.txt
+	save Makefile as 1Makefile-mingw32
+	dmake 2>&1| tee -a 2dmake-mingw32.txt
+
+	doesn't work too.
+	
+	the MinGW AS doesn't come with pthread.h
+	###############################
+	Make baseline:
+	Perl5.016.000_64_MinGW.bat
+	cd C:\CPANTesters\cpan\build\DB_File-1.827-cHJiYo
+	edit config.in
+		INCLUDE	= C:\CPANTesters\include\db
+		LIB	= C:\CPANTesters\lib
+		PREFIX	=	size_t
+		HASH	=	u_int32_t
+		DBNAME = -ldb
+	perl Makefile.PL 2>&1| tee -a 1MakeFile.PL-mingw64.txt
+	save Makefile as 1Makefile-mingw64
+	dmake 2>&1| tee -a 2dmake-mingw64.txt
+	GOOD.
+
+	Additional note:
+		C:\CPANTesters\Perl5.16.0_64\site\lib\auto\MinGW\x86_64-w64-mingw32\include\pthread.h
+	###############################
+	cd /C/CPANTesters/archives/db-4.8.30/build_unix
+	../dist/configure --disable-replication --enable-mingw --disable-pthread_api --prefix=/usr/local
+	configure:3401: WARNING: --enable-pthread_api is now always enabled
+	Edit db.h in build_unix/
+		-typedef pthread_t db_threadid_t;
+		+typedef u_int32_t db_threadid_t;
+	make
+	make install
+	$ make install
+	Installing DB include files: /usr/local/include ...
+	Installing DB library: /usr/local/lib ...
+	libtool: install: cp -p .libs/libdb-4.8.dll.a /usr/local/lib/libdb-4.8.dll.a
+	libtool: install: base_file=`basename libdb-4.8.la`
+	libtool: install:  dlpath=`/bin/sh 2>&1 -c '. .libs/'libdb-4.8.la'i; echo libdb-
+	4.8.dll'`
+	libtool: install:  dldir=/usr/local/lib/`dirname ../bin/libdb-4.8.dll`
+	libtool: install:  test -d /usr/local/lib/../bin || mkdir -p /usr/local/lib/../b
+	in
+	libtool: install:  cp -p .libs/libdb-4.8.dll /usr/local/lib/../bin/libdb-4.8.dll
+	
+	libtool: install:  chmod a+x /usr/local/lib/../bin/libdb-4.8.dll
+	libtool: install:  if test -n '' && test -n 'strip --strip-unneeded'; then eval
+	'strip --strip-unneeded /usr/local/lib/../bin/libdb-4.8.dll' || exit 0; fi
+	libtool: install: cp -p .libs/libdb-4.8.lai /usr/local/lib/libdb-4.8.la
+	libtool: install: cp -p .libs/libdb-4.8.a /usr/local/lib/libdb-4.8.a
+	libtool: install: chmod 644 /usr/local/lib/libdb-4.8.a
+	libtool: install: ranlib /usr/local/lib/libdb-4.8.a
+	libtool: install: cp -p libdb.a /usr/local/lib/libdb.a
+	libtool: install: chmod 644 /usr/local/lib/libdb.a
+	libtool: install: ranlib /usr/local/lib/libdb.a
+	----------------------------------------------------------------------
+	Libraries have been installed in:
+		/usr/local/lib
+	
+	If you ever happen to want to link against installed libraries
+	in a given directory, LIBDIR, you must either use libtool, and
+	specify the full pathname of the library, or use the `-LLIBDIR'
+	flag during linking and do at least one of the following:
+		- add LIBDIR to the `PATH' environment variable
+		  during execution
+		- add LIBDIR to the `LD_RUN_PATH' environment variable
+		  during linking
+		- use the `-LLIBDIR' linker flag
+	
+	See any operating system documentation about shared libraries for
+	more information, such as the ld(1) and ld.so(8) manual pages.
+	----------------------------------------------------------------------
+	Installing DB utilities: /usr/local/bin ...
+	libtool: install: cp -p .libs/db_archive.exe /usr/local/bin/db_archive.exe
+	libtool: install: cp -p .libs/db_checkpoint.exe /usr/local/bin/db_checkpoint.exe
+	
+	libtool: install: cp -p .libs/db_deadlock.exe /usr/local/bin/db_deadlock.exe
+	libtool: install: cp -p .libs/db_dump.exe /usr/local/bin/db_dump.exe
+	libtool: install: cp -p .libs/db_hotbackup.exe /usr/local/bin/db_hotbackup.exe
+	libtool: install: cp -p .libs/db_load.exe /usr/local/bin/db_load.exe
+	libtool: install: cp -p .libs/db_printlog.exe /usr/local/bin/db_printlog.exe
+	libtool: install: cp -p .libs/db_recover.exe /usr/local/bin/db_recover.exe
+	libtool: install: cp -p .libs/db_sql.exe /usr/local/bin/db_sql.exe
+	libtool: install: cp -p .libs/db_stat.exe /usr/local/bin/db_stat.exe
+	libtool: install: cp -p .libs/db_upgrade.exe /usr/local/bin/db_upgrade.exe
+	libtool: install: cp -p .libs/db_verify.exe /usr/local/bin/db_verify.exe
+	Installing documentation: /usr/local/docs ...
+
+	merge C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\local -> C:\CPANTesters\bin\db-4.8.30-mingw32
+
+	cd C:\CPANTesters\cpan\build\DB_File-1.827-cHJiYo
+	dmake clean
+	edit config.in
+		INCLUDE	= C:\CPANTesters\bin\db-4.8.30-mingw32\include
+		LIB	= C:\CPANTesters\bin\db-4.8.30-mingw32\lib
+		PREFIX	=	size_t
+		HASH	=	u_int32_t
+		DBNAME = -ldb
+
+	C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\gcc.exe -c  -IC:\CPANTesters\bin\db-4.8.30-mingw32\include  -DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS-DUSE_PERLIO -D_USE_32BIT_TIME_T -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2           -DVERSION=\"1.827\"   -DXS_VERSION=\"1.827\"  "-IC:\CPANTesters\Perl5.16.1\lib\CORE"  -D_NOT_CORE  -DmDB_Prefix_t=size_t -DmDB_Hash_t=u_int32_t version.c
+	In file included from C:\CPANTesters\bin\db-4.8.30-mingw32\include/db.h:30:0,                 from version.c:30:
+	c:\cpante~1\perl51~1.1\site\lib\auto\mingw-~1.2\bin\../lib/gcc/mingw32/4.6.2/../../../../include/pthread.h:612:3: error: expected identifier before numeric constant
+	dmake.exe:  Error code 129, while making 'version.o'
+
+
+	##############################	
+	cd /C/CPANTesters/archives/db-4.8.30/build_unix
+	../dist/configure --disable-replication --enable-mingw --disable-pthread_api --prefix=/usr/local
+	configure:3401: WARNING: --enable-pthread_api is now always enabled
+	Edit db.h in build_unix/
+		-typedef pthread_t db_threadid_t;
+		+typedef u_int32_t db_threadid_t;
+	make
+
+	mkdir C:\CPANTesters\archives\db-4.8.30-mingw32\bin
+	copy  C:\CPANTesters\archives\db-4.8.30\build_unix\*.exe C:\CPANTesters\archives\db-4.8.30-mingw32\bin
+	mkdir C:\CPANTesters\archives\db-4.8.30-mingw32\lib
+	copy  C:\CPANTesters\archives\db-4.8.30\build_unix\*.a C:\CPANTesters\archives\db-4.8.30-mingw32\lib
+	copy  C:\CPANTesters\archives\db-4.8.30\build_unix\*.la C:\CPANTesters\archives\db-4.8.30-mingw32\lib
+	mkdir C:\CPANTesters\archives\db-4.8.30-mingw32\include\db
+	copy  C:\CPANTesters\archives\db-4.8.30\build_unix\*.h C:\CPANTesters\archives\db-4.8.30-mingw32\include\db
+	
+	cd C:\CPANTesters\cpan\build\DB_File-1.827-cHJiYo
+	dmake clean
+	edit config.in
+		INCLUDE	= C:\CPANTesters\archives\db-4.8.30-mingw32\include\db
+		LIB	= C:\CPANTesters\archives\db-4.8.30-mingw32\lib
+		PREFIX	=	size_t
+		HASH	=	u_int32_t
+		DBNAME = -ldb
+	dmake
+	C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\gcc.exe -c  -IC:\CPANTesters\archives\db-4.8.30-mingw32\include\db  -DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT-DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D_USE_32BIT_TIME_T -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2           -DVERSION=\"1.827\"   -DXS_VERSION=\"1.827\"  "-IC:\CPANTesters\Perl5.16.1\lib\CORE"  -D_NOT_CORE  -DmDB_Prefix_t=size_t -DmDB_Hash_t=u_int32_t version.c
+	In file included from C:\CPANTesters\archives\db-4.8.30-mingw32\include\db/db.h:30:0,
+	                 from version.c:30:
+	c:\cpante~1\perl51~1.1\site\lib\auto\mingw-~1.2\bin\../lib/gcc/mingw32/4.6.2/../../../../include/pthread.h:612:3: error: expected identifier before numeric constant
+	dmake.exe:  Error code 129, while making 'version.o'
+
+	trace.
+	C:\CPANTesters\cpan\build\DB_File-1.827-cHJiYo\version.c:30
+	#include <db.h>
+	C:\CPANTesters\bin\db-4.8.30-mingw32\include\db.h:30
+	#include <pthread.h>
+	C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include\pthread.h
+	608:enum {
+	609:/*
+	610: * pthread_attr_{get,set}detachstate
+	611: */
+	612:  PTHREAD_CREATE_JOINABLE       = 0,  /* Default */
+	613:  PTHREAD_CREATE_DETACHED       = 1,
+
+
+
+	##############################	
+	cd /C/CPANTesters/archives/db-4.8.30/build_unix
+	../dist/configure --disable-replication --enable-mingw --disable-pthread_api --prefix=/usr/local
+	configure:3401: WARNING: --enable-pthread_api is now always enabled
+	make
+	libtool: compile:  cc -c -I. -I../dist/.. -O3 ../dist/../mutex/mut_failchk.c  -DDLL_EXPORT -DPIC -o .libs/mut_failchk.o
+	../dist/../mutex/mut_failchk.c: In function '__mut_failchk':
+	../dist/../mutex/mut_failchk.c:53:7: error: incompatible type for argument 3 of 'dbenv->is_alive'
+	../dist/../mutex/mut_failchk.c:53:7: note: expected 'db_threadid_t' but argument is of type 'int'
+	../dist/../mutex/mut_failchk.c:57:7: error: incompatible type for argument 3 of 'dbenv->thread_id_string'
+	../dist/../mutex/mut_failchk.c:57:7: note: expected 'db_threadid_t' but argument is of type 'int'
+	make: *** [mut_failchk.lo] Error 1
+	##############################	
+
+
+
+
+
+
+	back track to db-5.1.29
+
+
+	##############################	
+	back track to db-5.2.42
+	cd /C/CPANTesters/archives/db-5.2.42/build_unix
+	../dist/configure --disable-replication --enable-mingw --disable-pthread_api --prefix=/usr/local
+	configure:3409: WARNING: --enable-pthread_api is now always enabled
+	build_unix-mingw32-bad1.zip
+	##############################	
+	https://forums.oracle.com/forums/thread.jspa?messageID=4018239
+	I think the errors are caused by the absence of pthread library. Please make sure the build procedures have access to pthread library.
+	OTOH, if replication feature is not required, you can configure DB with --disable-pthread_api --disable-replication options, and you may be able to build DB in mingw without pthread library.
+
+	cd /C/CPANTesters/archives/db-5.3.21/build_unix	
+	../dist/configure --disable-replication --enable-mingw --disable-pthread_api --prefix=/usr/local
+
+	configure:3398: WARNING: --enable-pthread_api is now always enabled
+	# several lines down.
+	| 	#include <pthread.h>
+	
+	conclusion will not use db-5.3.21
+	build_unix-mingw32-bad4.zip
+	##############################	
+	>which gcc
+	C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\bin\gcc.EXE
+	gcc.exe -c  -IC:\CPANTesters\archives\db-5.3.21-mingw32\include\db  -DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D_USE_32BIT_TIME_T -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2           -DVERSION=\"1.827\"   -DXS_VERSION=\"1.827\"  "-IC:\CPANTesters\Perl5.16.1\lib\CORE"  -D_NOT_CORE  -DmDB_Prefix_t=size_t -DmDB_Hash_t=u_int32_t version.c -lpthread
+
+	##############################	
+	cd /C/CPANTesters/archives/db-5.3.21/build_unix
+	../dist/configure --disable-replication --enable-mingw --enable-compat185 --prefix=/usr/local
+	make
+	build_unix-mingw32-bad3.zip
+	##############################	
+	cd /C/CPANTesters/archives/db-5.3.21/build_unix
+	../dist/configure --disable-replication --enable-mingw --enable-cxx --disable-posixmutexes --prefix=/usr/local
+	make
+	bla bla bla
+
+	In file included from C:\CPANTesters\archives\db-5.3.21-mingw32\include\db/db.h:30:0,
+	                 from version.c:30:
+	c:\cpante~1\perl51~1.1\site\lib\auto\mingw-~1.2\bin\../lib/gcc/mingw32/4.6.2/../
+	../../../include/pthread.h:612:3: error: expected identifier before numeric cons
+	tant
+	dmake.exe:  Error code 129, while making 'version.o'
+
+	build_unix-mingw32-bad2.zip
+	##############################	
+	cd /C/CPANTesters/archives/db-5.3.21/build_unix
+	../dist/configure --disable-replication --enable-mingw --enable-cxx --enable-posixmutexes --prefix=/usr/local
+
+	make
+
+	bla bla bla
+
+	In file included from C:\CPANTesters\archives\db-5.3.21-mingw32\include\db/db.h:30:0,
+                 from version.c:30:
+	c:\cpante~1\perl51~1.1\site\lib\auto\mingw-~1.2\bin\../lib/gcc/mingw32/4.6.2/../
+	../../../include/pthread.h:612:3: error: expected identifier before numeric constant
+	dmake.exe:  Error code 129, while making 'version.o'
+	##############################	
+	cd /C/CPANTesters/archives/db-5.3.21/build_unix
+	../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+
+	everything is logged to config.log.
+
+	Edit db.h in build_unix/
+		-typedef pthread_t db_threadid_t;
+		+typedef u_int32_t db_threadid_t;
+
+	make 
+
+	../src/os/os_pid.c:51:9: error: incompatible types when assigning to type 'db_threadid_t' from type 'pthread_t'
+
+	https://bitcointalk.org/index.php?topic=49322.0
+	I suspect that the issue is that MinGW (the latest version) installs GCC 4.5.2 which includes PTHREADS-WIN32 2.8.0
+	##############################
+	cd /C/CPANTesters/archives/db-5.3.21/build_unix
+	../dist/configure --disable-replication --enable-mingw --enable-cxx --prefix=/usr/local
+
+	everything is logged to config.log.
+
+	make 
+
+	mkdir C:\CPANTesters\archives\db-5.3.21-mingw32\bin
+	copy  C:\CPANTesters\archives\db-5.3.21\build_unix\*.exe C:\CPANTesters\archives\db-5.3.21-mingw32\bin
+	mkdir C:\CPANTesters\archives\db-5.3.21-mingw32\lib
+	copy  C:\CPANTesters\archives\db-5.3.21\build_unix\*.a C:\CPANTesters\archives\db-5.3.21-mingw32\lib
+	copy  C:\CPANTesters\archives\db-5.3.21\build_unix\*.la C:\CPANTesters\archives\db-5.3.21-mingw32\lib
+	mkdir C:\CPANTesters\archives\db-5.3.21-mingw32\include\db
+	copy  C:\CPANTesters\archives\db-5.3.21\build_unix\*.h C:\CPANTesters\archives\db-5.3.21-mingw32\include\db
+
+	cd C:\CPANTesters\cpan\build\DB_File-1.827-cHJiYo
+	dmake clean
+	edit config.in
+		INCLUDE	= C:\CPANTesters\archives\db-5.3.21-mingw32\include\db
+		LIB	= C:\CPANTesters\archives\db-5.3.21-mingw32\lib
+		PREFIX	=	size_t
+		HASH	=	u_int32_t
+		DBNAME = -ldb
+
+	In file included from C:\CPANTesters\archives\db-5.3.21-mingw32\include\db/db.h:30:0,
+                 from version.c:30:
+	c:\cpante~1\perl51~1.1\site\lib\auto\mingw-~1.2\bin\../lib/gcc/mingw32/4.6.2/../
+	../../../include/pthread.h:612:3: error: expected identifier before numeric constant
+	dmake.exe:  Error code 129, while making 'version.o'
+
+	build_unix-mingw32-bad.zip
+	##############################
+
+
+11:16 AM 10/3/2012
+	Bundle::IO::Compress::Bzip2 -> it seems that the compression lib from gnuwin32 is ok.
+	
+	Compress::Bzip2
+		show_bzversion.c:3:19: fatal error: bzlib.h: No such file or directory
+		libbzip2-dev_1.0.5-2_win32.mft
+		libbzip2_1.0.5-2_win32.mft
+		show_bzversion.c:3:19: fatal error: bzlib.h: No such file or directory -> still showing.
+		
+		cd C:\CPANTesters\cpan\build\Compress-Bzip2-2.09-vzr2jQ
+		edit config.in
+			BZLIB_INCLUDE = C:\CPANTesters\bin\gnome-deps-win32\include
+			BZLIB_LIB     = C:\CPANTesters\bin\gnome-deps-win32\lib
+			BZLIB_BIN     = C:\CPANTesters\bin\gnome-deps-win32\bin
+		
+		Parsing config.in...
+		compile command 'C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\gcc.exe -DN
+		DEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE
+		 -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D_USE_32BIT_TIME_T -D
+		HASATTRIBUTE -fno-strict-aliasing -mms-bitfields -IC:/CPANTesters/bin/gnome-deps
+		-win32/include -L"C:\CPANTesters\Perl5.16.1\lib\CORE" -o show_bzversion show_bzv
+		ersion.c -LC:/CPANTesters/bin/gnome-deps-win32/lib -lbz2' failed
+		system bzip2 not useable, building internal libbz2
+
+	Compress::Raw::Bzip2
+		Compress::Raw::Bzip2 is up to date (2.055).
+
+	PerlIO::via::Bzip2
+		good.
+
+10:53 AM 10/3/2012 cpan Cairo -> Good.
+	cairo-dev_1.10.2-2_win32.mft & cairo_1.10.2-2_win32.mft
+	fontconfig-dev_2.8.0-2_win32.mft & fontconfig_2.8.0-2_win32.mft
+	freetype-dev_2.4.4-1_win32.mft & freetype_2.4.4-1_win32.mft
+	libpng-dev_1.4.3-1_win32.mft & libpng_1.4.3-1_win32.mft
+
+10:42 AM 10/3/2012 cpan ExtUtils::PkgConfig
+	pkg-config-dev_0.26-1_win32.mft
+	pkg-config_0.26-1_win32.mft
+	cpan ExtUtils::PkgConfig -> the procedure entry point g_assertion_message could not be 
+				    located in the dynamic link library libglib-2.0-0.dll.
+	glib-dev_2.28.1-1_win32.mft
+	glib_2.28.1-1_win32.mft
+	cpan ExtUtils::PkgConfig -> good.
+	###########
+
 	cd C:\CPANTesters\cpan\build\XML-LibXML-2.0004-Dsek1j
 	dmake clean
 	perl Makefile.PL INC=-IC:\CPANTesters\bin\gnome-deps-win64\include LIBS=-LC:\CPANTesters\bin\gnome-deps-win64\lib

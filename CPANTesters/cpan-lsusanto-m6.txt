@@ -4,6 +4,12 @@ Important modules:
 	DB_File
 	cpan IO::Async
 	cpan XML::LibXML
+		http://perl-xml.sourceforge.net/faq/#parserdetails.ini
+		
+		could not find ParserDetails.ini in C:\CPANTesters\Perl5.16.1\site\lib/XML/SAX
+		
+		perl -MXML::SAX -e "XML::SAX->add_parser(q(XML::SAX::PurePerl))->save_parsers()"
+		
 		11:33 PM 10/2/2012
 		Perl5.016.001_MinGW_LibXML2-Zlatkovic.bat
 		cd C:\CPANTesters\cpan\build\XML-LibXML-2.0004-otCUso
