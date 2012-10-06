@@ -3,6 +3,133 @@
 
 
 
+
+6:25 PM 10/5/2012
+	C:\CPANTesters\cpan\build\File-LibMagic-0.96-qeYSco
+	perl Makefile.PL INC=-IC:\CPANTesters\bin\gnuwin32\include LIBS=-LC:\CPANTesters\bin\gnuwin32\lib
+	dmake 
+	LibMagic.o:LibMagic.c:(.text+0xb4): undefined reference to `_imp__magic_file'
+
+	first build the binaries
+	
+	ftp://ftp.astron.com/pub/file/file-5.11.tar.gz
+	
+	cd /C/CPANTesters/archives/file-5.11
+	./configure
+	configure: error: libgnurx is required to build file(1) with MinGW
+
+	http://puredata.info/docs/developer/WindowsMinGW
+	wget http://prdownloads.sourceforge.net/mingw/mingw-libgnurx-2.5.1-bin.tar.gz
+	wget http://prdownloads.sourceforge.net/mingw/mingw-libgnurx-2.5.1-dev.tar.gz
+	-> C:\CPANTesters\bin\MinGW-32
+
+	./configure
+
+	mingw-get --help
+	mingw-get install zlib
+	mingw-get list  > mingw.txt
+	mingw-get install msys-file
+	mingw-get install msys-libmagic 
+
+	cd C:\CPANTesters\cpan\build\File-LibMagic-0.96-qeYSco
+	perl Makefile.PL INC=-IC:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\include LIBS=-LC:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\lib
+	dmake
+	LibMagic.o:LibMagic.c:(.text+0xb3): undefined reference to `magic_file'
+	LibMagic.o:LibMagic.c:(.text+0x18c): undefined reference to `magic_error'
+	LibMagic.o:LibMagic.c:(.text+0x2db): undefined reference to `magic_buffer'
+	LibMagic.o:LibMagic.c:(.text+0x886): undefined reference to `magic_close'
+	LibMagic.o:LibMagic.c:(.text+0x980): undefined reference to `magic_open'
+
+	cd /C/CPANTesters/archives/file-5.11
+	./configure
+	configure: creating ./config.status
+	make
+	make check
+	make install
+	
+	C:\CPANTesters\archives\MinGW-get\MinGW\msys\1.0\local -> C:\CPANTesters\archives\file-5.11-mingw32
+	
+	cd C:\CPANTesters\cpan\build\File-LibMagic-0.96-qeYSco
+	perl Makefile.PL INC=-IC:\CPANTesters\archives\file-5.11-mingw32\include LIBS=-LC:\CPANTesters\archives\file-5.11-mingw32\lib
+	dmake
+	LibMagic.o:LibMagic.c:(.text+0xb3): undefined reference to `magic_file'
+	LibMagic.o:LibMagic.c:(.text+0x18c): undefined reference to `magic_error'
+
+	C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\dlltool.exe --def LibMagic.def --output-exp dll.exp 
+	C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\g++.exe -o blib\arch\auto\File\LibMagic\LibMagic.dll -Wl,--base-file -Wl,dll.base -mdll -L"C:\CPANTesters\Perl5.16.1\lib\CORE" LibMagic.o   C:\CPANTesters\Perl5.16.1\lib\CORE\perl516.lib C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libkernel32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libuser32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libgdi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libwinspool.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libcomdlg32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libadvapi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libshell32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libole32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\liboleaut32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libnetapi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libuuid.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libws2_32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libmpr.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libwinmm.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libversion.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libodbc32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libodbccp32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libcomctl32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libmsvcrt.a dll.exp C:\CPANTesters\archives\file-5.11-mingw32\lib\libmagic.a C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\lib\libregex.a
+	C:\CPANTesters\archives\file-5.11-mingw32\lib\libmagic.a(magic.o): In function `get_default_magic': 
+	c:\CPANTesters\archives\file-5.11\src/magic.c:174: undefined reference to `_imp__PathRemoveFileSpecA@4'
+	C:\CPANTesters\archives\file-5.11-mingw32\lib\libmagic.a(funcs.o): In function `file_replace': 
+	c:\CPANTesters\archives\file-5.11\src/funcs.c:442: undefined reference to `regcomp'
+
+	mingw-get install msys-libregex 
+	mingw-get install mingw32-libz
+
+	cd /C/CPANTesters/archives/file-5.11
+	./configure
+		*** Warning: linker path does not have real file for library -lshlwapi.
+		*** Warning: linker path does not have real file for library -lgnurx.
+		*** Warning: linker path does not have real file for library -lz.
+		...
+		configure: creating ./config.status
+	make
+	make check
+	make install
+	
+	check and redo the file build again.
+
+	C:\CPANTesters\cpan\build\File-LibMagic-0.96-qeYSco
+	perl Makefile.PL INC=-IC:\CPANTesters\bin\gnuwin32\include LIBS=-LC:\CPANTesters\bin\gnuwin32\lib
+	dmake 
+
+	C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\g++.exe -o blib\arch\auto\File\LibMagic\LibMagic.dll -Wl,--base-file -Wl,dll.base -mdll 
+		-L"C:\CPANTesters\Perl5.16.1\lib\CORE" LibMagic.o   
+		C:\CPANTesters\Perl5.16.1\lib\CORE\perl516.lib 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libkernel32.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libuser32.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libgdi32.a
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libwinspool.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libcomdlg32.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libadvapi32.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libshell32.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libole32.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\liboleaut32.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libnetapi32.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libuuid.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libws2_32.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libmpr.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libwinmm.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libversion.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libodbc32.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libodbccp32.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libcomctl32.a 
+		C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libmsvcrt.a 
+		dll.exp
+
+	LibMagic.o:LibMagic.c:(.text+0xb4): undefined reference to `_imp__magic_file'
+	LibMagic.o:LibMagic.c:(.text+0x191): undefined reference to `_imp__magic_error'
+
+
+	C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\gcc.exe -c  -IC:\CPANTesters\bin\gnuwin32\include   -DNDEBUG -DWIN32 -D_CONSOLE -DNO_STRICT -DPERL_TEXTMODE_SCRIPTS -DUSE_SITECUSTOMIZE -DPERL_IMPLICIT_CONTEXT -DPERL_IMPLICIT_SYS -DUSE_PERLIO -D_USE_32BIT_TIME_T -DHASATTRIBUTE -fno-strict-aliasing -mms-bitfields -O2 -DVERSION=\"0.96\"    -DXS_VERSION=\"0.96\"  "-IC:\CPANTesters\Perl5.16.1\lib\CORE"   LibMagic.c
+
+	####
+	
+
+	perl Makefile.PL INC=-IC:\CPANTesters\archives\file-5.11-mingw32\include LIBS=-LC:\CPANTesters\archives\file-5.11-mingw32\lib
+	dmake
+	C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\g++.exe -o blib\arch\auto\File\LibMagic\LibMagic.dll -Wl,--base-file -Wl,dll.base -mdll -L"C:\CPANTesters\Perl5.16.1\lib\CORE" LibMagic.o   C:\CPANTesters\Perl5.16.1\lib\CORE\perl516.lib C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libkernel32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libuser32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libgdi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libwinspool.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libcomdlg32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libadvapi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libshell32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libole32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\liboleaut32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libnetapi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libuuid.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libws2_32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libmpr.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libwinmm.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libversion.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libodbc32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libodbccp32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libcomctl32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libmsvcrt.a dll.exp 
+	LibMagic.o:LibMagic.c:(.text+0xb3): undefined reference to `magic_file'
+	LibMagic.o:LibMagic.c:(.text+0x18c): undefined reference to `magic_error'
+	LibMagic.o:LibMagic.c:(.text+0x2db): undefined reference to `magic_buffer'
+
+	C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\g++.exe -o blib\arch\auto\File\LibMagic\LibMagic.dll -Wl,--base-file -Wl,dll.base -mdll -L"C:\CPANTesters\Perl5.16.1\lib\CORE" LibMagic.o   C:\CPANTesters\Perl5.16.1\lib\CORE\perl516.lib C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libkernel32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libuser32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libgdi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libwinspool.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libcomdlg32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libadvapi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libshell32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libole32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\liboleaut32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libnetapi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libuuid.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libws2_32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libmpr.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libwinmm.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libversion.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libodbc32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libodbccp32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libcomctl32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libmsvcrt.a C:\CPANTesters\archives\file-5.11-mingw32\lib\libmagic.dll.a C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\lib\libregex.dll.a   dll.exp 
+
+
+	With mingw, a typical error is undefined reference to `_imp___WHATEVER'. It means that the library is static, whereas the applications wants to use shared library.
+
+
+	FUCK this module.
+
 11:08 PM 10/3/2012 cpan DB_FIle
 	###############################
 	restore C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\include\pthread.h
