@@ -1,0 +1,9 @@
+pops (main folder, songs to keep)
+xxx (folder to comb)
+
+
+
+mp3_tag_pops.pl: get the relevant tags from pops
+remove_duplicates.pl: remove duplicates from xxx
+sort_collections.pl: sort database for easier reading
+
