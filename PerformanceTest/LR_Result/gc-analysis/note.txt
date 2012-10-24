@@ -1,0 +1,1 @@
+need to combine these 2 scripts into 1 and merge back to the main LR_Result folder
