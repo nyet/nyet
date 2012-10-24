@@ -1,0 +1,192 @@
+upload
+ORM.zip
+http://angrybots.com/ppm/as_p5_8_b822/x86/sandbox/zips/ORM-$ver.zip
+
+ORM.ppd
+http://angrybots.com/ppm/as_p5_8_b822/x86/sandbox/ORM.ppd
+ORM.tar.gz
+http://angrybots.com/ppm/as_p5_8_b822/x86/sandbox/ORM.tar.gz
+
+
+
+
+
+
+#########################################################################
+PATH to C:\Perl5.8.8\site\bin in front of C:\Perl5.8.8\bin. 
+
+
+
+
+
+
+
+
+
+#########################################################################
+ppm install MinGW
+ppm install ppm-make
+ppm install Class-Accessor-Fast-XS
+ppm install XML-Atom
+ppm install ExtUtils-FakeConfig
+	http://www.perlmonks.org/?displaytype=print;node_id=614808
+	perl -MConfig_m conf.pl
+ppm install bundle-cpan
+
+#########################################################################
+$name .= "-$self->{version}" 
+     if ( ($self->{opts}->{vs} or $self->{opts}->{vsr}) and $self->{version});
+
+
+make_zipdist
+
+
+__TROUBLESHOOT__
+
+need cwd?
+
+
+
+
+Can't locate object method "data" via package "CPAN::Modulelist" (perhaps you fo
+rgot to load "CPAN::Modulelist"?) at (eval 159) line 8.
+
+	perl -MCPAN -e shell
+	o conf init
+
+
+	reload index
+
+
+
+
+
+
+http://theoryx5.uwinnipeg.ca/ppms/zips/
+http://theoryx5.uwinnipeg.ca/ppms/PPM-Make.ppd
+http://theoryx5.uwinnipeg.ca/ppms/x86/PPM-Make.tar.gz
+
+http://ppm4.activestate.com/MSWin32-x86/5.8/822/
+http://ppm4.activestate.com/MSWin32-x86/5.8/822/A/AK/AKIMOV/ORM-0.85.tar.gz
+
+
+
+
+
+
+
+
+
+
+C:\work\bin\gzip.exe
+C:\work\bin\tar.exe
+C:\work\bin\wget.exe
+
+.ppmcfg
+
+cpan> o conf
+CPAN::Config options from C:/Perl5.8.8/lib/CPAN/Config.pm:
+    commit             Commit changes to disk
+    defaults           Reload defaults from disk
+    init               Interactive setting of all options
+
+    build_cache        10
+    build_dir          C:\Perl5.8.8/cpan/build
+    cache_metadata     1
+    cpan_home          C:\Perl5.8.8/cpan
+    dontload_hash
+    ftp                C:\WINDOWS\system32\ftp.EXE
+    ftp_proxy
+    getcwd
+    gpg
+    gzip               C:\work\bin\gzip.exe
+    histfile           C:\Perl5.8.8/cpan/histfile
+    histsize           100
+    http_proxy
+    inactivity_timeout 0
+    index_expire       1
+    inhibit_startup_message 0
+    keep_source_where  C:\Perl5.8.8/cpan/sources
+    lynx
+    make
+    make_arg
+    make_install_arg
+    makepl_arg
+    no_proxy
+    pager              more
+    prerequisites_policy ask
+    scan_cache         atstart
+    shell              C:\WINDOWS\system32\cmd.exe
+    tar                C:\work\bin\tar.exe
+    term_is_latin      1
+    unzip              C:\oracle\product\10.2.0\client_1\bin\unzip.EXE
+    urllist
+        http://ppm.activestate.com/CPAN
+        http://cpan.perl.org
+    wget               C:\work\bin\wget.exe
+
+gzip -dc 03modlist.data.gz | nl | head -23| tail -13
+
+
+make_ppm --no_cfg http://search.cpan.org/CPAN/authors/id/G/GR/GRAY/WebService-Google-Reader-0.07.tar.gz
+
+
+
+TOREAD
+http://docs.activestate.com/activeperl/5.10/faq/ActivePerl-faq2.html#CPAN_shell
+
+
+
+Compiling C/C++ based Modules under ActiveState using MinGW
+by syphilis on May 11, 2007 at 04:07 UTC (replies)
+http://www.perlmonks.org/?displaytype=print;node_id=614808
+
+
+
+PPM::Make::make_ppm('PPM::Make=HASH(0x2a6adf4)') 
+	called at lib.pl line 27
+PPM::Make::make_ppd('PPM::Make=HASH(0x2a6adf4)', 'WebService-Google-Reader.tar.gz') 
+	called at C:/Perl5.8.8/site/lib/PPM/Make.pm line 123
+PPM::Make::Util::dist_search('WebService-Google-Reader') 
+	called at C:/Perl5.8.8/site/lib/PPM/Make.pm line 542
+
+PPM::Make::Util::cpan_dist_search('WebService-Google-Reader') 
+	called at C:/Perl5.8.8/site/lib/PPM/Make/Util.pm line 877
+
+
+The results are returned as a hash reference of the form
+    Distribution: $results->{dist_name}
+    Version: $results->{dist_vers}
+    Description: $results->{dist_abs}
+    Author: $results->{author}
+    CPAN file: $results->{dist_file}
+
+
+mapping to meta.yaml
+	$results->{dist_name}
+	name:                WebService-Google-Reader
+
+	$results->{dist_vers}
+	version:             0.07
+
+	$results->{dist_abs}
+	abstract:            Perl interface to Google Reader
+
+	$results->{author}
+	author:
+	    - gray <gray@cpan.org>
+
+	$results->{dist_file}
+
+
+my $meta = PPM::Make::Meta->new(dir => $self->{cwd});
+
+dist_search -> PROVIDE
+mod_search -> DEPENDENCY
+
+
+
+http://theoryx5.uwinnipeg.ca/ppms/YAML.ppd
+http://theoryx5.uwinnipeg.ca/ppms/ORM.ppd
+
+
