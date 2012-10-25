@@ -1,0 +1,70 @@
+https://bitbucket.org/xerial/sqlite-jdbc
+http://www.xerial.org/maven/repository/artifact/org/xerial/sqlite-jdbc/
+http://repo2.maven.org/maven2/org/xerial/sqlite-jdbc/3.7.2/
+
+groovyConsole.bat
+
+import groovy.sql.Sql
+sql = groovy.sql.Sql.newInstance("jdbc:sqlite:C:/work/data/test.db","org.sqlite.JDBC")
+sql.execute("create table orders(id, sessionid)")
+###
+import groovy.sql.Sql
+sql = groovy.sql.Sql.newInstance("jdbc:sqlite:C:/Users/lsusanto/Desktop/test.db","org.sqlite.JDBC")
+sql.execute("create table students(name, age)")
+sql.execute("insert into students(name, age) values( 'Ali Baba', 20)")
+sql.eachRow("select rowid,name,age from students;") {
+    println "${it.rowid}: ${it.name} ${it.age}"
+}
+###
+sql = groovy.sql.Sql.newInstance("jdbc:sqlite:C:/Users/lsusanto/Desktop/test.db","org.sqlite.JDBC")
+sql.execute("insert into students(name, age) values( 'Ali Baba', 20)")
+def res = sql.firstRow("select last_insert_rowid() as rowid")
+println "${res.rowid}"
+###
+
+
+###
+[setup sqlite-jdbc on SoapUI]
+download sqlite-jdbc from http://www.xerial.org/maven/repository/artifact/org/xerial/sqlite-jdbc/
+drop sqlite-jdbc-x.x.x.jar into SmartBear\soapUI-Pro-4.5.1\bin\ext
+###
+[mock]
+import groovy.sql.Sql
+import org.sqlite.JDBC
+com.eviware.soapui.support.GroovyUtils.registerJdbcDriver("org.sqlite.JDBC")
+sql = groovy.sql.Sql.newInstance("jdbc:sqlite:C:/work/data/test.db","org.sqlite.JDBC")
+sql.execute("insert into orders(id, sessionid) values('" + buystring +
+"', '" + sessionid + "')")
+def res = sql.firstRow("select last_insert_rowid() as rowid")
+###
+[Groovy Script TestStep]
+import groovy.sql.Sql
+import org.sqlite.JDBC
+com.eviware.soapui.support.GroovyUtils.registerJdbcDriver("org.sqlite.JDBC")
+sql = groovy.sql.Sql.newInstance("jdbc:sqlite:C:/work/data/test.db","org.sqlite.JDBC")
+sql.eachRow("select count(*) as cnt from orders") {
+        log.info("${it.cnt}")
+}
+testRunner.fail("your reason for failing the test")
+###
+[setup groovy-2.0.5]
+download sqlite-jdbc from http://www.xerial.org/maven/repository/artifact/org/xerial/sqlite-jdbc/
+drop sqlite-jdbc-x.x.x.jar into groovy-2.0.5\lib
+run cmd-groovy.bat
+###
+sql = groovy.sql.Sql.newInstance("jdbc:sqlite:C:/Users/lsusanto/Desktop/test.db","org.sqlite.JDBC")
+sql.execute("insert into students(name, age) values( 'Ali Baba', 20)")
+sql.eachRow("select last_insert_rowid() as rowid") {
+	println "${it.rowid}"
+}
+###
+sql = groovy.sql.Sql.newInstance("jdbc:sqlite:C:/Users/lsusanto/Desktop/test.db","org.sqlite.JDBC")
+def insertStr = "insert into students(name, age) values('Ali Baba', 20);select last_insert_rowid() as rowid"
+def insertedStudent = sql.execute(insertStr)  
+println "Student ${insertedStudent.rowid} added."  
+###
+sql = groovy.sql.Sql.newInstance("jdbc:sqlite:C:/Users/lsusanto/Desktop/test.db","org.sqlite.JDBC")
+def insertedStudent = sql.executeInsert("insert into students(name, age) values('Ali Baba', 20)")  
+println insertedStudent.dump
+-> not implemented by SQLite JDBC driver
+###
