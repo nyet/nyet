@@ -1,3 +1,80 @@
+#############################
+
+upload results
+   * 7:50 AM 10/23/2012 Title Wave
+   * 7:54 AM 10/23/2012 Cognos
+   * Impact
+
+
+
+if no load test, ask them to fill up the check list.
+
+soapUI
+	groovy to get SQL 
+	meet with Kathy on Thu
+
+
+9:12 AM 10/18/2012 - 8.0.0.160 deployed
+
+http://social.msdn.microsoft.com/Forums/en-US/sqltools/thread/b5a0c106-faf6-4a21-a012-2d60366190e3/
+
+Copy impact template.tdf into: 
+
+C:\Program Files\Microsoft SQL Server\100\Tools\Profiler\Templates\Microsoft SQL Server\1050
+
+
+Impact80-Smoketest-2012-10-18-1515.trc -> C:\FT\Impact\Batches\SmokeTest.bat
+	Stuck at Lookup County windows
+	.class:  USADSI.UI.Common.NewLookupCommonInfo`1[[USADSI.Root.Data.County, USADSI.Root, Version=8.0.160.0, Culture=neutral, PublicKeyToken=d53c4cc78756c4aa]]
+	
+
+	USADSI.EscrowModule.Main
+	->USADSI.UI.Escrow.InitialQuestions.EscrowFileWizard
+	->Lookup County
+	
+Run a round of C:\FT\Impact\Batches\SmokeTest.bat to weed out bad UI.
+
+
+Impact80-Smoketest-2012-10-18-1613.trc -> C:\FT\Impact\Batches\SmokeTest.bat
+	-> some receipt is locked.
+	receipt 015018, L2964
+	receipt 015025, L2965
+
+Impact80-Smoketest-2012-10-18-1751.trc -> C:\FT\Impact\Batches\SmokeTest.bat
+	good, check the script, no good, there is no marker.
+	
+
+Impact80-Smoketest-2012-10-18-1828.trc -> C:\FT\Impact\Batches\SmokeTestLT.bat
+	-> C:\PerformanceTest\Impact\v8.0.0 build 160\20121018-1828
+
+
+
+How to insert a function?
+Current: ScriptImpact80201206291327.cs.temp
+New:     ScriptImpact80201210181828.cs.temp
+
+ * Insert: private void Statement43()
+	comb through current to determine X [Statement43_X()]
+	function before and after at current.
+	
+
+
+
+When SugarSync manager crashed and wont come back up: http://sugarsync.hivelive.com/posts/f06e04e3a8
+1. Uninstall SugarSync manager 
+2. Backup current folders to another folders.
+3. Install SugarSync manager and boot up. -> this will result in downloading everything again from backup.
+4. Merge the newly downloaded folders with the old ones.
+%HOMEPATH%\Local Settings\Application Data\SugarSync\sc1.log 
+
+http://www.sugarsync.com/online-help/Excluding_Subfolders.htm
+
+P/PV/PVANDRY/gettext-1.05.tar.gz
+
+#############################
+
+
+
 CDCSLRGNAPP01-T
 
 
@@ -72,31 +149,7 @@ Devel::Callsite
 CPAN long runs: file://///lsusanto-h2/c$/CPANTesters/testdevcode/test-duration.html
 12:42 PM 9/21/2012	
 
-##############################################
-Ref:   WFM ID: 4642056831 -- Case Analysis & Suggestions
 
-Please try using Socket level capture for recording and during replay uncheck “use wininet level replay instead of sockets”.
-
-http://support.openview.hp.com/selfsolve/document/KM184757
-
-In the other application you showed me I saw “invalid Server name” error due to Kerberos. Please see KB article given below:
-
-http://support.openview.hp.com/selfsolve/document/KM493445?searchIdentifier=-274b8497%3a139cca66fd1%3a75aa&resultType=document&documentURL=KM493445&resultsURL=%2fselfsolve%2fdocuments&allowReturn=true&searchString=enable+integrated+authentication+in+runtime+settings&searchKey=
-
-Please replay the Cognos script with extended logging as given below:
-
-1) Go to run time settings -> Log -> Extended Log. Please check all three options namely parameterization, data returned by server and advanced trace.
- 
-2) Replay the script.
- 
-3) Go to File -> Zip Operations -> Export to Zip.
-
-Please upload the above generated zip file to the case attachments or to the FTP site given below and let me know.
-
-ftp://SC06f22c:H3no.UK7@ftp.usa.hp.com/
-
-http://support.openview.hp.com/selfsolve/document/KM493445
-##############################################
 
 
 C:\Windows\System32\drivers\etc\hosts
@@ -127,6 +180,45 @@ shutdown /m \\CDCSSPSTS99A /r /f /t 5 /c "reset LR gen"
 shutdown /m \\CDCSLRGNAPP02-T /r /f /t 5 /c "reset LR gen"
 shutdown /m \\CDCSLRGNAPP03-T /r /f /t 5 /c "reset LR gen"
 shutdown /m \\CDCSLRGNAPP04-T /r /f /t 5 /c "reset LR gen"
+
+
+
+
+12:21 AM 10/19/2012 
+	Sugarsync Excluding Subfolders
+	http://www.sugarsync.com/online-help/Excluding_Subfolders.htm
+
+11:13 AM 10/19/2012 
+	bigpicture-2012-10-post.html-
+
+10:26 AM 10/18/2012 
+	reboot lsusanto-m5
+
+##############################################
+Ref:   WFM ID: 4642056831 -- Case Analysis & Suggestions
+
+Please try using Socket level capture for recording and during replay uncheck “use wininet level replay instead of sockets”.
+
+http://support.openview.hp.com/selfsolve/document/KM184757
+
+In the other application you showed me I saw “invalid Server name” error due to Kerberos. Please see KB article given below:
+
+http://support.openview.hp.com/selfsolve/document/KM493445?searchIdentifier=-274b8497%3a139cca66fd1%3a75aa&resultType=document&documentURL=KM493445&resultsURL=%2fselfsolve%2fdocuments&allowReturn=true&searchString=enable+integrated+authentication+in+runtime+settings&searchKey=
+
+Please replay the Cognos script with extended logging as given below:
+
+1) Go to run time settings -> Log -> Extended Log. Please check all three options namely parameterization, data returned by server and advanced trace.
+ 
+2) Replay the script.
+ 
+3) Go to File -> Zip Operations -> Export to Zip.
+
+Please upload the above generated zip file to the case attachments or to the FTP site given below and let me know.
+
+ftp://SC06f22c:H3no.UK7@ftp.usa.hp.com/
+
+http://support.openview.hp.com/selfsolve/document/KM493445
+##############################################
 
 11:28 AM 9/28/2012
 	setup ASO to test CPAN (only for last resort since it's taking a lot of resources).
