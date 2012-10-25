@@ -71,6 +71,12 @@ my %grab = (
 		},
 	},
 	PortableApps => {
+		Audacity => {
+			Every => 10*24*3600-600,
+			URL => 'http://portableapps.com/apps/music_video/audacity_portable',
+			File => 'portableapps.com/apps/music_video/audacity_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
 		BleachBit => {
 			Every => 3*24*3600-600,
 			URL => 'http://portableapps.com/apps/utilities/bleachbit_portable',
@@ -87,6 +93,12 @@ my %grab = (
 			Every => 3*24*3600-600,
 			URL => 'http://portableapps.com/apps/development/database_browser_portable',
 			File => 'portableapps.com/apps/development/database_browser_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		Diffpdf => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/utilities/diffpdf_portable',
+			File => 'portableapps.com/apps/utilities/diffpdf_portable',
 			TimeStamp => "$year-$mon-$mday",
 		},
 		FileZilla => {
@@ -107,16 +119,34 @@ my %grab = (
 			File => 'portableapps.com/apps/internet/firefox_portable',
 			TimeStamp => "$year-$mon-$mday",
 		},
+		FocusWriter => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/office/focuswriter_portable',
+			File => 'portableapps.com/apps/office/focuswriter_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
 		FoxitReader => {
 			Every => 3*24*3600-600,
 			URL => 'http://portableapps.com/apps/office/foxit_reader_portable',
 			File => 'portableapps.com/apps/office/foxit_reader_portable',
 			TimeStamp => "$year-$mon-$mday",
 		},
+		FreeDownloadManager => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/internet/free-download-manager-portable',
+			File => 'portableapps.com/apps/internet/free-download-manager-portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
 		Frhed => {
 			Every => 3*24*3600-600,
 			URL => 'http://portableapps.com/apps/development/frhed_portable',
 			File => 'portableapps.com/apps/development/frhed_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		Ghostscript => {
+			Every => 3*24*3600-600,
+			URL => 'http://portableapps.com/apps/utilities/ghostscript_portable',
+			File => 'portableapps.com/apps/utilities/ghostscript_portable',
 			TimeStamp => "$year-$mon-$mday",
 		},
 		GIMP => {
@@ -137,16 +167,58 @@ my %grab = (
 			File => 'portableapps.com/apps/internet/google_chrome_portable',
 			TimeStamp => "$year-$mon-$mday",
 		},
+		IcoFX => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/graphics_pictures/icofx_portable',
+			File => 'portableapps.com/apps/graphics_pictures/icofx_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		InfraRecorder => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/utilities/infrarecorder_portable',
+			File => 'portableapps.com/apps/utilities/infrarecorder_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
 		Iron => {
 			Every => 3*24*3600-600,
 			URL => 'http://portableapps.com/apps/internet/iron_portable',
 			File => 'portableapps.com/apps/internet/iron_portable',
 			TimeStamp => "$year-$mon-$mday",
 		},
+		javaLauncher => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/utilities/java_portable_launcher',
+			File => 'portableapps.com/apps/utilities/java_portable_launcher',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		java => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/utilities/java_portable',
+			File => 'portableapps.com/apps/utilities/java_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
 		KeePass => {
 			Every => 3*24*3600-600,
 			URL => 'http://portableapps.com/apps/utilities/keepass_portable',
 			File => 'portableapps.com/apps/utilities/keepass_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		KiTTY => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/internet/kitty-portable',
+			File => 'portableapps.com/apps/internet/kitty-portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		Lightscreen => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/utilities/lightscreen_portable',
+			File => 'portableapps.com/apps/utilities/lightscreen_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		MicroSIP => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/internet/microsip-portable',
+			File => 'portableapps.com/apps/internet/microsip-portable',
 			TimeStamp => "$year-$mon-$mday",
 		},
 		NotepadPP => {
@@ -161,6 +233,12 @@ my %grab = (
 			File => 'portableapps.com/apps/utilities/peazip_portable',
 			TimeStamp => "$year-$mon-$mday",
 		},
+		PhotoFiltre => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/graphics_pictures/photofiltre_portable',
+			File => 'portableapps.com/apps/graphics_pictures/photofiltre_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
 		Pidgin => {
 			Every => 3*24*3600-600,
 			URL => 'http://portableapps.com/apps/internet/pidgin_portable',
@@ -171,6 +249,12 @@ my %grab = (
 			Every => 3*24*3600-600,
 			URL => 'http://portableapps.com/apps/internet/putty_portable',
 			File => 'portableapps.com/apps/internet/putty_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		RawTherapee => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/graphics_pictures/rawtherapee-portable',
+			File => 'portableapps.com/apps/graphics_pictures/rawtherapee-portable',
 			TimeStamp => "$year-$mon-$mday",
 		},
 		Skype => {
@@ -186,9 +270,15 @@ my %grab = (
 			TimeStamp => "$year-$mon-$mday",
 		},
 		SqliteDataBaseBrowser => {
-			Every => 3*24*3600-600,
+			Every => 7*24*3600-600,
 			URL => 'http://portableapps.com/apps/development/sqlite_database_browser_portable',
 			File => 'portableapps.com/apps/development/sqlite_database_browser_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		Sqliteman => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/development/sqliteman-portable',
+			File => 'portableapps.com/apps/development/sqliteman-portable',
 			TimeStamp => "$year-$mon-$mday",
 		},
 		SystemExplorer => {
@@ -221,6 +311,18 @@ my %grab = (
 			File => 'portableapps.com/apps/music_video/vlc_portable',
 			TimeStamp => "$year-$mon-$mday",
 		},
+		WinDirStat => {
+			Every => 7*24*3600-600,
+			URL => 'http://portableapps.com/apps/utilities/windirstat_portable',
+			File => 'portableapps.com/apps/utilities/windirstat_portable',
+			TimeStamp => "$year-$mon-$mday",
+		},
+		#WiseRegistryCleaner => {
+		#	Every => 7*24*3600-600,
+		#	URL => 'http://portableapps.com/apps/utilities/wise-registry-cleaner-portable',
+		#	File => 'portableapps.com/apps/utilities/wise-registry-cleaner-portable',
+		#	TimeStamp => "$year-$mon-$mday",
+		#},
 		XnView => {
 			Every => 3*24*3600-600,
 			URL => 'http://portableapps.com/apps/graphics_pictures/xnview_portable',
@@ -547,6 +649,7 @@ if (exists $Pages{BorrowLenses}) {
 	}
 }
 
+
 if (exists $Pages{PortableApps}) {
 	my $timestamp = "$year-$mon-$mday";
 	my $bkupFolder = 'C:\work\install\PortableApps';
@@ -566,82 +669,168 @@ if (exists $Pages{PortableApps}) {
 	foreach my $App (keys %{$Pages{PortableApps}}) {
 		my $Page = $Pages{PortableApps}{$App}{File};
 		tee("Start parsing PortableApps:$App: $Page");
-		
-		use HTML::TreeBuilder::XPath;
-		my $tree= HTML::TreeBuilder::XPath->new;
-		$tree->parse_file($Page);
-		foreach my $product ($tree->findnodes('//div[@class="download-box"]')) {
-			my $thisNode = $product->clone;
-			#print "PRODUCT:".$product->as_XML()."\n\n";
-			#print $thisNode->as_XML();
+
+		my @app_data; #some page might have more than 1 download (e.g.: http://portableapps.com/apps/utilities/java_portable has 32 bit and 64 bit downloads)
+		my $URL;
+		my $VERSION;
+		my $to_download = 0;
+		{	#simple parsing first		
+			# some of the page doesn't use download-box anymore e.g.: http://portableapps.com/apps/utilities/peazip_portable
+			# need to parse the version and the download URL manually.
+			# href="http://sourceforge.net/projects/portableapps/files/PeaZip%20Portable/Additional%20Versions/PeaZipPortable_4.7.paf.exe/download"
 			
-			sub getVersion {
-				#get $product->as_XML(): Download 5.9.3
-				$_[0] =~ /\<strong\>Download (.+?)\<\//;return $1 || '5.9.3';
-			};
-			#get the first instance of a/@href->[0] = http://downloads.sourceforge.net/portableapps/NotepadPlusPlusPortable_5.9.3.paf.exe?download
-			my $url = $thisNode->findvalue('(//a)[1]/@href');
-				
-			#get the version = 5.9.3
-			my $version = getVersion($thisNode->as_XML());
-			if (!$version) { # check if the parser is broken
-				tee("	PortableApps parser is broken: version($version) is not found");
-				my $result = $nt->update("\@nyet PortableApps parser is broken: version($version) is not found");
-				tee("	result: $result");
+			local $/ = undef;
+			open my $LOCAL, $Page;
+			my $whole = <$LOCAL>;
+			close $LOCAL;
+			
+			my $i = 0;
+			while ($whole =~ m|"(http://downloads.sourceforge.net/.+?)\?download"|g) { 
+				#<a href="http://downloads.sourceforge.net/portableapps/KeePassPortable_1.24.paf.exe?download" class="sourceforge_accelerator_link"
+				$URL = $1;
+				$app_data[$i]->{URL} = $URL;
+				$i++;
 			}
-			else {
-				$current{$App}{version} = $version;
-				$current{$App}{url}     = $url;
+			while ($whole =~ m|"(http://downloads.sourceforge.net/.+?\.exe)"\s+class="sourceforge_accelerator_link"|g) { 
+				#<a href="http://downloads.sourceforge.net/portableapps/SWI-PrologPortable_6.2.1_English.paf.exe" class="sourceforge_accelerator_link"
+				$URL = $1;
+				$app_data[$i]->{URL} = $URL;
+				$i++;
+			}
+			#http://portableapps.com/bouncer?t=http%3A%2F%2Fdownload.portableapps.com%2Fportableapps%2Fwiseregistrycleanerportable%2FWiseRegistryCleanerPortable_7.51.paf.exe
+			#http://downloads.sourceforge.net/portableapps/SqlitemanPortable_1.2.2.paf.exe?accel_key=69%3A1348633465%3Ahttp%253A//portableapps.com/apps/development/sqliteman-portable%3A1fd6a6ee%24a6580a02528bd71d88fd0dba1247e86b002e5027&click_id=0dfe536e-0792-11e2-a7c5-0200ac1d1d8a&source=accel
+			while ($whole =~ m|"(http://sourceforge.net/.+?)/download"|g) {
+				$URL = $1;
+				$app_data[$i]->{URL} = $URL;
+				$i++;
+			}
+			$i = 0;	
+			while ($whole =~ m|<strong>Version (.+?)<\/strong>|g) {
+				$VERSION = $1;
+				$app_data[$i]->{VERSION} = $VERSION;
+				$i++;
+			}
+			
+			if ($URL && $VERSION) {
+				$current{$App}{version} = $VERSION;
+				$current{$App}{url}     = $URL;
 				$current{$App}{time}    = $time;
-				my $currentFile = "PortableApps/Apps-$timestamp.yaml";
-				DumpFile($currentFile, \%current);
-				tee("	DumpFile(\%current): $currentFile");
+				$to_download = 1;
+				tee("	DumpFile(\@app_data): ".Dumper(\@app_data));
+			}
+		}
+		
+		if (!$to_download) { #URL & version parsing via download-box
+			tee("	URL & version parsing via download-box");
+			use HTML::TreeBuilder::XPath;
+			my $tree= HTML::TreeBuilder::XPath->new;
+			$tree->parse_file($Page);
+			my $i = 0;
+			foreach my $product ($tree->findnodes('//div[@class="download-box"]')) {
+				my $thisNode = $product->clone;
+				#print "PRODUCT:".$product->as_XML()."\n\n";
+				#print $thisNode->as_XML();
 				
-				sub updateData {
-					my ($App, $version, $url) = @_;
+				sub getVersion {
+					#get $product->as_XML(): Download 5.9.3
+					$_[0] =~ /\<strong\>Download (.+?)\<\//;return $1 || '5.9.3';
+				};
+				#get the first instance of a/@href->[0] = http://downloads.sourceforge.net/portableapps/NotepadPlusPlusPortable_5.9.3.paf.exe?download
+				$URL = $thisNode->findvalue('(//a)[1]/@href');
 					
-					(my $tmpurl = $url) =~ s/\%2f/\//gi;
-					tee("	tmpurl:$tmpurl");
-					if ($tmpurl =~ /.+\/(.+)/) {
-						my ($filename) = split /\?/, $1;
-						
+				#get the version = 5.9.3
+				$VERSION = getVersion($thisNode->as_XML());
+				if (!$VERSION) { # check if the parser is broken
+					tee("	PortableApps parser is broken: VERSION($VERSION) is not found");
+					my $result = $nt->update("\@nyet PortableApps parser is broken: VERSION($VERSION) is not found");
+					tee("	result: $result");
+				}
+				else {
+					$current{$App}{version} = $VERSION;
+					$current{$App}{url}     = $URL;
+					$current{$App}{time}    = $time;
+					
+					$app_data[$i]->{VERSION} = $VERSION;
+					$app_data[$i]->{URL} = $URL;
+					
+					$to_download = 1;
+					$i++;
+				}
+			}
+		}
+
+		if ($to_download){ #download
+			my $currentFile = "PortableApps/Apps-$timestamp.yaml";
+			DumpFile($currentFile, \%current);
+			tee("	DumpFile(\%current): $currentFile");
+			
+			sub updateData {
+				my ($App, $version, $url, $i) = @_;
+				
+				(my $tmpurl = $url) =~ s/\%2f/\//gi;
+				tee("	tmpurl:$tmpurl");
+				if ($tmpurl =~ /.+\/(.+)/) {
+					my ($filename) = split /\?/, $1;
+					
+					if (!-f "$bkupFolder\\$filename") {
 						my $cmd = qq{wget -O $bkupFolder\\$filename $url};
 						system($cmd);
 						tee("	File($filename) is downloaded");
 						my $result = $nt->update("\@nyet File($filename) is downloaded");
 						tee("	result: $result");
-				
+
 						$data->{$App}{version} = $version;
 						$data->{$App}{url}     = $url;
 						$data->{$App}{time}    = $time;
 						
-						DumpFile($PortableAppsFile, $data);
-						tee("	DumpFile(\$data): $PortableAppsFile");
-					}
-				}
-				
-				if (exists $data->{$App}) {
-					if (exists $data->{$App}{version}) {
-						if ($data->{$App}{version} eq $version) {
-							tee("	Old $App($version), $url");
-						}
-						else {
-							tee("	New $App(new=$version,old=$data->{$App}{version}), $url");
-							updateData($App, $version, $url);
+						if ($i == 0) {
+							DumpFile($PortableAppsFile, $data);
+							tee("	DumpFile(\$data): $PortableAppsFile");
 						}
 					}
 					else {
-						tee("	New $App($version), $url");
-						updateData($App, $version, $url);
+						tee("	File($filename) is already downloaded");
+					}
+				}
+			}
+			
+			
+			#Flat dump of Java (2 downloads in 1 page)
+			#'URL' => 'http://sourceforge.net/projects/portableapps/files/Java%20Portable/Additional%20Versions/jPortable_7_Update_6_online.paf.exe',
+			#'VERSION' => '7 Update 6 (32-bit)'
+			#'URL' => 'http://sourceforge.net/projects/portableapps/files/Java%20Portable/Additional%20Versions/jPortable64_7_Update_6_online.paf.exe',
+			#'VERSION' => '7 Update 6 (64-bit)'
+			my $i = 0;
+			foreach my $d (@app_data) {
+				my $VERSION = $d->{VERSION};
+				my $URL     = $d->{URL};
+				if (exists $data->{$App}) {
+					if (exists $data->{$App}{version}) {
+						if ($data->{$App}{version} eq $VERSION) {
+							tee("	Old $App($VERSION), $URL");
+						}
+						else {
+							tee("	New $App(new=$VERSION,old=$data->{$App}{version}), $URL");
+							updateData($App, $VERSION, $URL, $i);
+						}
+					}
+					else {
+						tee("	New $App($VERSION), $URL");
+						updateData($App, $VERSION, $URL, $i);
 					}
 				}
 				else {
-					tee("	New $App($version), $url");
-					updateData($App, $version, $url);
+					tee("	New $App($VERSION), $URL");
+					updateData($App, $VERSION, $URL, $i);
 				}
+				$i++;
 			}
+			
+		}		
+		else {
+			tee("	PortableApps parser for $App is broken: URL($URL) and/or version($VERSION) is not found");
+			my $result = $nt->update("\@nyet PortableApps parser for $App is broken: URL($URL) and/or version($VERSION) is not found");
 		}
-		
 		tee("End parsing PortableApps:$App");
 	}
 }
