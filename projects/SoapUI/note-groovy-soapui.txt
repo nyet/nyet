@@ -23,6 +23,11 @@ println "${res.rowid}"
 ###
 
 
+
+###
+[setup ojdbc on SoapUI]
+Copy Oracle Database 11g Release 2 (11.2.0.3) JDBC Drivers/ojdbc6.jar to 
+	C:\Program Files\SmartBear\soapUI-Pro-4.5.1\bin\ext
 ###
 [setup sqlite-jdbc on SoapUI]
 download sqlite-jdbc from http://www.xerial.org/maven/repository/artifact/org/xerial/sqlite-jdbc/

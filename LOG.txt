@@ -47,7 +47,20 @@ Impact80-Smoketest-2012-10-18-1751.trc -> C:\FT\Impact\Batches\SmokeTest.bat
 Impact80-Smoketest-2012-10-18-1828.trc -> C:\FT\Impact\Batches\SmokeTestLT.bat
 	-> C:\PerformanceTest\Impact\v8.0.0 build 160\20121018-1828
 
+Impact80-Smoketest-20121025-1216
 
+
+The template file is screwed up, building a new one from scratch
+	Impact trace template for VSTS
+	Based on standard template
+	Column Filter 
+		LoginName: Qascript and Impact
+	Uncheck column
+		Audit Login and Logout
+		ExistingConnection
+	Make sure SQL:Batch Completed and RPC:Completed events has TEXTDATA
+
+	Export to Impact trace template for VSTS-2012-10-25.tdf
 
 How to insert a function?
 Current: ScriptImpact80201206291327.cs.temp
@@ -57,6 +70,8 @@ New:     ScriptImpact80201210181828.cs.temp
 	comb through current to determine X [Statement43_X()]
 	function before and after at current.
 	
+
+
 
 
 
