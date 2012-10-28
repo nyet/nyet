@@ -127,6 +127,15 @@
 
 	With mingw, a typical error is undefined reference to `_imp___WHATEVER'. It means that the library is static, whereas the applications wants to use shared library.
 
+	####
+
+	cd C:\CPANTesters\cpan\build\File-LibMagic-0.96-raDMg0
+	perl Makefile.PL INC=-IC:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\include LIBS=-LC:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\lib
+
+	C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\bin\g++.exe -o blib\arch\auto\File\LibMagic\LibMagic.dll -Wl,--base-file -Wl,dll.base -mdll -L"C:\CPANTesters\Perl5.16.1\lib\CORE" LibMagic.o   C:\CPANTesters\Perl5.16.1\lib\CORE\perl516.lib C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libkernel32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libuser32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libgdi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libwinspool.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libcomdlg32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libadvapi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libshell32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libole32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\liboleaut32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libnetapi32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libuuid.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libws2_32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libmpr.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libwinmm.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libversion.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libodbc32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libodbccp32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libcomctl32.a C:\CPANTE~1\PERL51~1.1\site\lib\auto\MINGW-~1.2\lib\libmsvcrt.a C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\lib\libmagic.a C:\CPANTesters\Perl5.16.1\site\lib\auto\MinGW-4.6.2\msys\1.0\lib\libregex.a   dll.exp
+
+	LibMagic.o:LibMagic.c:(.text+0xb3): undefined reference to `magic_file'
+	LibMagic.o:LibMagic.c:(.text+0x18c): undefined reference to `magic_error'
 
 	FUCK this module.
 
