@@ -1,0 +1,103 @@
+TODO: 
+   * deploy the latest 2-6.pl at lsusanto-h2 to prod.
+   * rename 2-6.pl to something that makes sense.
+   * fix 2-6.pl to take reports-sent.db into account (this to avoid long running FAIL modules)
+      * from dev.txt: A-2_01 (dev)
+      * get the lastest PRODUCTION version number of A using cpan/sources/modules/02packages.details.txt.gz -> A-2
+      * if A-2 from reports-sent.db fails -> exit
+      * if A-2_01 from reports-sent.db fails -> exit
+      * test "use A"
+      * if fail "cpan A"
+      * else "cpan -t A"
+
+      * M/ML/MLEHMANN/IO-AIO-4.12.tar.gz
+      * cpan IO::AIO
+      * cpan IO
+      * cpan MLEHMANN/IO-AIO-4.12.tar.gz
+   * 2-6.pl: make sure all bat has ECHO BOT %DATE% %TIME% and ECHO EOT %DATE% %TIME%
+   * KILLED module test is not logged somewhere
+
+
+TYPE OF MODULES:
+   * PASS
+   * FAIL
+   * KILLED
+
+TYPE OF EXECUTION REPORT			CLASS	TODO
+UNKNOWN since its manually terminated.			-> Terminating on signal SIGHUP(1) -> archives/20121027_172709.P5.016000.cpan-t.CJK_WebService-IMDB-0.03.tar.gz.log
+UNKNOWN (more than 30 min)				-
+	might be ok when given enough time		FIND SAMPLE (need the process to run urgent message)
+	hang (waiting for stdin/stuck thread)		DEPLOY TO CPAN/prefs ?
+FAIL (less than 25 min)					-
+	pure fail					-
+	need fixing					FIND OUT TO DETERMINE THIS
+PASS							-							-
+
+[REPORT]
+what file to go through, what info is important
+
+move-test-STDOUT.pl
+   * go through the content of 2-\d{8}_\d{6}\.log, to get the elapsed time of test execution
+   * the problem with going over 2-\d{8}_\d{6}\.log: the result is rather late (2.log max size is 2MB)
+   * go through the content of (d{6}).+?(P\d\.\d{6}).
+      * ECHO BOT Sat 09/29/2012 22:54:31.17 
+      * ECHO EOT Sat 09/29/2012 22:54:51.30 
+      * IF 30 min < EOT-BOT < 40 min 	-> mark as too long
+      * Terminating on signal SIGHUP(1)	-> mark as too long
+   * go through reports-sent.db
+
+REPORT TEMPLATE:
+   | MODULE | P5.014        | P5.016 | P5.018
+   | MOD-V  | 2LONG (x min) | PASS   | FAIL (
+
+
+[HOW TO DETECT BAD TEST]
+[HOW TO DETECT BAD CONFIG]
+
+NOTES TO SELF:
+   * stuff deployed to prefs is the brain damaging stuff, will not test this crap, e.g.: Acme-*
+
+
+
+
+__NOTES__
+C:\CPANTesters\Perl5.012.004_MSSDK7.1_cpan.bat Perl::Dist::Strawberry -i 2>&1| tee -a $screenLogFile
+
+
+run_emergency_queue();
+{	# check if there is something in the emergency queue
+	use Tie::File;
+	tie my @cmdLines, 'Tie::File', "1_EMERGENCY_QUEUE.txt" or die "Can not open 1_EMERGENCY_QUEUE.txt";
+	foreach my $cmdLine (@cmdLines) {
+		chomp $cmdLines;
+		my ($timeout, $stdoutlog, $cmd) = split /\t/, $cmdLines;
+		cpan_cmdline($cmd, $timeout, 10, $stdoutlog);
+	}
+}
+
+Perl5.016.000_64_MinGW.bat
+Perl5.016.000_64_MinGW_cpan.bat
+
+
+
+cpan_cmdline
+cpan_bat
+cpan_env_bat
+
+1800	Perl5.010.000_MSSDK7.1_cpan.bat	P5.010000.Module-Build.log	Module::Build -i
+1800	Perl5.016.001_MinGW_cpan.bat	P5.016001.B-C-1.32.log	RURBAN/B-C-1.32.tar.gz -t
+1800	Perl5.016.001_MinGW_cpan.bat	P5.016001.B-C-1.31-SPECIAL.log	RURBAN/B-C-1.31.tar.gz -t
+1800	Perl5.016.001_MinGW_cpan.bat	P5.016001.cpan-t.B-C-1.30-SPECIAL.log	RURBAN/B-C-1.30.tar.gz -t
+1800	Perl5.016.001_MinGW_cpan.bat	P5.016001.cpan-t.B-C-1.29-SPECIAL.log	RURBAN/B-C-1.29.tar.gz -t
+
+test without emergency queue
+	KRAIH/Mojolicious-1.22.tar.gz
+	RENEEB/Test-TestCoverage-0.11.tar.gz
+	CVEGA/WWW-MediaTemple-0.02.tar.gz
+
+	
+CJK/WebService-IMDB-0.03.tar.gz
+JDB/PPM-Repositories-0.19.tar.gz
+INGY/Module-Compile-0.21.tar.gz
+
+
