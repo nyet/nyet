@@ -23,7 +23,11 @@ println "${res.rowid}"
 ###
 
 
-
+###
+Edit global properties
+	File -> Preferences -> Global Properties -> MSGLOGDBServer, etc
+###
+log.info(com.eviware.soapui.model.propertyexpansion.PropertyExpansionUtils.globalProperties['MSGLOGDBServer'].value);
 ###
 [setup ojdbc on SoapUI]
 Copy Oracle Database 11g Release 2 (11.2.0.3) JDBC Drivers/ojdbc6.jar to 

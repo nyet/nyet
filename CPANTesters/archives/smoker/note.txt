@@ -4,16 +4,11 @@ TODO:
    * fix 2-6.pl to take reports-sent.db into account (this to avoid long running FAIL modules)
       * from dev.txt: A-2_01 (dev)
       * get the lastest PRODUCTION version number of A using cpan/sources/modules/02packages.details.txt.gz -> A-2
-      * if A-2 from reports-sent.db fails -> exit
-      * if A-2_01 from reports-sent.db fails -> exit
+      * if A-2 from reports-sent.db fails -> exit 
+      * if A-2_01 from reports-sent.db fails -> exit (done)
       * test "use A"
       * if fail "cpan A"
       * else "cpan -t A"
-
-      * M/ML/MLEHMANN/IO-AIO-4.12.tar.gz
-      * cpan IO::AIO
-      * cpan IO
-      * cpan MLEHMANN/IO-AIO-4.12.tar.gz
    * 2-6.pl: make sure all bat has ECHO BOT %DATE% %TIME% and ECHO EOT %DATE% %TIME%
    * KILLED module test is not logged somewhere
 
@@ -62,6 +57,22 @@ NOTES TO SELF:
 
 __NOTES__
 C:\CPANTesters\Perl5.012.004_MSSDK7.1_cpan.bat Perl::Dist::Strawberry -i 2>&1| tee -a $screenLogFile
+
+check_reports_sent_db
+	reports-sent.db
+	Pod-Coverage-Moose-0.04 (perl-5.16.0)
+
+	20121030_130624:        Shell::Config::Generate, to be tested(0.03), installed(0.03)
+	20121030_130624:Module P/PL/PLICEASE/Shell-Config-Generate-0.03.tar.gz will not be tested, 0.03 is already installed.
+
+	tee("	SKIP: cpan -i moduleName ($moduleName2: $moduleName2-$moduleVersion1 is tested);");
+
+	20121030_132347:        SKIP: cpan -i moduleName (Shell-Config-Generate: Shell-Config-Generate-0.03 is tested);
+
+      * M/ML/MLEHMANN/IO-AIO-4.12.tar.gz
+      * cpan IO::AIO
+      * cpan IO
+      * cpan MLEHMANN/IO-AIO-4.12.tar.gz
 
 
 run_emergency_queue();
