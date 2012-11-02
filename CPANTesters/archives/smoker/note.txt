@@ -1,6 +1,7 @@
 TODO: 
    * deploy the latest 2-6.pl at lsusanto-h2 to prod.
    * rename 2-6.pl to something that makes sense.
+<<<<<<< HEAD
    * fix 2-6.pl to take reports-sent.db into account (this to avoid long running FAIL modules)
       * from dev.txt: A-2_01 (dev)
       * get the lastest PRODUCTION version number of A using cpan/sources/modules/02packages.details.txt.gz -> A-2
@@ -9,9 +10,10 @@ TODO:
       * test "use A"
       * if fail "cpan A"
       * else "cpan -t A"
+=======
+>>>>>>> origin/master
    * 2-6.pl: make sure all bat has ECHO BOT %DATE% %TIME% and ECHO EOT %DATE% %TIME%
-   * KILLED module test is not logged somewhere
-
+   * libgcc_s_dw2-1.dll is missing
 
 TYPE OF MODULES:
    * PASS
@@ -107,8 +109,107 @@ test without emergency queue
 	CVEGA/WWW-MediaTemple-0.02.tar.gz
 
 	
-CJK/WebService-IMDB-0.03.tar.gz
-JDB/PPM-Repositories-0.19.tar.gz
-INGY/Module-Compile-0.21.tar.gz
+	CJK/WebService-IMDB-0.03.tar.gz
+	JDB/PPM-Repositories-0.19.tar.gz
+	INGY/Module-Compile-0.21.tar.gz
+
+KARMAN/Catalyst-Plugin-Static-Simple-ByClass-0.005.tar.gz
+VICHOU/Tie-Scalar-Epoch-0.002.tar.gz
+VICHOU/Tie-Scalar-Epoch-0.003.tar.gz
+RMCKAY/Finance-Currency-Convert-XE-0.22.tar.gz
+
+Tie::Scalar::Epoch -> the latest production version is 0.003
+but
+	20121031_212108:	package(Tie::Scalar::Epoch) 
+		> CPAN package name: Tie::Scalar::Epoch, 
+		lastest release version: 0.01
+	02packages.details.txt
+	Tie::Scalar::Epoch                 0.01  V/VI/VICHOU/Tie-Scalar-Epoch-0.002.tar.gz
+	
+Finance-Currency doesnt exist, will 2-6 blow up?
+	20121031_212207:	package(Finance::Currency::Convert::XE) > 
+		CPAN package name: Finance::Currency::Convert::XE, 
+		lastest release version: 0.21
+	cpan -i => RMCKAY/Finance-Currency-Convert-XE-0.22.tar.gz
+	
+MARCEL/Tie-Scalar-Timeout-2.101420.tar.gz
+KRYDE/Time-Duration-Locale-8.tar.gz
+
+02packages.details.txt can not be trusted.
+http://www.perlmonks.org/?node_id=832936
+
+reload index
+
+cpan[4]> i /Tie::Scalar::Epoch/
+Module id = Tie::Scalar::Epoch
+    CPAN_USERID  VICHOU (Victor Houston <CENSORED>)
+    CPAN_VERSION 0.01
+    CPAN_FILE    V/VI/VICHOU/Tie-Scalar-Epoch-0.002.tar.gz
+    UPLOAD_DATE  2012-10-27
+    MANPAGE      Tie::Scalar::Epoch - Create a scalar that always returns the number of seconds since the epoch.
+    INST_FILE    C:\CPANTesters\Perl5.16.1\site\lib\Tie\Scalar\Epoch.pm
+    INST_VERSION 0.01
+
+cpan[5]> i /Finance::Currency::Convert::XE/
+Module id = Finance::Currency::Convert::XE
+    CPAN_USERID  RMCKAY (Robert J. McKay <robert@mckay.com>)
+    CPAN_VERSION 0.22
+    CPAN_FILE    R/RM/RMCKAY/Finance-Currency-Convert-XE-0.22.tar.gz
+    UPLOAD_DATE  2012-10-30
+    INST_FILE    (not installed)
+
+02packages.details.txt  -> still old.
+    Finance::Currency::Convert::XE     0.21  R/RM/RMCKAY/Finance-Currency-Convert-XE-0.21.tar.gz
+    
+C:\CPANTesters\cpan\cpandb.sql
+
+select mod_vers from mods where mod_name like 'Finance::Currency::Convert::XE'
+0.22
+
+select mod_vers, dist_id from mods where mod_name like 'Tie::Scalar::Epoch'
+0.01, 25391
+Tie::Scalar::Epoch is up to date (0.01).
+
+select dist_vers, dist_name, dist_file from dists where dist_id=25391
+
+select mod_vers, dist_id from mods where mod_name like 'Tie::Scalar'
+
+process:
+VICHOU/Tie-Scalar-Epoch-0.003.tar.gz
+	-> Tie-Scalar-Epoch -> 
+	-> 0.003
+	select dist_vers from dists where dist_name like 'Tie-Scalar-Epoch'
+	-> 0.002
+	
+DMUEY/Text-Extract-MaketextCallPhrases-0.3.tar.gz
+PATCH/Template-Plugin-StringDump-0.05.tar.gz
+
+if (check_reports_sent_db("$moduleName2-$moduleVersion1", $perlVersion) == 0) {
+
+BAREFOOT/Method-Signatures-20121025.2315_001.tar.gz
+this is dev version
+
+ANDREFS/Lingua-EN-Sentence-Offsets-0.01_06.tar.gz
+this is dev version and without official release
+dist_cpan_file = '/'
+
+select dist_vers, dist_file from dists where dist_name like 'Lingua-EN-Sentence-Offsets'
+
+   * fix 2-6.pl to take reports-sent.db into account (this to avoid long running FAIL modules)
+      * from dev.txt: A-2_01 (dev)
+      * get the lastest PRODUCTION version number of A using cpan/sources/modules/02packages.details.txt.gz -> A-2
+      * if A-2 from reports-sent.db fails -> exit
+      * if A-2_01 from reports-sent.db fails -> exit
+      * test "use A"
+      * if fail "cpan A"
+      * else "cpan -t A"
+
+      * M/ML/MLEHMANN/IO-AIO-4.12.tar.gz
+      * cpan IO::AIO
+      * cpan IO
+      * cpan MLEHMANN/IO-AIO-4.12.tar.gz
+
+   * KILLED module test is not logged somewhere
+
 
 
