@@ -1,9 +1,21 @@
 #############################
 
-upload results
-   * 7:50 AM 10/23/2012 Title Wave
-   * 7:54 AM 10/23/2012 Cognos
-   * Impact
+2:13 PM 11/1/2012 Setup CV meeting next week
+3:18 PM 11/1/2012 copy these files and folders from qaweb-jax01:
+C:\c
+C:\foswiki
+C:\perl
+C:\xampp
+C:\favicon.ico
+C:\fos.ico
+C:\fos_alert.ico
+C:\FoswikiOnAStick_splash.bmp
+C:\portable.perl
+C:\start_foswiki.bat
+C:\stop_foswiki.bat
+C:\tray.pl
+
+howto create new page for new guy
 
 
 
@@ -88,8 +100,11 @@ P/PV/PVANDRY/gettext-1.05.tar.gz
 
 #############################
 
+2:11 PM 11/1/2012 ASK Cognos if they need load test
 
-
+7:50 AM 10/23/2012 upload results Title Wave
+7:54 AM 10/23/2012 upload results Cognos
+#############################
 CDCSLRGNAPP01-T
 
 
