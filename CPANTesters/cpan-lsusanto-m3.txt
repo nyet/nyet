@@ -1157,3 +1157,130 @@ C:\Windows\SysWOW64\java.exe -Xmx192M -jar "C:\Program Files\jEdit\jedit.jar"
 20120208_120844:	Captured using %rules, will not run C/CA/CAPTTOFU/DBD-mysql-4.019.tar.gz, have not setup mysql yet
 20120208_120844:Done with C/CA/CAPTTOFU/DBD-mysql-4.019.tar.gz
 20120208_120844:cpan_sendreport - start
+######
+20120924_113730:                C:\CPANTesters\Perl5.012.004_MSSDK7.1_cpan.bat B
+/BI/BIGPRESH/Dancer-Plugin-NYTProf-0.22.tar.gz -t
+pid: 1656
+pname: cmd.exe
+exitcode = 259:20120924_113730:CPAN process is still running, elapse: 0
+exitcode = 255:CPAN process is down
+20120924_113740:        cpan_cmdline(B/BI/BIGPRESH/Dancer-Plugin-NYTProf-0.22.ta
+r.gz -t) - end
+20120924_113740:        Finish testing module: cpan -t B/BI/BIGPRESH/Dancer-Plug
+in-NYTProf-0.22.tar.gz
+unlink(C:\WINDOWS\Temp/ib4.tmp)
+unlink(C:\WINDOWS\Temp/ib5.tmp)
+unlink(C:\WINDOWS\Temp/ib6.tmp)
+unlink(C:\WINDOWS\Temp/ib7.tmp)
+unlink(C:\WINDOWS\Temp/ib8.tmp)
+20120924_113740:Done with B/BI/BIGPRESH/Dancer-Plugin-NYTProf-0.22.tar.gz
+20120924_113740:Update testdevcode/dev/core-install-attempts-5.012004-201209.txt
+
+20120924_113740:Get from file: N/NH/NHORNE/CGI-Buffer-0.63.tar.gz
+20120924_113740:        Loading RULES.txt - start
+20120924_113740:        Loading RULES.txt - end
+20120924_113740:        Processing N/NH/NHORNE/CGI-Buffer-0.63.tar.gz
+20120924_113740:        SKIP: cpan -i moduleName (CGI-Buffer:2 > 1);"
+20120924_113740:        perl -e "use CGI::Buffer;"
+Can't spawn "cmd.exe": No such file or directory at C:\CPANTesters\testdevcode\2
+-6.pl line 223, <FILE> line 320.
+20120924_113740:        cpan exited with value 255
+20120924_113740:        SKIP: cpan -i moduleName (CGI:2 > 1);"
+20120924_113740:        perl -e "use CGI;"
+Can't spawn "cmd.exe": No such file or directory at C:\CPANTesters\testdevcode\2
+-6.pl line 223, <FILE> line 320.
+20120924_113740:        cpan exited with value 255
+20120924_113740:        TODO: wondering what's the base module for N/NH/NHORNE/C
+GI-Buffer-0.63.tar.gz
+Use of uninitialized value in numeric le (<=) at C:\CPANTesters\testdevcode\2-6.
+pl line 201, <FILE> line 321.
+Can't spawn "cmd.exe": No such file or directory at C:\CPANTesters\testdevcode\2
+-6.pl line 223, <FILE> line 321.
+Can't spawn "cmd.exe": No such file or directory at C:\CPANTesters\testdevcode\2
+-6.pl line 223, <FILE> line 321.
+Can't spawn "cmd.exe": No such file or directory at C:\CPANTesters\testdevcode\2
+-6.pl line 223, <FILE> line 324.
+Use of uninitialized value in numeric le (<=) at C:\CPANTesters\testdevcode\2-6.
+pl line 201, <FILE> line 324.
+Can't spawn "cmd.exe": No such file or directory at C:\CPANTesters\testdevcode\2
+-6.pl line 223, <FILE> line 324.
+Use of uninitialized value in numeric le (<=) at C:\CPANTesters\testdevcode\2-6.
+pl line 201, <FILE> line 324.
+Can't spawn "cmd.exe": No such file or directory at C:\CPANTesters\testdevcode\2
+-6.pl line 223, <FILE> line 324.
+Use of uninitialized value in numeric le (<=) at C:\CPANTesters\testdevcode\2-6.
+pl line 201, <FILE> line 325.
+Can't spawn "cmd.exe": No such file or directory at C:\CPANTesters\testdevcode\2
+-6.pl line 223, <FILE> line 325.
+Can't spawn "cmd.exe": No such file or directory at C:\CPANTesters\testdevcode\2
+-6.pl line 223, <FILE> line 326.
+Can't spawn "cmd.exe": No such file or directory at C:\CPANTesters\testdevcode\2
+-6.pl line 223, <FILE> line 326.
+Use of uninitialized value in numeric le (<=) at C:\CPANTesters\testdevcode\2-6.
+pl line 201, <FILE> line 327.
+Can't spawn "cmd.exe": No such file or directory at C:\CPANTesters\testdevcode\2
+-6.pl line 223, <FILE> line 327.
+Use of uninitialized value in numeric le (<=) at C:\CPANTesters\testdevcode\2-6.
+pl line 201, <FILE> line 327.
+Can't spawn "cmd.exe": No such file or directory at C:\CPANTesters\testdevcode\2
+-6.pl line 223, <FILE> line 327.
+Use of uninitialized value in numeric le (<=) at C:\CPANTesters\testdevcode\2-6.
+pl line 201, <FILE> line 328.
+Can't spawn "cmd.exe": No such file or directory at C:\CPANTesters\testdevcode\2
+-6.pl line 223, <FILE> line 328.
+Can't spawn "cmd.exe": No such file or directory at C:\CPANTesters\testdevcode\2
+-6.pl line 223, <FILE> line 328.
+Can't spawn "cmd.exe": No such file or directory at C:\CPANTesters\testdevcode\2
+-6.pl line 223, <FILE> line 330.
+
+
+%TABLE{ sort="on" initsort="5" headerrows="1" }%
+| *Program* | *Resource* | *Project / Task / Sprint / Deliverable* | *Target Date* | *Progress* | *Notes* | *Open Issues* |
+
+EditTablePlugin
+EditRowPlugin
+TablePlugin
+
+
+%META:FILEATTACHMENT{name="2011-10-04_InstallSQLServer2008R2Dev.txt" attr="" autoattached="1" comment="" date="1317753900" path="2011-10-04_InstallSQLServer2008R2Dev.txt" size="8358" user="LeoSusanto" version=""}%
+
+Main.CPANTesters.Exec
+Main.CPANTesters.Exec.LSUSANTO_M3
+Main.CPANTesters.ExecList
+
+
+G:\foswiki\pub\Main\FlickrAutomation
+G:\foswiki\data\Main\CPANTesters\Exec\LSUSANTO_M3
+G:\foswiki\pub\Main\CPANTesters\Exec\LSUSANTO_M3\ExecutionList
+%PUBURL%/Otherweb/OtherTopic/Sample.txt
+
+%PUBURL%/CPANTesters/Exec/LSUSANTO_M3/ExecutionList/
+
+
+| *Machine* | *Platform* | *Distribution* | *Link* | *Test Status* | *Note* |
+| LSUSANTO-M6 | P5.16.1 | !WebService-Cmis-0.07 | [[%PUBURL%/Main/CPANTesters/ExecList/LSUSANTOM3/20121001_120832.P5.016001.cpan-i.Dancer-Plugin-Facebook.log][log]] | FAIL | - |
+
+
+Test requires module 'Template' but it's not found
+Test requires module 'HTTP::Throwable::Factory' but it's not found
+Test requires module 'HTTP::Throwable' but it's not found
+Test requires module 'warnings::unused' but it's not found
+Test requires module 'warnings::unused' but it's not found
+
+Messaging::Message required for this test
+Test::Carp required for test
+
+
+Data::Float
+
+
+Delete:
+CGI-Buffer-0.65 
+PICA-Modification-0.14 
+OX-0.04
+OX-0.01 
+
+Scalar-Vec-Util-0.07 
+Module::Path -> 
+
+#socbiz
