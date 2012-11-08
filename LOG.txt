@@ -1,31 +1,5 @@
 #############################
 
-2:13 PM 11/1/2012 Setup CV meeting next week
-3:18 PM 11/1/2012 copy these files and folders from qaweb-jax01:
-C:\c
-C:\foswiki
-C:\perl
-C:\xampp
-C:\favicon.ico
-C:\fos.ico
-C:\fos_alert.ico
-C:\FoswikiOnAStick_splash.bmp
-C:\portable.perl
-C:\start_foswiki.bat
-C:\stop_foswiki.bat
-C:\tray.pl
-
-howto create new page for new guy
-
-
-
-if no load test, ask them to fill up the check list.
-
-soapUI
-	groovy to get SQL 
-	meet with Kathy on Thu
-
-
 9:12 AM 10/18/2012 - 8.0.0.160 deployed
 
 http://social.msdn.microsoft.com/Forums/en-US/sqltools/thread/b5a0c106-faf6-4a21-a012-2d60366190e3/
@@ -99,6 +73,45 @@ http://www.sugarsync.com/online-help/Excluding_Subfolders.htm
 P/PV/PVANDRY/gettext-1.05.tar.gz
 
 #############################
+
+10:19 PM 11/7/2012 How to create new foswiki status page for a new guy
+	Get email address of the person 
+		If wrong email address is entered, change it at C:\foswiki\data\.htpasswd
+	Enter user information at: http://qaweb-jax01:8080/foswiki/bin/view/System/UserRegistration
+		TestLast
+		test@angrybots.com
+	Create page: 
+		Edit C:\foswiki\data\Main\Work\Status\Auto\1CreateNewPage.pl
+		Change $username
+		Execute 1CreateNewPage.pl
+	Update the parent page to include TestLastStatus:
+		http://qaweb-jax01:8080/foswiki/bin/view/Main/Work/Status/Auto/WebHome
+
+
+10:00 PM 11/7/2012 copy these files and folders from qaweb-jax01 to \\jaxdevstorage\QAMisc\Foswiki
+	C:\c
+	C:\foswiki
+	C:\perl
+	C:\xampp
+	C:\favicon.ico
+	C:\fos.ico
+	C:\fos_alert.ico
+	C:\FoswikiOnAStick_splash.bmp
+	C:\portable.perl
+	C:\start_foswiki.bat
+	C:\stop_foswiki.bat
+	C:\tray.pl
+
+10:37 AM 11/7/2012 lame lame3.99.5 convert wav to mp3
+	http://www.rarewares.org/mp3-lame-bundle.php
+	cd C:\Users\vmuser\Desktop\move
+	lame3.99.5\lame.exe --help
+	lame3.99.5\lame.exe -h "DDC4 Voter guide.wav" "DDC4 Voter guide.mp3"
+
+7:49 AM 11/7/2012 http://election2012.npr.org/
+	So, we end the campaign where we began. President Obama will remain in the White House. Democrats will control the Senate. Republicans will control the House. Now, can they work together to address the nation's challenges? That remains to be seen, of course. In the meantime, scroll down to see how the long 2012 race finished. 
+
+7:48 AM 11/7/2012 Florida (FL) Election Watch for President of the United States: http://enight.elections.myflorida.com/CompareByCounty/?ContestId=100000
 
 2:11 PM 11/1/2012 ASK Cognos if they need load test
 
@@ -776,6 +789,21 @@ NOW PLAYING: Robyn "Indestructible"
 
 
 
+##############################
+2010-07-21 Wed 15:32 PDT
+	http://search.cpan.org/CPAN/authors/id/G/GR/GRAY/WebService-Google-Reader-0.08.tar.gz
+	CPAN GRAY/WebService-Google-Reader-0.08.tar.gz
+	http://search.cpan.org/CPAN/authors/id/G/GR/GRAY/WebService-Google-Reader-0.10.tar.gz
+	cpan GRAY/WebService-Google-Reader-0.10.tar.gz
+	Login is corrected
+	Set the status of entry to read is busted.
+	
+2010-07-19 Mon 11:00 PDT
+	Women of the Moose - http://www.flickr.com/photos/imjustwalkin/4798626340/
+
+2010-07-16 18:39
+	Pdf995 is a product of the Software995 Corporation.
+	The default configuration of Pdf995 uses the registered Postscript to PDF converter on your system. By accepting, you will re-configure Pdf995 so that it uses the free Converter each time you create a PDF with Pdf995. If you decline, you will not be able to create PDF's unless a Postscript to PDF converter is currently installed on your system. You may also manually re-configure Pdf995 so that it uses the free Converter each time you create a PDF with Pdf995 by removing the following entries from pdf995.ini: TS Enabled=0 and Use Default Distiller=1. By accepting, you will be able to create PDF's quickly and easily using Pdf995. Thank you for choosing Pdf995.
 
 
 
