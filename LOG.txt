@@ -73,6 +73,12 @@ http://www.sugarsync.com/online-help/Excluding_Subfolders.htm
 P/PV/PVANDRY/gettext-1.05.tar.gz
 
 #############################
+7:22 PM 11/8/2012
+	Bkup Impact at qaweb-jax01 test run to I:\PerformanceTest\Impact\TestProject2\TestResults
+	C:\MSSQL\MSSQL10.MSSQLSERVER\MSSQL\Backup
+	\\JAX-LR8-CTRL2\C$\MSSQL\MSSQL10.MSSQLSERVER\MSSQL\Backup
+
+
 
 10:19 PM 11/7/2012 How to create new foswiki status page for a new guy
 	Get email address of the person 
